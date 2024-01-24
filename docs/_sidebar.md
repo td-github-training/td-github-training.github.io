@@ -1,8 +1,8 @@
 - Getting Started
   - [Getting Ready for Class](01_getting_ready_for_class.md)
-  - [Git 101](02_git_101.md)
-  - [GitHub 101](02_github_101.md)
-  - [Markdown 101](02_markdown.md)
+  - [What is Git](02_git_101.md)
+  - [What is GitHub](02_github_101.md)
+  - [Using Markdown](02_markdown.md)
   - [GitHub Flow](03_github_flow.md)
 
 - Project 1: Caption This
