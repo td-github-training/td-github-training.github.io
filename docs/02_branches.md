@@ -8,10 +8,13 @@ git branch
 
 ```mermaid
     gitGraph
-        commit id: "ZERO"
+        commit id: "A"
+        commit id: "B"
+        commit id: "C"
         branch develop
-        branch release
-        commit id:"A"
+        commit id:"D"
+        commit id:"E"
+        commit id:"F"
 ```
 
 If you type `git branch` you will see a list of local branches.

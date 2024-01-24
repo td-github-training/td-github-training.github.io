@@ -10,7 +10,7 @@
 
 - GitHub 101
   - [What is GitHub?](03_github_101.md)
-  - [Using Repos](03_repositories.md)
+  - [Using Repositories](03_repositories.md)
   - [Using Pull Requests](03_repositories.md)
   - [Using GitHub Flow](03_github_flow.md)
   - [Using Issues](03_issues.md)
@@ -61,24 +61,9 @@
 
 - Appendix
   - **GitHub Resources**
-    - [Day 1 Activity Instructions](app_Day_1_activities.md)
-    - [Day 2 Activity Instructions](app_day2_mergeconflict.md)
     - [Fork and Pull Workflow and Multiple Remotes](app_fork_workflow.md)
-    - [End of Training: Cleaning Loaner PCs](App_clean_loaner_pc.md)
-  - **Tool tips**
     - [Add your human-readable name](app_add_human_readable_name.md)
-    - [How to Generate Jekyll Sites Locally](app_how_to_generate_locally.md)
-    - [Add Branch to Terminal Prompt](app_git_branch_in_terminal.md)
     - [Alias Pro Tips](app_aliases.md)
-    - [Vi Basics](app_vi_basics.md)
-  - **Community Resources**
-    - [GitHub Events](app_github_events.md)
-    - [Plan an event](app_plan_an_event.md)
-    - [Facilitating workflow conversations](app_facilitating_workflow.md)
-    - [Case studies](app_case_studies.md)
-    - [Prepare for being an ambassador](app_evangelize.md)
-    - [Issue templates](app_issue_template.md)
-    - [Supporting Learning Lab](app_supporting_learning_lab.md)
   - **Teaching Resources**
     - [GitHub Training Scripts](app_teaching_script.md)
     - [Teachback: Prepare repositories](app_teachback_repo_prep.md)
