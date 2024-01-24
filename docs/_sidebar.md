@@ -11,7 +11,7 @@
 - GitHub 101
   - [What is GitHub?](03_github_101.md)
   - [Repositories](03_repositories.md)
-  - [Pull Requests](03_repositories.md)
+  - [Pull Requests](03_pull_requests.md)
   - [GitHub Flow](03_github_flow.md)
   - [Issues](03_issues.md)
   - [Basic Administration](03_administration.md)
