@@ -18,7 +18,7 @@ If you do not see a Git version listed or this command returns an error, you may
 
 ### Git configuration levels
 
-![Git Configuration Levels](./img/config-levels.png)
+![Git Configuration Levels](./img/config-levels.png ':size=10%')
 
 Git allows you to set configuration options at three different levels.
 
