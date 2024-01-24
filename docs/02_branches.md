@@ -8,33 +8,43 @@ When the work on a branch is complete, it can be merged back into the main branc
 
 Branches allow you to separate your work from the `main` branch. In other words, everyone's work is safe while you contribute. For more information, see "[About branches](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches)".
 
-### Using branches locally
+### Viewing Branches
+
+Type `git branch` to see a list of local branches.
 
 ```sh
 git branch
+* main
 ```
 
-```mermaid
-    gitGraph
-        commit id: "A"
-        commit id: "B"
-        commit id: "C"
-        branch develop
-        commit id:"D"
-        commit id:"E"
-        commit id:"F"
-```
-
-If you type `git branch` you will see a list of local branches.
+Type `git branch --all` to see all the branches, including the read-only copies of your remote branches (you can add the `--all` option or just `-a`).
 
 ```sh
 git branch --all
-git branch -a
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
 ```
 
-If you want to see all the branches, including the read-only copies of your remote branches, you can add the `--all` option or just `-a`.
 
 > The `--all` and `-a` are actually synonyms for the branch command. Git often provides a verbose and a short option.
+
+### Creating branches
+
+Type `git branch <name>` to create a new branch.
+
+```sh
+git branch develop
+* main
+```
+
+```mermaid
+      gitGraph
+       commit
+       branch develop
+       commit
+
+```
 
 ### Switching branches
 
