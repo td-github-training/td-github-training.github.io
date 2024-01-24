@@ -1,6 +1,7 @@
 - Getting Started
   - [Getting Ready for Class](01_getting_ready_for_class.md)
   - [Getting Started](02_getting_started.md)
+  - [Markdown 101](02_markdown.md)
   - [GitHub Flow](03_github_flow.md)
 
 - Project 1: Caption This
