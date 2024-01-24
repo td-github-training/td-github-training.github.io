@@ -16,6 +16,16 @@
   - [Workflows](03_github_flow.md)
   - [Markdown](03_markdown.md)
   - [Administration](03_administration.md)
+
+- Advanced Topics
+  - [Personal Access Tokens](20_personal_access_token.md)
+  - [GitHub Actions](17_github_actions.md)
+  - [Automate Releases](17_actions_activity.md)
+  - [Commit signature verification](24_commit_sig_verification.md)
+  - [Git Stash](25_git_stash.md)
+  - [Git LFS](26_git_lfs.md)
+  - [Git submodules](27_git_submodules.md)
+  - [Git subtrees](28_git_subtrees.md)
  
 - Exercise 1: Git Basics
   - [Create a Local Repo](18_create_local_repo.md)
@@ -41,16 +51,6 @@
   - [Tags & Releases](17_tags_and_releases.md)
   - [Workflow Discussion](17_workflow_discussion.md)
 
-
-- Advanced Topics
-  - [Personal Access Tokens](20_personal_access_token.md)
-  - [GitHub Actions](17_github_actions.md)
-  - [Automate Releases](17_actions_activity.md)
-  - [Commit signature verification](24_commit_sig_verification.md)
-  - [Git Stash](25_git_stash.md)
-  - [Git LFS](26_git_lfs.md)
-  - [Git submodules](27_git_submodules.md)
-  - [Git subtrees](28_git_subtrees.md)
 
 - Appendix
   - **GitHub Resources**
