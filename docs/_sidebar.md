@@ -35,6 +35,8 @@
     - [Commit signature verification](24_commit_sig_verification.md)
     - [Forks](app_fork_workflow.md)
 
+---
+
 - Exercise 1: Git Basics
   - [Create a Local Repo](18_create_local_repo.md)
   - [Forgot to branch?](19_forgot_to_branch.md)
@@ -54,6 +56,8 @@
 - Exercise 4: Advanced Git
   - [Workflow Review](13_workflow_review_project_github_games.md)
   - [Workflow Discussion](17_workflow_discussion.md)
+
+---
 
 - Appendix
   - **GitHub Resources**
