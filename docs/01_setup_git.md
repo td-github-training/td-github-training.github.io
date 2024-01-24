@@ -3,36 +3,6 @@
 Git is an open source version control application. You will need Git installed for this class.
 
 You may already have Git installed so let's check! Open Terminal if you are on a Mac, or PowerShell if you are on a Windows machine, and type:
-Fart
-<!-- DOM element in which we'll mount our graph -->
-<div id="graph-container"></div>
-
-<!-- Use the `GitgraphJS` global variable to create your graph -->
-<script>
-// Get the graph container HTML element.
-const graphContainer = document.getElementById("graph-container");
-
-// Instantiate the graph.
-const gitgraph = GitgraphJS.createGitgraph(graphContainer);
-
-// Simulate git commands with Gitgraph API.
-const master = gitgraph.branch("master");
-master.commit("Initial commit");
-
-const develop = master.branch("develop");
-develop.commit("Add TypeScript");
-
-const aFeature = develop.branch("a-feature");
-aFeature
-    .commit("Make it work")
-    .commit("Make it right")
-    .commit("Make it fast");
-
-develop.merge(aFeature);
-develop.commit("Prepare v1");
-
-master.merge(develop).tag("v1.0.0");
-</script>
 
 ```sh
 git version

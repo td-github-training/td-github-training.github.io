@@ -1,4 +1,8 @@
-## Using Branches
+## What is a Branch?
+
+A Git branch represents an independent line of development within a project. Branches are lightweight, movable pointers to a specific commit, allowing developers to diverge from the main line of development and work on new features or bug fixes without affecting the main codebase. 
+
+When the work on a branch is complete, it can be merged back into the main branch, integrating the changes made.
 
 ### Using branches locally
 

@@ -4,18 +4,18 @@
 
 - Git 101
   - [What is Git?](02_git_101.md)
-  - [Using Repositories](02_repositories.md)
-  - [Using Commits](02_commits.md)
-  - [Using Branches](02_branches.md)
+  - [Repositories](02_repositories.md)
+  - [Commits](02_commits.md)
+  - [Branches](02_branches.md)
 
 - GitHub 101
   - [What is GitHub?](03_github_101.md)
-  - [Using Repositories](03_repositories.md)
-  - [Using Pull Requests](03_repositories.md)
-  - [Using GitHub Flow](03_github_flow.md)
-  - [Using Issues](03_issues.md)
+  - [Repositories](03_repositories.md)
+  - [Pull Requests](03_repositories.md)
+  - [GitHub Flow](03_github_flow.md)
+  - [Issues](03_issues.md)
   - [Basic Administration](03_administration.md)
-  - [Using Markdown](03_markdown.md)
+  - [Markdown](03_markdown.md)
 
 - Project 1: Caption This
   - [Branching with Git](04_branching_with_git.md)

@@ -1,4 +1,4 @@
-## Using Repositories
+## What is a Repository?
 
 A Git repository is a centralized location that stores a collection of files along with their revision history. It is a crucial component of the Git version control system, which enables collaborative development and allows multiple developers to work on a project simultaneously. Each developer maintains a local copy of the entire repository, including all files and their complete history, enabling seamless offline work and efficient merging of changes at a later stage. 
 
