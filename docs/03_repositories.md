@@ -1,23 +1,32 @@
-## About repositories
+## Using Repositories
 
-A repository is the most basic element of {% data variables.product.prodname_dotcom %}. It's a place where you can store your code, your files, and each file's revision history. Repositories can have multiple collaborators and can be either public{% ifversion ghes or ghec %}, internal,{% endif %} or private.
+A Git repository is a centralized location that stores a collection of files along with their revision history. It is a crucial component of the Git version control system, which enables collaborative development and allows multiple developers to work on a project simultaneously. Each developer maintains a local copy of the entire repository, including all files and their complete history, enabling seamless offline work and efficient merging of changes at a later stage. 
 
-To create a new repository, go to [https://github.com/new](https://github.com/new). For instructions, see "[AUTOTITLE](/repositories/creating-and-managing-repositories/quickstart-for-repositories)."
+### Creating Repositories
 
-## Repository terminology
+Repositories are created by using `git init`:
 
-Before getting started with repositories, learn these important terms.
+```sh
+mkdir practice-repo
 
-{% rowheaders %}
+cd practice-repo
 
-Term | Definition |
----- | ---------- |
-Branch | A parallel version of your code that is contained within the repository, but does not affect the primary or main branch.
-Clone | To download a full copy of a repository's data from {% data variables.location.product_location %}, including all versions of every file and folder.
-Fork | A new repository that shares code and visibility settings with the original "upstream" repository.
-Merge | To take the changes from one branch and apply them to another.
-Pull request | A request to merge changes from one branch into another.
-Remote | A repository stored on {% data variables.product.product_name %}, not on your computer.
-Upstream | The branch on an original repository that has been forked or cloned. The corresponding branch on the cloned or forked branch is called the "downstream."
+git init
+```
 
-{% endrowheaders %}
+Alternatively, you can use:
+
+```sh
+git init practice-repo
+```
+
+### Repository Status
+
+`git status` is a command to verify the current state of your repository and the files it contains. Right now, we can see that we are on branch main, everything is up-to-date with origin/main and our working tree is clean.
+
+```shell-session
+git status
+On branch main
+Your branch is up-to-date with 'origin/main'.
+nothing to commit, working tree clean
+```

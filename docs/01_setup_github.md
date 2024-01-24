@@ -28,7 +28,7 @@ The GitHub CLI installation instructions can be found here: [cli/cli: GitHub’s
 
 To install the CLI under Ubuntu, we type the following:
 
-```bash
+```sh
 type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
 && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
@@ -55,7 +55,7 @@ GitHub CLI can be used with both GitHub Enterprise Cloud and GitHub Enterprise S
 
 To use `gh cli` with GHEC, we have to do the following:
 
-```bash
+```sh
 gh auth login
 ? What account do you want to log into? GitHub.com
 ? What is your preferred protocol for Git operations on this host? HTTPS
@@ -82,7 +82,7 @@ You should see the following:
 
 And your terminal should show the following:
 
-```bash
+```sh
 ✓ Authentication complete.
 - gh config set -h github.com git_protocol https
 ✓ Configured git protocol

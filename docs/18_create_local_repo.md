@@ -14,7 +14,7 @@ Since we will be using this as our practice repository, we need to generate some
 
 **Bash:**
 
-```bash
+```sh
 for d in {1..6}; do touch "file${d}.md"; git add "file${d}.md"; git commit -m "adding file ${d}"; done
 ```
 
