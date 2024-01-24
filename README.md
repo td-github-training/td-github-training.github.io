@@ -10,6 +10,8 @@ The content is all written in [Markdown](https://guides.github.com/features/mast
 - [docsify](https://docsify.js.org)
 - [Mermaid.js](https://mermaid.js.org/)
 - [mermaid-docsify](https://github.com/Leward/mermaid-docsify)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [VSCodeExt-docsify-Preview](https://github.com/dzylikecode/VSCodeExt-docsify-Preview)
 
 ## Deploying the manual
 
@@ -23,12 +25,45 @@ These manuals are designed to be generated using [docsify](https://docsify.js.or
 
 ## Making changes
 
-The official [docsify documentation](https://docsify.js.org/#/?id=docsify) is your best bet for getting up to speed with the tool.
-
 In general, you'll find all of the manual content in the [`docs/`](docs/) folder of this repository. All content is written in Markdown, and it's all stitched together in [`docs/_sidebar.md`](docs/_sidebar.md), which specifies the order and hierarchy of the content.
+
+### Visual Studio Code
+
+The repository includes a `.devcontainer` which makes editing the documentation in `vscode` easy.
+
+#### Launching the devcontainer
+
+When you first open the workspace, you should get the following pop-up:
+
+![Dev Container Pop-up](docs/img/image.png)
+
+Select `Reopen in Container`.
+
+Alternatively,type `Ctrl+Shift+P` and select `Dev Containers: Reopen in Container`.
+
+#### Pasting images
+
+The workspace's `.vscode/settings.json` includes the following setting, which allows you to `Ctrl+V` images right into your `.md` files!
+
+```json
+    "markdown.copyFiles.destination": {
+        "**/*": "docs/img/"
+    }
+```
+
+### Docsify
+
+You shouldn't need to, but if you need to mess around with the docsify configuration, the official [docsify documentation](https://docsify.js.org/#/?id=docsify) is your best bet for getting up to speed.
 
 ## Previewing changes on your machine
 
+### Visual Studio Code
+
+The `.devcontainer` is setup with the [VSCodeExt-docsify-Preview](https://github.com/dzylikecode/VSCodeExt-docsify-Preview) Visual Studio Code extension.
+
+To open a preview window in `vscode` type `Ctrl+Shift+P` and select `docsify: Open the full Preview`.
+
+### Web Browser
 You can install, and serve the contents of the `docs/` folder locally with minimal setup. The steps are thoroughly described in the [doscify quick start](https://docsify.js.org/#/quickstart) guide.
 
 You can also simply run the following scripts:
@@ -37,22 +72,6 @@ You can also simply run the following scripts:
 script/bootstrap
 script/server
 ```
-
-## Generate a PDF
-
-Docsify doesn't currently support creating PDFs, but you can generate one using [GitBook legacy](https://docs.gitbook.com/resources/gitbook-legacy). We've tried to make this simple for you by creating [`script/generate-pdf`](script/generate-pdf).  The legacy version of GitBook is being shut down soon, but it still works.  You'll need to follow the installation instructions below to install GitBook.  The previous installation instructions on the GitBook site have been removed.
-
-## GitBook dependency
-
-<!-- textlint-disable terminology -->
-
-1. Download and install [Calibre](https://calibre-ebook.com/download).
-
-1. Run Calibre once to set up the application.
-
-1. Make sure that the [Calibre command line interface](https://manual.calibre-ebook.com/generated/en/cli-index.html) is available on your path.  This is located at `/Applications/calibre.app/Contents/MacOS/` on macOS if you are running the application from the default location.
-
-<!-- textlint-enable terminology -->
 
 ## Teaching scripts
 
