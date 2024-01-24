@@ -34,6 +34,7 @@
     - [Git subtrees](28_git_subtrees.md)
   - **GitHub**
     - [Releases](17_releases.md)
+      - [Exercise: Creating a Release](17_releases.md)
     - [Personal Access Tokens](20_personal_access_token.md)
     - [Forks](app_fork_workflow.md)
 
