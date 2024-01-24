@@ -8,9 +8,7 @@ Repositories are created by using `git init`:
 
 ```sh
 mkdir practice-repo
-
 cd practice-repo
-
 git init
 ```
 
@@ -24,7 +22,7 @@ git init practice-repo
 
 `git status` is a command to verify the current state of your repository and the files it contains. Right now, we can see that we are on branch main, everything is up-to-date with origin/main and our working tree is clean.
 
-```shell-session
+```sh
 git status
 On branch main
 Your branch is up-to-date with 'origin/main'.
