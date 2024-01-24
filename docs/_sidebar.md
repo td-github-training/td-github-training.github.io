@@ -4,18 +4,17 @@
 
 - Git 101
   - [What is Git?](02_git_101.md)
-  - [Understanding Repositories](02_repositories.md)
-  - [Understanding Commits](02_commits.md)
-  - [Understanding Branches](02_branches.md)
-  - [Understanding Repositories](02_repositories.md)
+  - [Using Repositories](02_repositories.md)
+  - [Using Commits](02_commits.md)
+  - [Using Branches](02_branches.md)
+  - [Branching Strategies](03_github_flow.md)
 
 - GitHub 101
   - [What is GitHub?](03_github_101.md)
-  - [Understanding Repos](03_repositories.md)
-  - [Understanding Pull Requests](03_repositories.md)
-  - [Understanding Issues](03_issues.md)
-  - [Branching Strategies](03_github_flow.md)
-  - [Administration](03_administration.md)
+  - [Using Repos](03_repositories.md)
+  - [Using Pull Requests](03_repositories.md)
+  - [Using Issues](03_issues.md)
+  - [Basic Administration](03_administration.md)
   - [Using Markdown](03_markdown.md)
 
 - Project 1: Caption This
