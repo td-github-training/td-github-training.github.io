@@ -17,7 +17,15 @@
   - [Markdown](03_markdown.md)
   - [Administration](03_administration.md)
  
-- Project 1: Caption This
+- Exercise 1: Git Basics
+  - [Create a Local Repo](18_create_local_repo.md)
+  - [Fixing Commit Mistakes](19_fixing_commit_mistakes.md)
+  - [Forgot to branch?](19_forgot_to_branch.md)
+  - [Rewriting History with Git Reset](20_rewriting_history_git_reset.md)
+  - [Cherry Picking](21_git_cherry_pick.md)
+  - [Merge Strategies](22_merge_strategies_rebase.md)
+
+- Exercise 2: Creating A Pull Request
   - [Branching with Git](04_branching_with_git.md)
   - [Working Locally](06_working_locally.md)
   - [Collaborating on Code](07_collaborating_on_code.md)
@@ -26,11 +34,11 @@
   - [Local History](10_local_history.md)
   - [Streamline Workflow with Aliases](11_streamline_workflow_with_aliases.md)
 
-- Project 2: Merge Conflicts
+- Exercise 3: Resolving Merge Conflicts
   - [Defining a merge conflict](12a_what_is_a_merge_conflict.md)
   - [Resolving merge Conflicts](12b_resolving_merge_conflicts.md)
 
-- Project 3: GitHub Games
+- Exercise 4: Advanced Git
   - [Workflow Review](13_workflow_review_project_github_games.md)
   - [Protected Branches & CODEOWNERS](17_protected_branches.md)
   - [Git Bisect](14_git_bisect.md)
@@ -40,13 +48,6 @@
   - [Tags & Releases](17_tags_and_releases.md)
   - [Workflow Discussion](17_workflow_discussion.md)
 
-- Project 4: Local Repository
-  - [Create a Local Repo](18_create_local_repo.md)
-  - [Fixing Commit Mistakes](19_fixing_commit_mistakes.md)
-  - [Forgot to branch?](19_forgot_to_branch.md)
-  - [Rewriting History with Git Reset](20_rewriting_history_git_reset.md)
-  - [Cherry Picking](21_git_cherry_pick.md)
-  - [Merge Strategies](22_merge_strategies_rebase.md)
 
 - Advanced Topics
   - [Personal Access Tokens](20_personal_access_token.md)
