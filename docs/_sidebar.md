@@ -5,6 +5,7 @@
 - Git 101
   - [What is Git?](02_git_101.md)
   - [Repositories](02_repositories.md)
+    - [Exercise 1: Initializing a Repo](02_repositories.md)
   - [Commits](02_commits.md)
   - [Branches](02_branches.md)
 
