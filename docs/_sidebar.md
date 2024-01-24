@@ -27,6 +27,8 @@
   - [Git submodules](27_git_submodules.md)
   - [Git subtrees](28_git_subtrees.md)
  
+ ---
+ 
 - Exercise 1: Git Basics
   - [Create a Local Repo](18_create_local_repo.md)
   - [Forgot to branch?](19_forgot_to_branch.md)
