@@ -4,27 +4,20 @@ A Git repository is a centralized location that stores a collection of files alo
 
 ### Creating Repositories
 
-Repositories are created by using `git init`:
+#### GitHub Web
 
-```sh
-mkdir practice-repo
-cd practice-repo
-git init
-```
+- New Repository
+	- Initialize repo using GitHub.com UI
+	- Follow instructions on GitHub.com to create new repo and push
+- Existing source code via GitHub.com UI
+	- Initialize repo locally
+	- Create repo using GitHub.com UI
+	- Follow instructions on GitHub.com to push existing repo
 
-Alternatively, you can use:
+#### GitHub CLI
 
-```sh
-git init practice-repo
-```
-
-### Repository Status
-
-`git status` is a command to verify the current state of your repository and the files it contains. Right now, we can see that we are on branch main, everything is up-to-date with origin/main and our working tree is clean.
-
-```sh
-git status
-On branch main
-Your branch is up-to-date with 'origin/main'.
-nothing to commit, working tree clean
-```
+- Existing source code via GitHub CLI
+	- Initialize repo locally
+	- Use `gh repo` to create repo and push code from current directory
+- Existing repo on GitHub.com
+	- `git clone` to local directory
