@@ -7,12 +7,12 @@
   - [Using Repositories](02_repositories.md)
   - [Using Commits](02_commits.md)
   - [Using Branches](02_branches.md)
-  - [Branching Strategies](03_github_flow.md)
 
 - GitHub 101
   - [What is GitHub?](03_github_101.md)
   - [Using Repos](03_repositories.md)
   - [Using Pull Requests](03_repositories.md)
+  - [Using GitHub Flow](03_github_flow.md)
   - [Using Issues](03_issues.md)
   - [Basic Administration](03_administration.md)
   - [Using Markdown](03_markdown.md)
