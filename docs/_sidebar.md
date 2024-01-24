@@ -27,12 +27,8 @@
     - [Git submodules](27_git_submodules.md)
     - [Git subtrees](28_git_subtrees.md)
   - **GitHub**
-    - [Helpful Git Commands](16_helpful_git_commands.md)
     - [Releases](17_releases.md)
     - [Personal Access Tokens](20_personal_access_token.md)
-    - [GitHub Actions](17_github_actions.md)
-    - [Automate Releases](17_actions_activity.md)
-    - [Commit signature verification](24_commit_sig_verification.md)
     - [Forks](app_fork_workflow.md)
 
 ---
