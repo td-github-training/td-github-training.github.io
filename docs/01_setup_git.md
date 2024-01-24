@@ -203,11 +203,3 @@ If installed properly, the following command will open the Visual Studio Code ed
 ```sh
 code .
 ```
-
-
-```mermaid
-graph LR
-    A --- B
-    B-->C[fa:fa-ban forbidden]
-    B-->D(fa:fa-spinner);
-```
