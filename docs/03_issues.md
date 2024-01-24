@@ -1,4 +1,4 @@
-## What are Issues?
+## What is an Issue?
 
 In GitHub, you will use issues to record and discuss ideas, enhancements, tasks, and bugs. Issues make collaboration easier by:
 

@@ -27,7 +27,6 @@
     - [Git submodules](27_git_submodules.md)
     - [Git subtrees](28_git_subtrees.md)
   - **GitHub**
-    - [Protected Branches & CODEOWNERS](17_protected_branches.md)
     - [Helpful Git Commands](16_helpful_git_commands.md)
     - [Releases](17_releases.md)
     - [Personal Access Tokens](20_personal_access_token.md)
@@ -35,8 +34,6 @@
     - [Automate Releases](17_actions_activity.md)
     - [Commit signature verification](24_commit_sig_verification.md)
     - [Forks](app_fork_workflow.md)
-
- ---
 
 - Exercise 1: Git Basics
   - [Create a Local Repo](18_create_local_repo.md)
@@ -57,8 +54,6 @@
 - Exercise 4: Advanced Git
   - [Workflow Review](13_workflow_review_project_github_games.md)
   - [Workflow Discussion](17_workflow_discussion.md)
-
----
 
 - Appendix
   - **GitHub Resources**
