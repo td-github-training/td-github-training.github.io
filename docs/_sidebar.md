@@ -1,6 +1,6 @@
 - Getting Started
-  - [Setup Git](01_getting_ready_for_class.md)
-  - [Setup GitHub](01_getting_ready_for_class.md)
+  - [Setting up Git](01_setup_git.md)
+  - [Setting up GitHub](01_setup_github.md)
 
 - Git 101
   - [What is Git?](02_git_101.md)
