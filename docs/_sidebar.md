@@ -5,23 +5,23 @@
 - Git 101
   - [What is Git?](02_git_101.md)
   - [Repositories](02_repositories.md)
-    - [Exercise: Creating a Repo](02_repositories.md)
   - [Commits](02_commits.md)
-    - [Exercise: Versioning Files](02_repositories.md)
   - [Branches](02_branches.md)
-    - [Exercise: Navigating Branches](02_repositories.md)
+  - [Exercise: Creating a Repo](02_repositories.md)
+  - [Exercise: Versioning Files](02_repositories.md)
+  - [Exercise: Navigating Branches](02_repositories.md)
 
 - GitHub 101
   - [What is GitHub?](03_github_101.md)
   - [Repositories](03_repositories.md)
-    - [Exercise: Creating a Repo](03_repositories.md)
   - [Pull Requests](03_pull_requests.md)
-    - [Exercise: Creating a PR](03_pull_requests.md)
   - [Issues](03_issues.md)
-    - [Exercise: Creating an Issue](03_issues.md)
   - [Workflows](03_github_flow.md)
   - [Markdown](03_markdown.md)
   - [Administration](03_administration.md)
+  - [Exercise: Creating a Repo](03_repositories.md)
+  - [Exercise: Creating a PR](03_pull_requests.md)
+  - [Exercise: Creating an Issue](03_issues.md)
 
 - Advanced Topics
   - **Git**
