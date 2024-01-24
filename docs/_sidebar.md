@@ -10,8 +10,12 @@
   - [Repositories](02_repositories.md)
 
 - GitHub 101
-  - [What is GitHub?](02_github_101.md)
-  - [Using Markdown](02_markdown.md)
+  - [What is GitHub?](03_github_101.md)
+  - [Repositories](03_repositories.md)
+  - [Pull Requests](03_repositories.md)
+  - [Issues](03_issues.md)
+  - [Administration](03_administration.md)
+  - [Using Markdown](03_markdown.md)
 
 - Workflows
   - [GitHub Flow](03_github_flow.md)
