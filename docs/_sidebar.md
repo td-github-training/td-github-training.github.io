@@ -53,13 +53,13 @@
   - [Workflow Review](13_workflow_review_project_github_games.md)
   - [Workflow Discussion](17_workflow_discussion.md)
 
----
+# ---
 
-- Appendix
-  - **GitHub Resources**
-    - [Add your human-readable name](app_add_human_readable_name.md)
-  - **Teaching Resources**
-    - [GitHub Training Scripts](app_teaching_script.md)
-    - [Teachback: Prepare repositories](app_teachback_repo_prep.md)
-    - [Teacher/Facilitation Tips](app_facilitation_tips.md)
-    - [Authentication Troubleshooting Guide](app_authentication.md)
+# - Appendix
+#  - **GitHub Resources**
+#    - [Add your human-readable name](app_add_human_readable_name.md)
+#  - **Teaching Resources**
+#    - [GitHub Training Scripts](app_teaching_script.md)
+#    - [Teachback: Prepare repositories](app_teachback_repo_prep.md)
+#    - [Teacher/Facilitation Tips](app_facilitation_tips.md)
+#    - [Authentication Troubleshooting Guide](app_authentication.md)
