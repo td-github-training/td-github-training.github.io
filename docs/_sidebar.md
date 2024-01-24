@@ -4,6 +4,10 @@
 
 - Git 101
   - [What is Git?](02_git_101.md)
+  - [Repositories](02_repositories.md)
+  - [Commits](02_commits.md)
+  - [Branches](02_branches.md)
+  - [Repositories](02_repositories.md)
 
 - GitHub 101
   - [What is GitHub?](02_github_101.md)
@@ -14,7 +18,6 @@
 
 - Project 1: Caption This
   - [Branching with Git](04_branching_with_git.md)
-  - [Local Git Configs](05_local_git_configs.md)
   - [Working Locally](06_working_locally.md)
   - [Collaborating on Code](07_collaborating_on_code.md)
   - [Editing on GitHub](08_edit_on_github.md)
