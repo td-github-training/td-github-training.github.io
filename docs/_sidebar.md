@@ -20,15 +20,16 @@
 - Advanced Topics
   - **Git**
     - [Git Stash](25_git_stash.md)
+    - [Git Tags](17_tags.md)
+    - [Git Bisect](14_git_bisect.md)
     - [Git LFS](26_git_lfs.md)
+    - [Git aliases](app_aliases.md)
     - [Git submodules](27_git_submodules.md)
     - [Git subtrees](28_git_subtrees.md)
-    - [Git Aliases](app_aliases.md)
   - **GitHub**
     - [Protected Branches & CODEOWNERS](17_protected_branches.md)
-    - [Git Bisect](14_git_bisect.md)
     - [Helpful Git Commands](16_helpful_git_commands.md)
-    - [Tags & Releases](17_tags_and_releases.md)
+    - [Releases](17_releases.md)
     - [Personal Access Tokens](20_personal_access_token.md)
     - [GitHub Actions](17_github_actions.md)
     - [Automate Releases](17_actions_activity.md)
