@@ -1,8 +1,4 @@
-## Getting started with collaboration
-
-We will start by introducing you to Git, GitHub, and the collaboration features we will use throughout the class. Even if you have used GitHub in the past, we hope this information will provide a baseline understanding of how to use it to build better software!
-
-### What is GitHub?
+## What is GitHub?
 
 GitHub is a collaboration platform built on top of a distributed version control system called Git. GitHub is focused on developers, the people who code and create software. Our focus is also the people who partner with and employ developers, who are encouraging them to build amazing things.
 
@@ -21,98 +17,65 @@ In addition to being a place to host and share your Git projects, GitHub provide
 - Projects
 - Organizations and Teams
 
-### The GitHub ecosystem
+## The GitHub ecosystem
 
 Rather than force you into a "one size fits all" ecosystem, GitHub strives to be the place that brings all of your favorite tools together. For more information on integrations, check out <https://github.com/integrations>.
 
 You may even find some new, indispensable tools to help with continuous integration, dependency management, code quality and much more.
 
-### What is Git?
-
-**Git is:**
-
-- A distributed version control system (DVCS)
-- Free and open source
-- Designed to handle everything from small to very large projects with speed and efficiency
-- Small in size and fast
-
-Git features cheap local branching, convenient staging areas, and multiple workflows.
-
-As we begin to discuss Git (and what makes it special) it would be helpful if you could forget everything you know about other version control systems (VCSs) for just a moment. Git stores and thinks about information very differently than other VCSs.
-
-We will learn more about how Git stores your code as we go through this class, but the first thing you will need to understand is how Git works with your content.
-
-#### Snapshots, not deltas
-
-One of the first ideas you will need understand is that Git does not store your information as series of changes. Instead, Git takes a snapshot of your repository at a given point in time. This snapshot is called a commit.
-
-#### Optimized for local operations
-
-Git is optimized for local operation. When you clone a copy of a repository to your local machine, you receive a copy of the entire repository and its history. This means you can work on the plane, on the train, or anywhere else your adventures find you!
-
-#### Branches are lightweight and cheap
-
-Branches are an essential concept in Git.
-
-When you create a new branch in Git, you are actually just creating a pointer that corresponds to the most recent commit in a line of work. Git keeps the commits for each branch separate until you explicitly tell it to merge those commits into the main line of work.
-
-#### Git is explicit
-
-Which brings us to our final point for now; Git is very explicit. It does not do anything until you tell it to. No auto-saves or auto-syncing with the remote, Git waits for you to tell it when to take a snapshot and when to send that snapshot to the remote.
-
-### Exploring a GitHub repository
+## Exploring a GitHub repository
 
 A repository is the most basic element of GitHub. It is easiest to imagine as a project's folder. However, unlike an ordinary folder on your laptop, a GitHub repository offers simple yet powerful tools for collaborating with others.
 
 A repository contains all the project files (including documentation), and stores each file's revision history. Whether you are just curious or you are a major contributor, knowing your way around a repository is essential!
 
-### User accounts vs. organization accounts
+## User accounts vs. organization accounts
 
 There are two account types in GitHub, user accounts and organization accounts. While there are many differences in these account types, one of the more notable differences is how you handle permissions.
 
-#### User accounts
+### User accounts
 
 When you signed up for GitHub, you were automatically given a user account. Permissions for a user account are simple, you add people as collaborators to specific repositories to give them full read-write access to the project.
 
-#### Organization accounts
+### Organization accounts
 
 Organization accounts provide more granular control over repository permissions. In an organization account you create teams of people and then give those teams access to specific repositories. Permissions can be assigned at the team level (e.g, read, write, or admin).
 
-### Repository navigation
+## Repository navigation
 
-#### Code
+### Code
 
 The **Code** tab is where you will find the files included in the repository. These files may contain the project code, documentation, and other important files. We also call this tab the root of the project. Any changes to these files will be tracked via Git version control.
 
-#### Issues
+### Issues
 
 Issues are used to track bugs and feature requests. Issues can be assigned to specific team members and are designed to encourage discussion and collaboration.
 
-#### Pull requests
+### Pull requests
 
 A Pull Request represents a change, such as adding, modifying, or deleting files, which the author would like to make to the repository. Pull Requests help you write better software by facilitating code review and showing the status of any automated tests.
 
-#### Projects
+### Projects
 
 Projects allow you to visualize your work with Kanban style boards. Projects can be created at the repository or organization level.
 
-#### Wiki
+### Wiki
 
 Wikis in GitHub can be used to communicate project details, display user documentation, or almost anything your heart desires. And of course, GitHub helps you keep track of the edits to your Wiki!
 
-#### README.md
+### README.md
 
 The README.md is a special file that we recommend all repositories contain. GitHub looks for this file and helpfully displays it below the repository. The README should explain the project and point readers to helpful information within the project.
 
-#### CONTRIBUTING.md
+### CONTRIBUTING.md
 
 The CONTRIBUTING.md is another special file that is used to describe the process for collaborating on the repository. The link to the CONTRIBUTING.md file is shown when a user attempts to create a new issue or pull request.
 
-#### ISSUE_TEMPLATE.md
+### ISSUE_TEMPLATE.md
 
 The ISSUE_TEMPLATE.md (and its twin the pull request template) are used to generate templated starter text for your project issues. Any time someone opens an issue, the content in the template will be pre-populated in the issue body.
 
-### Using GitHub Issues
+## Using GitHub Issues
 
 In GitHub, you will use issues to record and discuss ideas, enhancements, tasks, and bugs. Issues make collaboration easier by:
 
