@@ -16,6 +16,8 @@ If you already have an account, verify that you can visit github.com within your
 
 GitHub is designed to run on the current versions of all major browsers. Take a look at our list of [supported browsers](https://docs.github.com/github/getting-started-with-github/supported-browsers).
 
+---
+
 ## Setting up GitHub CLI
 
 ### Why?
