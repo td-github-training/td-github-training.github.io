@@ -105,7 +105,7 @@
 
 Head over to **Releases** and marvel at the outcome:
 
-![release](img/release-actions.png ':size=60%')
+![release](img/release-actions.png ':size=600')
 
 #### Keep on practicing
 

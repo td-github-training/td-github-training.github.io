@@ -50,11 +50,11 @@ The [github/gitignore repository](https://github.com/github/gitignore) is a coll
 
 For example, the following snippet shows some suggested files you should start ignoring in a Python project.
 
-![python-gitignore](img/python-gitignore.png ':size=200')
+![python-gitignore](img/python-gitignore.png ':size=600')
 
 These templates are also available when you create a new repository:
 
-![create-gitignore-repo](img/gitignore-create-repo.png ':size=60%')
+![create-gitignore-repo](img/gitignore-create-repo.png ':size=600')
 
 #### gitignore.io
 
