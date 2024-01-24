@@ -16,7 +16,7 @@
   - [Workflows](03_github_flow.md)
   - [Markdown](03_markdown.md)
   - [Administration](03_administration.md)
-
+ 
 - Project 1: Caption This
   - [Branching with Git](04_branching_with_git.md)
   - [Working Locally](06_working_locally.md)
