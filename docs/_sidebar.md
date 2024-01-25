@@ -7,9 +7,12 @@
   - [Repositories](02_repositories.md)
   - [Commits](02_commits.md)
   - [Branches](02_branches.md)
+  - [Configuration](02_configuration.md)
   - [Exercise: Creating a Repo](02_repositories.md)
   - [Exercise: Versioning Files](02_repositories.md)
+  - [Exercise: Fixing Mistakes](02_fixing_mistakes.md)
   - [Exercise: Navigating Branches](02_repositories.md)
+  - [Exercise: Creating a .gitignore](02_gitignore.md)
 
 - GitHub 101
   - [What is GitHub?](03_github_101.md)
