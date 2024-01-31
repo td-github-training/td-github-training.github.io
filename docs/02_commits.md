@@ -1,25 +1,10 @@
 ## What is a Commit?
 
-A commit is a core function in Git that captures a snapshot of the changes made to the files in a project at a specific point in time. 
+A commit is a core function in Git that captures a snapshot of the changes made to the files in a project at a specific point in time. Each commit also contains the commit ID of its parent commit.
 
-### How commits are made
+![Alt text](docs/img/image-3.png)
 
-Every commit in Git is a unique snapshot of the project at that point in time. It contains the following information:
-
-- Pointers to the current objects in the repository
-- Commit author and email (from your config settings)
-- Commit date and time
-- Commit message
-
-![Git's Basic Commit Structure](./img/commit-and-tree.png)
-
-Each commit also contains the commit ID of its parent commit.
-
-![Relationship between commits](./img/commit-parent.png)
-
-Image source: ProGit v2 by Scott Chacon
-
-### The two stage commit
+<!-- ### The two stage commit
 
 When you work locally, your files exist in one of four states. They are either untracked, modified, staged, or committed.
 
@@ -37,7 +22,23 @@ To add these files to version control, we use `git add`, which creates a collect
 
 When we are satisfied with the unit of work we have assembled, we create a commit using `git commit`, which will take a snapshot of everything in the staging area.
 
-![The Two Stage Commit - Part 4](./img/two-stage-commit-d.png ':size=400')
+![The Two Stage Commit - Part 4](./img/two-stage-commit-d.png ':size=400') -->
+
+### How commits are made
+
+Every commit in Git is a **snapshot** of the project at that point in time and will contain:
+
+- Pointers to the current objects in the repository
+- Commit author and email (from your config settings)
+- Commit date and time
+- Commit message
+
+The four commands copy files between the working directory, the stage (also called the index), and the history (in the form of commits).
+
+- `git add` files copies files (at their current state) to the stage.
+- `git commit - m "Commit message"` saves a snapshot of the stage as a commit with its message.
+- `git reset` -- files unstages files; that is, it copies files from the latest commit to the stage. Use this command to "undo" a git add files. You can also git reset to unstage everything.
+- `git checkout` -- files copies files from the stage to the working directory. Use this to throw away local changes
 
 ### Viewing commit history
 

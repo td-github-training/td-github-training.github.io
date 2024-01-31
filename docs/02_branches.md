@@ -4,14 +4,7 @@ A Git branch represents an independent line of development within a project. Bra
 
 ### Viewing Branches
 
-Type `git branch` to see a list of local branches.
-
-```sh
-git branch
-* main
-```
-
-Type `git branch --all` to see all the branches, including the read-only copies of your remote branches (you can add the `--all` option or just `-a`).
+Type `git branch --all` to see all the local branches, including the read-only copies of your remote branches (you can add the `--all` option or just `-a`).
 
 ```sh
 git branch --all
@@ -20,25 +13,22 @@ git branch --all
   remotes/origin/main
 ```
 
-
 > The `--all` and `-a` are actually synonyms for the branch command. Git often provides a verbose and a short option.
 
-### Creating branches
 
-Type `git branch <name>` to create a new branch.
-
-```sh
-git branch develop
-* main
-```
-
-```mermaid
+### Branching with git
+![Alt text](docs/img/image-2.png)
+<!-- ```mermaid
       gitGraph
        commit
        branch develop
        commit
 
-```
+``` -->
+### Creating branches
+
+Type `git branch <name>` to create a new branch.
+
 
 ### Switching branches
 
@@ -46,12 +36,10 @@ git branch develop
 git switch <BRANCH-NAME>
 ```
 
-To switch the branch you created online, type `git switch` and the name of your branch. Git will provide a message that says you have been switched to the branch, and it has been set up to track the same remote branch from origin.
-
-> You do not need to type `remotes/origin` in front of the branch - only the branch name. Typing `remotes/origin` in front of the branch name will put you in a detached HEAD state. We will learn more about that later, but for now just remember this is not a state we want to be in.
-
 ### Merging Branches
+The `git merge` command lets you take the commits(or changes) created on a git branch and integrate them into the target branch.
 
-- `git merge`
-- `git rebase`
-- `git rebase -i`
+##### For example:
+```sh
+git merge <BRANCH-NAME>
+```
