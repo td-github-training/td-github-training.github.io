@@ -1,4 +1,4 @@
-<!-- ## Setting up GitHub
+## Setting up GitHub
 
 For this class, we will use a public account on GitHub.com
 
@@ -14,15 +14,25 @@ If you already have an account, verify that you can visit `github.com` within yo
 ---
 
 ## Setting up GitHub CLI
+##### [**gh cli installation instructions**](https://github.com/cli/cli#installation) 
 
-### Why?
+##### [**gh cli manual**](https://cli.github.com/manual/)
+### Adding the GitHub CLI to your workflow can help you
+* View, create, clone, and fork repositories
+* Create, close, edit, and view issues and pull requests
+* Review, diff, and merge pull requests
+* Run, view, and list workflows
+* Create, list, view, and delete releases
+* Create, edit, list, view, and delete gists
+* List, create, delete, and connect to a codespace
+* Retrieve information from the GitHub API
 
-### Installation
 
-The GitHub CLI installation instructions can be found here: [cli/cli: GitHub’s official command line tool](https://github.com/cli/cli#installation) 
 
-To install the CLI under Ubuntu, we type the following:
 
+
+<!-- To install the CLI under Ubuntu, we type the following: -->
+<!-- 
 ```sh
 type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
@@ -42,15 +52,35 @@ Preparing to unpack .../archives/gh_2.42.1_amd64.deb ...
 Unpacking gh (2.42.1) ...
 Setting up gh (2.42.1) ...
 Processing triggers for man-db (2.10.2-1) ...
+``` -->
+
+### Authenticate with a GitHub host
+
+**Start interactive setup:**
+
+`$ gh auth login`
+
+**Authenticate against github.com by reading the token from a file:**
+
+`$ gh auth login --with-token < mytoken.txt`
+
+**Authenticate with specific host:**
+
+`$ gh auth login --hostname enterprise.internal`
+
+
+#### For example:
+
+```zsh
+gh auth setup-git
+gh auth setup-git [flags]
+This command configures git to use GitHub CLI as a credential helper. For more information on git credential helpers please reference: https://git-scm.com/docs/gitcredentials.
+
+By default, GitHub CLI will be set as the credential helper for all authenticated hosts. If there is no authenticated hosts the command fails with an error.
 ```
 
-### Authentication
 
-GitHub CLI can be used with both GitHub Enterprise Cloud and GitHub Enterprise Server.
-
-To use `gh cli` with GHEC, we have to do the following:
-
-```sh
+<!-- ```zsh
 gh auth login
 ? What account do you want to log into? GitHub.com
 ? What is your preferred protocol for Git operations on this host? HTTPS
