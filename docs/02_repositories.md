@@ -39,10 +39,9 @@ A `.gitignore` file in your repository stores names and file types. This file an
 1. Build files, e.g. `Build/*`
 
 
-### Collections of .gitignore templates based on popular programming languages:
-
-#### [github/gitignore repository](https://github.com/github/gitignore)
-
+Collection of .gitignore templates from GitHub:
+- [github/gitignore repository](https://github.com/github/gitignore)
 
 
-#### [gitignore.io](https://www.toptal.com/developers/gitignore) 
+Collection of .gitignore templates from toptal:
+- [gitignore.io](https://www.toptal.com/developers/gitignore) 

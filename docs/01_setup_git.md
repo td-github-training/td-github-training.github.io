@@ -7,10 +7,6 @@
 - If you are working on Windows, we recommend **Git Bash** which is installed with the Git package, so that you can follow along with the facilitator who will be using Bash
 - If you are working on macOS or another Unix-like system, you can use the built-in **Terminal** application
 
-If you already have Git installed, you can get the latest development version via Git itself with 
-
-`git clone https://github.com/git/git`
-
 #### Installing Git
 
 If you don't already have Git installed, you can download Git at www.git-scm.com.

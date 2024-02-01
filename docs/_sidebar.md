@@ -45,7 +45,7 @@
 
 - Exercise 1: Git Basics
   - [Create a Local Repo](18_create_local_repo.md)
-  - [Forgot to branch?](19_forgot_to_branch.md)
+  - [Creating a Branch](19_forgot_to_branch.md)
   - [Cherry Picking](21_git_cherry_pick.md)
   - [Merge Strategies](22_merge_strategies_rebase.md)
 

@@ -1,12 +1,133 @@
-## What is a Pull Request?
+## Pull Requests 
+PRs are used to propose changes to the git commit history. A pull request introduces an action that could address an Issue or other change. A Pull Request is considered a work in progress until it is merged into the target branch.
 
-Pull Requests are used to propose changes to the project files. A pull request introduces an action that addresses an Issue. A Pull Request is considered a "work in progress" until it is merged into the project.
+### Creating an Issue
+**1.** Navigate to the Issues tab
 
-[include](07a_activity_create_pull_request.md ':include')
+**2.** Click on New Issue
 
-### Exploring a pull request
+**3.** Get started with the Error Issue Template which will have prompts
 
-Now that we have created a Pull Request, let's explore a few of the features that make Pull Requests the center of collaboration:
+**4.** Copy the below formatting:
+> <img width="1253" alt="Screenshot 2024-01-26 at 1 35 22 PM" src="docs/img/image-14.png">
+
+**5.** Assign Yourself to the issue
+
+**6.** Label issue as a bug
+
+**7.** Submit the issue
+
+### Working on the Issue on GitHub
+**1.** On your new issue under "Development", click `create a branch`
+
+**2.** Click on the README.md file on your new branch
+
+**3.** Click on the pencil in the top right to open the editor
+
+**4.** Change the filename to README.**md**
+
+**5.** Commit directly to your branch
+
+
+### Creating a Pull Request
+Now that you have started to change your file, you will open a pull request to discuss the file with your team mates. Follow these steps to create a Pull Request in the class repository:
+
+**1.** Click the *Pull Request* tab.
+
+**2.** Click *New Pull Request*.
+
+**3.** In the *base* dropdown, choose `main`
+
+**4.** In the *compare* dropdown, choose the branch you just committed.
+
+**5.** Type a subject line and enter a concise description.
+
+**6.** Enter the description as `fixes #1` to tag it to the issue
+
+**6.** Click *Preview* to see how your Pull Request will look.
+
+**7.** Assign the Pull Request to yourself.
+
+**8.** Select the instructor as a reviewer on the PR.
+
+**9.** Click on *Create pull request*.
+
+> When you navigate to the class repository, you should see a banner at the top of the page indicating you have recently pushed branches, along with a button that reads *Compare & pull request*. This helpful button will automatically create a pull request between your branch and `main` as well.
+
+If everything looks good we will start to merge!
+
+### Merging Your Pull Request
+
+When you merge your branch, you are taking the content and history from your feature branch and adding it to the content and history of the `main` branch.
+
+![image](docs/img/image-15.png)
+
+Many project teams have established rules about who should merge a pull request.
+
+- Some say it should be the person who created the pull request since they will be the ones to deal with any issues resulting from the merge.
+- Others say it should be a single person within the project team to ensure consistency.
+- Still others say it can be anyone other than the person who created the pull request to ensure at least one review has taken place.
+
+> GitHub offers three different merge strategies for Pull Requests:
+
+- **Create a merge commit:** This is the traditional option that will perform a standard recursive merge. A new commit will be added that shows the point when the two branches were merged together.
+- **Squash and merge:** This option will take all of the commits on your branch and compress them into a single commit. The commit messages will be preserved in the extended commit message for the commit, but the individual commits will be lost.
+- **Rebase and merge:** This option will take all of the commits and replay them as if they just happened. This allows GitHub to perform a fast forward merge (and avoids the addition of the merge commit).
+
+#### Let's take a look at how you can merge the pull request.
+
+**1.** Navigate to your Pull Request (HINT: Use the Author or Assignee drop downs to find your Pull Request quickly)
+
+**2.** Click *Conversation*
+
+**3.** Scroll to the bottom of the Pull Request and click the *Merge pull request* button
+
+**4.** Click *Confirm merge*
+
+**5.** Click *Delete branch*
+> Your issue will be closed through the link created with the `fixes` keyword.
+
+
+### Updating Your Local Git Repository
+
+When you merged your Pull Request, you deleted the branch on GitHub, but this will not automatically update your local copy of the repository. Let's go back to our command line application and get everything in sync.
+
+First, we need to get the changes we made on GitHub into our local copy of the repository:
+
+**1.** Start by switching back to your default branch: `git switch main`
+
+**2.** Retrieve all of the changes from GitHub: `git pull`
+
+> `git pull` is a combination command that retrieves all of the changes from GitHub and then updates the branch you are currently on to include the changes from the remote. The two separate commands being run are `git fetch` and `git merge`. `git fetch` is a primary command used to download contents from a remote repository, and `git merge` joins two or more development histories together.
+
+
+### Cleaning Up the Unneeded Branches
+
+If you type `git branch --all` you will probably see that even though you deleted your branch on the remote, it is still listed in your local copy of the repository, both as a local branch and as a read-only remote tracking branch. 
+
+**Let's get rid of those extra branches.**
+
+**1.** Take a look at your local branches: `git branch --all`
+
+**2.** Let's see which branches are safe to delete: `git branch --merged`
+
+**3.** Delete the local branch: `git branch -d <branch-name>`
+
+**4.** Take another look at the list: `git branch --all`
+
+**5.** Your local branch is gone but the remote tracking branch is still there. Delete the remote tracking branch: `git pull --prune`
+
+
+> Adding the `--merged` option to the `git branch` command allows you to see which branches **do not contain unique work** when compared to the checked out branch. In this case, since we are checked out to main, we will use this command to ensure all of the changes on our feature branch have been merged to production before we delete the branch.
+
+If you would like pruning of the remote tracking branches to be set as your default behavior when you pull, you can use the following configuration option: `git config --global fetch.prune true`.
+
+
+<!-- [include](07a_activity_create_pull_request.md ':include') -->
+<!-- 
+### Exploring a pull request -->
+
+<!-- Now that we have created a Pull Request, let's explore a few of the features that make Pull Requests the center of collaboration:
 
 #### ![octicon-comment-discussion] Conversation tab
 
@@ -106,4 +227,6 @@ GitHub offers three different merge strategies for pull requests:
 
 - **Rebase and merge**
 
-  This option will take all the commits and replay them as if they just happened. This allows GitHub to perform a fast-forward merge (and avoids the addition of the merge commit).
+  This option will take all the commits and replay them as if they just happened. This allows GitHub to perform a fast-forward merge (and avoids the addition of the merge commit). -->
+
+
