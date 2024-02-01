@@ -58,29 +58,7 @@ Processing triggers for man-db (2.10.2-1) ...
 
 **Start interactive setup:**
 
-`$ gh auth login`
-
-**Authenticate against github.com by reading the token from a file:**
-
-`$ gh auth login --with-token < mytoken.txt`
-
-**Authenticate with specific host:**
-
-`$ gh auth login --hostname enterprise.internal`
-
-
-#### For example:
-
-```zsh
-gh auth setup-git
-gh auth setup-git [flags]
-This command configures git to use GitHub CLI as a credential helper. For more information on git credential helpers please reference: https://git-scm.com/docs/gitcredentials.
-
-By default, GitHub CLI will be set as the credential helper for all authenticated hosts. If there is no authenticated hosts the command fails with an error.
 ```
-
-
-<!-- ```zsh
 gh auth login
 ? What account do you want to log into? GitHub.com
 ? What is your preferred protocol for Git operations on this host? HTTPS
@@ -91,28 +69,7 @@ gh auth login
 Press Enter to open github.com in your browser...
 ```
 
-![](images/Pasted%20image%2020240123181402.png)
+**You should see the following:**
 
-Click `Authorize`:
-
-![](images/Pasted%20image%2020240123181450.png)
-
-After authenticating, click `Authorize github`:
-
-![](images/Pasted%20image%2020240123181542.png)
-
-You should see the following:
-
-![](images/Pasted%20image%2020240123181613.png)
-
-And your terminal should show the following:
-
-```sh
-✓ Authentication complete.
-- gh config set -h github.com git_protocol https
-✓ Configured git protocol
-! Authentication credentials saved in plain text
-✓ Logged in as im-sampm
-```
-
-You're all set! -->
+![Alt text](docs/img/image-5.png)
+![Alt text](docs/img/image-6.png)
