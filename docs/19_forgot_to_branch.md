@@ -1,6 +1,6 @@
-## Oops, I forgot to create a branch
+## Creating a branch
 
-If you begin working, but you are still on `main`, don’t panic! Changes aren't “on” a branch until they are committed. Your working directory and staging area are attached to `HEAD`, _not_ a branch. So, you can change branches, and any changes that are not committed will come with you.
+If you begin working, you are by default put on the `main` or topline branch. Changes aren't “on” a branch until they are committed. Your working directory and staging area are attached to `HEAD`, _not_ a branch. So, you can change branches, and any changes that are not committed will come with you.
 
 ### Activity: Create a branch after making changes
 
@@ -9,6 +9,8 @@ If you begin working, but you are still on `main`, don’t panic! Changes aren't
 2. Type `git status`, and notice changes in your working directory
 3. Create a new branch with `git switch -c BRANCH-NAME`
 4. Type `git status` again, to notice which branch you are on, and your working directory
+5. Type `git add .`
+6. Type `git commit -m "Your message"` to commit the change to the git history
 
 ## Non-committed conflicts
 

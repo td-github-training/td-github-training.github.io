@@ -8,16 +8,7 @@
 Repositories are created with git on the command line by using `git init`, for example:
 
 ```sh
-mkdir practice-repo && cd practice-repo
-
-git init
-Initialized empty Git repository in /home/me/practice-repo/.git/
-```
-
-Alternatively, you can do all of the above in one-line:
-
-```sh
-git init practice-repo
+git init new-repo
 Initialized empty Git repository in /home/me/practice-repo/.git/
 ```
 

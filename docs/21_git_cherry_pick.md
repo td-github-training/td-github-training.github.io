@@ -1,10 +1,8 @@
 ## Getting it back: `git cherry-pick`
 
-We just learned how reflog can help us find local changes that have been discarded. So what if:
+![Alt text](docs/img/image-13.png)
 
-### You just want that one commit
-
-Cherry-picking allows you to pick up a commit from your reflog or another branch of your project and move it to your current branch. Right now, your file directory and log should look like this:
+**Cherry-picking** allows you to pick up a commit from your reflog or another branch of your project and move it to your current branch. Right now, your file directory and log should look like this:
 
 ```shell-session
 $ ls
