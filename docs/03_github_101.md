@@ -13,4 +13,4 @@
   - **Projects**
 
 
-  ![Alt text](docs/img/image-7.png)
+<img src="docs/img/image-7.png" alt="code" width="720"/>
