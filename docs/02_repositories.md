@@ -1,12 +1,13 @@
 ## What is a Repository?
 
-A Git repository is a centralized location that stores a collection of files along with their revision history.  Each developer maintains a local copy of the entire repository, including all files and their complete history, enabling seamless offline work and efficient merging of changes at a later stage. 
+* A centralized location that stores a collection of files along with their git history.  
+* Each developer maintains a local copy of the entire git repository
 
 #### Creating a Repository
 
-Repositories are created by using `git init`, for example:
+Repositories are created with git on the command line by using `git init`, for example:
 
-```shell
+```sh
 mkdir practice-repo && cd practice-repo
 
 git init
@@ -22,7 +23,7 @@ Initialized empty Git repository in /home/me/practice-repo/.git/
 
 #### Repository Status
 
-To verify the current state of your repository type: `git status`. 
+To verify the current state of your repository type: `git status`
 
 ```sh
 git status
@@ -37,7 +38,7 @@ Right now, we can see that we are on branch `main`, everything is up-to-date wit
 
 ### Ignoring Files
 
-Git enables you to ignore specific files, files types, and folders through the use of a text file you can add to your repository titled `.gitignore`. This file instructs Git to stop tracking changes of certain files, which means that these files will not be pushed to GitHub from your local machine.
+A `.gitignore` file in your repository stores names and file types. This file and its contents instruct Git to stop tracking changes of certain files, which means that these files will not be pushed to GitHub from your local.
 
 **Example files that you might want Git to ignore:**
 
@@ -46,10 +47,11 @@ Git enables you to ignore specific files, files types, and folders through the u
 1. Log files, e.g. `*.log`
 1. Build files, e.g. `Build/*`
 
-#### github/gitignore
 
-The [github/gitignore repository](https://github.com/github/gitignore) is a collection of `.gitignore` templates based on popular programming languages.
+### Collections of .gitignore templates based on popular programming languages:
 
-#### gitignore.io
+#### [github/gitignore repository](https://github.com/github/gitignore)
 
-[This website](https://www.toptal.com/developers/gitignore) is another resource for you to find appropriate `.gitignore` templates when your project contains multiple programming languages.
+
+
+#### [gitignore.io](https://www.toptal.com/developers/gitignore) 
