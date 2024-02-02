@@ -1,3 +1,16 @@
+Pulling changes from a remote repository
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+`git pull` is a convenient shortcut for completing both `git fetch` and `git merge`in the same command:
+
+```
+$ git pull REMOTE-NAME BRANCH-NAME
+# Grabs online updates and merges them with your local work
+
+```
+
+Because `pull` performs a merge on the retrieved changes, you should ensure that your local work is committed before running the `pull` command. If you run into [a merge conflict](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line) you cannot resolve, or if you decide to quit the merge, you can use `git merge --abort` to take the branch back to where it was in before you pulled.
+
 ### Updating your local repository
 
 When you merged your Pull Request, you deleted the branch on GitHub, but this will not automatically update your local copy of the repository. Let's go back to our command line application and get everything in sync.
@@ -22,3 +35,4 @@ If you type `git branch --all` you will probably see that, even though you delet
 > Adding the `--merged` option to the `git branch` command allows you to see which branches do not contain unique work when compared to the checked out branch. In this case, since we are checked out to main, we will use this command to ensure all the changes on our feature branch have been merged to production before we delete the branch.
 
 If you would like pruning of the remote tracking branches to be set as your default behavior when you pull, you can use the following configuration option: `git config --global fetch.prune true`.
+
