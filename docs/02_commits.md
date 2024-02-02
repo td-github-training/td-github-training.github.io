@@ -4,15 +4,16 @@
 * Each commit also contains the commit ID of its parent commit
 
 <div class="grid2">
-
 <div class="col">
 
 Test
 
-</div><div class="col">
+</div>
+<div class="col">
 
 ![Alt text](docs/img/image-3.png)
 
+</div>
 </div>
 
 <!-- ### The two stage commit
