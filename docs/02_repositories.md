@@ -1,6 +1,6 @@
 ## What is a Repository?
 
-* A centralized location that stores a collection of files along with their git history.  
+* A centralized location that stores a collection of files along with their git history  
 * Each developer maintains a local copy of the entire git repository
 
 #### Creating a Repository
@@ -38,10 +38,6 @@ A `.gitignore` file in your repository stores names and file types. This file an
 1. Log files, e.g. `*.log`
 1. Build files, e.g. `Build/*`
 
-
-Collection of .gitignore templates from GitHub:
-- [github/gitignore repository](https://github.com/github/gitignore)
-
-
-Collection of .gitignore templates from toptal:
-- [gitignore.io](https://www.toptal.com/developers/gitignore) 
+#### Links  
+- Collection of .gitignore templates from GitHub: [github/gitignore repository](https://github.com/github/gitignore)
+- Collection of .gitignore templates from toptal: [gitignore.io](https://www.toptal.com/developers/gitignore) 

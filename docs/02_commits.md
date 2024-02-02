@@ -1,8 +1,19 @@
 ## What is a Commit?
 
-A commit is a core function in Git that captures a snapshot of the changes made to the files in a project at a specific point in time. Each commit also contains the commit ID of its parent commit.
+* A commit captures a snapshot of the changes made to the files in a project at a specific point in time
+* Each commit also contains the commit ID of its parent commit
+
+<div class="grid2">
+
+<div class="col">
+
+Test
+
+</div><div class="col">
 
 ![Alt text](docs/img/image-3.png)
+
+</div>
 
 <!-- ### The two stage commit
 
