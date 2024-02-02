@@ -3,18 +3,11 @@
 * A commit captures a snapshot of the changes made to the files in a project at a specific point in time
 * Each commit also contains the commit ID of its parent commit
 
-<div class="grid2">
-<div class="col">
-
-Test
-
-</div>
-<div class="col">
+<center>
 
 ![Alt text](docs/img/image-3.png)
 
-</div>
-</div>
+</center>
 
 <!-- ### The two stage commit
 
@@ -76,22 +69,13 @@ git log --patch
 
 `git diff` allows you to see the difference between any two refs in the repository. 
 
-<div class="grid">
-<div class="col">
-
-The diagram to the right shows how you can compare the content of your working area, staging, and HEAD (or the most recent commit):
-
-</div>
-<div class="col">
+The diagram below shows how you can compare the content of your working area, staging, and HEAD (or the most recent commit):
 
 <center>
 
 ![Git Diff Options](./img/diff-options.png ':size=500')
 
 </center>
-
-</div>
-</div>
 
 Let's try these commands on the repository:
 
@@ -111,9 +95,9 @@ git diff origin/main main
 git diff 2710 b745
 ```
 
-> Notice that, just like merges, diffs are directional. It is easiest to think of it as "diff back to `<REF-1>` starting at `<REF-2>`" or "see what is *not* in `<REF-1>` but *is* in `<REF-2>`".  The final example shows how to compare two commits based on their commit hashes.  This exact command will not work for everyone since the commits in your own repository will have different hashes.
-
-There's a helpful alias for opening the remote directly from your command-line. Check out the appendix if you'd like to know more!
+> Notice that, just like merges, diffs are directional. It is easiest to think of it as "diff back to `<REF-1>` starting at `<REF-2>`" or "see what is *not* in `<REF-1>` but *is* in `<REF-2>`".  
+> 
+> The final example shows how to compare two commits based on their commit hashes.  This exact command will not work for everyone since the commits in your own repository will have different hashes.
 
 ## Fixing mistakes
 
@@ -125,14 +109,20 @@ Two of the most common uses are:
 
 ### Reverting commits
 
-`git revert`
+`git revert` is used to create a new commit that undoes the changes made in a previous commit.
+
+It's useful for fixing mistakes and for safely removing changes without rewriting the project's history. 
 
 
 ### Rewriting history with Git reset
 
 Sometimes we are working on a branch, and we decide things aren't going quite like we had planned. We want to reset some, or even all, of our files to look like what they were at a different point in history.
 
+<center>
+
 ![Git Reset Before and After](./img/reset-visual.png ':size=500')
+
+</center>
 
 Remember, there are three different snapshots of our project at any given time. The first is the most recent commit (also known as HEAD). The second is the staging area (also called the index). The third is the working directory containing any new, deleted, or modified files.
 
@@ -165,6 +155,8 @@ The reflog is a record of every place HEAD has been. In a few minutes we will se
 
 ## Syncing Changes
 
-- `git push`
-- `git pull`
-- `git fetch`
+Git provides three primary ways for syncing changes between local and remote repositories:
+
+- `git push` Uploads local repository content to a remote repository.
+- `git pull` Fetches and downloads content from a remote repository and immediately updates the local repository to match that content.
+- `git fetch` Downloads remote content without altering the state of the local repository, allowing for checking changes before merging them into the local branch.
