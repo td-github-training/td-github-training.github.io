@@ -1,3 +1,9 @@
+<div id="dark_mode"
+  ><i class="fas fa-sun"></i
+  ><input type="checkbox" id="dark_mode_switch" name="mode"
+  ><label for="dark_mode_switch">Toggle</label
+  ><i class="fas fa-moon"></i></div>
+
 - Getting Started
   - [Setting up Git](01_setup_git.md)
   - [Setting up GitHub](01_setup_github.md)
