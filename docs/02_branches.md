@@ -29,12 +29,32 @@ Type `git branch <name>` to create a new branch.
 
 ### Switching branches
 
-Type `git switch <name>` to switch branches.
+`git switch` allows you to switch your current HEAD branch. 
+
+> It's relatively new (added in Git v2.23) and provides a simpler alternative to the classic "checkout" command.
+
+#### Usage Examples
+
+The most common scenario is to simply specify the local branch you want to switch to:
 
 ```sh
-$ git switch test
-Switched to branch 'test'
+$ git switch other-branch
 ```
+
+This will make the given branch the new HEAD branch. If, in one go, you also want to create a new local branch, you can use the "-c" parameter:
+
+```sh
+$ git switch -c new-branch
+```
+
+If you want to check out a remote branch (that doesn't yet exist as a local branch in your local repository), you can simply provide the remote branch's name. When Git cannot find the specified name as a local branch, it will assume you want to check out the respective remote branch of that name:
+
+```sh
+$ git switch remote-branch
+```
+
+This will not only create a local branch, but also set up a "tracking relationship" between the two branches, making sure that pulling and pushing will be as easy as "git pull" and "git push".
+
 
 ## Integrating changes
 
