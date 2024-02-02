@@ -55,7 +55,9 @@ The four commands copy files between the working directory, the stage (also call
 
 When you clone a repository, you receive the history of all the commits made in that repository. The log command allows us to view that history on our local machine.
 
-Let's take a look at some option switches you can use to customize your view of the project history. You can find these options, and many more, on [git-scm.com](https://git-scm.com/docs/git-log). _(Note: `--graph` is default on most Git Bash for Windows terminals.)_
+Let's take a look at some option switches you can use to customize your view of the project history. You can find these options, and many more, on [git-scm.com](https://git-scm.com/docs/git-log). 
+
+> **Note:** `--graph` is default on most Git Bash for Windows terminals.
 
 ```sh
 git log
@@ -71,9 +73,24 @@ git log --patch
 
 ### Viewing local changes
 
-`git diff` allows you to see the difference between any two refs in the repository. The diagram below shows how you can compare the content of your working area, staging, and HEAD (or the most recent commit):
+`git diff` allows you to see the difference between any two refs in the repository. 
 
-![Git Diff Options](./img/diff-options.png)
+<div class="grid">
+<div class="col">
+
+The diagram to the right shows how you can compare the content of your working area, staging, and HEAD (or the most recent commit):
+
+</div>
+<div class="col">
+
+<center>
+
+![Git Diff Options](./img/diff-options.png ':size=500')
+
+</center>
+
+</div>
+</div>
 
 Let's try these commands on the repository:
 
