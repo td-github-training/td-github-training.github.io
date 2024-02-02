@@ -42,21 +42,15 @@ git config --global user.name "First-name Surname"
 git config --global user.email "you@email.com"
 ```
 
+#### Handling Line Endings
+
 Different systems handle line endings and line breaks differently. If you open a file created on another system and do not have this config option set, Git will think you made changes to the file based on the way your system handles this type of file.
 
-```sh
-//for Windows users
-git config --global core.autocrlf true
-```
-
-```sh
-//for Mac or Linux users
-git config --global core.autocrlf input
-```
+- **Windows users:** `git config --global core.autocrlf true`
+- **Mac users:** `git config --global core.autocrlf input`
 
 > **Tip:** If you make a typo when setting one of your config properties, don't worry.  You can rerun the same `git config` command with different values between the double quotes to update the property to a new value.  If you typo a property name, you can delete the property with the following command:
 >
 > ```sh
 > git config --global --unset <property_name>
 > ```
-
