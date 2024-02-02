@@ -114,7 +114,9 @@ Two of the most common uses are:
 It's useful for fixing mistakes and for safely removing changes without rewriting the project's history. 
 
 
-### Rewriting history with Git reset
+## Rewriting history 
+
+### Git reset
 
 Sometimes we are working on a branch, and we decide things aren't going quite like we had planned. We want to reset some, or even all, of our files to look like what they were at a different point in history.
 
@@ -137,6 +139,69 @@ The three modes for git reset are: `--soft`, `--mixed`, and `--hard`. For these 
 - `git reset --soft <SHA>` moves the current branch to point at the `<SHA>`. However, the working directory and staging area remain untouched. Since the snapshot that current branch points to now differs from the index's snapshot, this command effectively stages all differences between those snapshots. This is a good command to use when you have made numerous small commits, and you would like to regroup them into a single commit.
 - `git reset --mixed <SHA>` makes the current branch *and* the staging area look like the `<SHA>` snapshot. *This is the default mode:* if you don't include a mode flag, Git will assume you want to do a `--mixed` reset. `--mixed` is useful if you want to keep all of your changes in the working directory, but change whether and how you commit those changes.
 - `git reset --hard <SHA>` is the most drastic option. With this, Git will make all 3 snapshots, the current branch, the staging area, *and* your working directory, look like they did at `<other-commit>`. This can be dangerous! We've assumed so far that our working directory is clean. If it is not, and you have uncommitted changes, `git reset --hard` will *delete all of those changes*. Even with a clean working directory, use `--hard` only if you're sure you want to completely undo earlier changes.
+
+### Git rebase
+
+Reordering commit history with `git rebase -i` is a powerful way to clean up your project's timeline. 
+
+Here's how to do it:
+
+1. **Start Interactive Rebase**: First, check out the branch you want to reorder. Then, initiate an interactive rebase for the last `N` commits using `git rebase -i HEAD~N`. Replace `N` with the number of commits you want to reorder.
+
+    ```bash
+    git checkout feature-branch
+    git rebase -i HEAD~3
+    ```
+
+    This command will open a text editor with a list of commits like this:
+
+    ```
+    pick e3f1e37 Commit message A
+    pick 7c91bf1 Commit message B
+    pick 4a07e8d Commit message C
+    ```
+
+2. **Reorder Commits**: In the text editor, reorder the lines to change the order of commits. Move the lines up or down as desired.
+
+    ```
+    pick 4a07e8d Commit message C
+    pick e3f1e37 Commit message A
+    pick 7c91bf1 Commit message B
+    ```
+
+3. **Resolve Conflicts**: If there are conflicts after reordering, Git will stop and let you resolve them. After fixing conflicts in a file, stage the changes with `git add` and then continue rebasing with `git rebase --continue`.
+
+    ```bash
+    # Fix conflicts in your files
+    git add <file-with-conflict>
+    git rebase --continue
+    ```
+
+    You may need to repeat this step if there are multiple conflicts.
+
+4. **Force Push if Necessary**: If you've already pushed the branch to a remote repository, you'll need to force push your changes because the commit history has changed.
+
+    ```bash
+    git push --force
+    ```
+
+    Be cautious with this step, as it can overwrite history on the remote.
+
+5. **Verify the New Order**: Use `git log` to ensure the commit history reflects your changes.
+
+    ```bash
+    git log --oneline
+    ```
+
+    You'll see the new order of commits:
+
+    ```
+    7c91bf1 Commit message B
+    e3f1e37 Commit message A
+    4a07e8d Commit message C
+    ```
+
+Remember to use `git rebase -i` with care, especially when working with branches that others might be using, as it rewrites commit history[1][2][4].
 
 ### Does 'gone' really mean gone?
 
