@@ -35,22 +35,43 @@ Wikis are to communicate project details, display user documentation, or almost 
 
 ---
 
-### Creating Repositories
+## Creating Repositories
 
-#### GitHub Web
+### GitHub Web
 
-- New Repository
-	- Initialize repo using GitHub.com UI
-	- Follow instructions on GitHub.com to create new repo and push
-- Existing source code via GitHub.com UI
-	- Initialize repo locally
-	- Create repo using GitHub.com UI
-	- Follow instructions on GitHub.com to push existing repo
+GitHub repositories store a variety of projects. In this guide, you'll create a repository and commit your first change.
 
-#### GitHub CLI
+1.  In the upper-right corner of any page, select , then click New repository.
 
-- Existing source code via GitHub CLI
-	- Initialize repo locally
-	- Use `gh repo` to create repo and push code from current directory
-- Existing repo on GitHub.com
-	- `git clone` to local directory
+    ![Screenshot of a GitHub dropdown menu showing options to create new items. The menu item "New repository" is outlined in dark orange.](docs/img/image-17.png)
+
+2.  Type a short, memorable name for your repository. For example, "hello-world".
+
+    ![Screenshot of the first step in creating a GitHub repository. The "Repository name" field contains the text "hello-world" and is outlined in dark orange.](docs/img/image-18.png)
+
+3.  Optionally, add a description of your repository. For example, "My first repository on GitHub."
+
+4.  Choose a repository visibility. For more information, see "[About repositories](https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories#about-repository-visibility)."
+
+5.  Select Initialize this repository with a README.
+
+6.  Click Create repository.
+
+Congratulations! You've successfully created your first repository, and initialized it with a *README* file.
+
+### GitHub CLI
+
+#### gh repo create
+
+```
+gh repo create [<name>] [flags]
+
+```
+
+Creates a new GitHub repository.
+
+To create a repository interactively, use `gh repo create` with no arguments.
+
+To create a remote repository non-interactively, supply the repository name and one of `--public`, `--private`, or `--internal`. Pass `--clone` to clone the new repository locally.
+
+To create a remote repository from an existing local repository, specify the source directory with `--source`. By default, the remote repository name will be the name of the source directory. Pass `--push` to push any local commits to the new repository.
