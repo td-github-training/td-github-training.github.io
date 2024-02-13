@@ -108,7 +108,7 @@ Is the commit ID the same as the one you used in the cherry-pick command? Why or
 Renaming a Branch
 -----------------
 
-You can effortlessly rename a local branch with just one command, eliminating the need for `git checkout`.
+You can effortlessly rename a local branch with just one command!
 
 ### Step 1: Ensure You're in the Main Branch
 
