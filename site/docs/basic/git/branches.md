@@ -1,6 +1,6 @@
 # What is a Branch?
 
-A Git branch represents an independent line of development within a project. Branches are lightweight, movable pointers to a specific commit, allowing developers to diverge from the main line of development and work on new features or bug fixes without affecting the main codebase. 
+Branches are lightweight, movable bookmarks to a specific commit that allow separate lines of development without impacting the main codebase. After completing work on a branch, changes can be merged back into the main codebase.
 
 <center>
 
@@ -115,38 +115,3 @@ eanu482 adding file 4
 Is the commit ID the same as the one you used in the cherry-pick command? Why or why not?
 
 !> Remember, when using any commands that change history, it's important to make these changes before pushing to GitHub. When you change a commit ID that has been pushed to the remote, you risk creating problems for your collaborators.
-
-
-## Tagging branches
-
-Tags and branches serve different purposes in version control:
-
-- **Branches** are for ongoing development, such as adding new features or fixing bugs. They allow separate lines of development without impacting the main codebase. After completing work on a branch, changes can be merged back into the main codebase.
-
-- **Tags** mark specific points in the repository's history, indicating important milestones like releases. Unlike branches, tags are not intended for ongoing development but rather to reference specific points in the development timeline.
-
-### When to use branches
-
-- **Scenario:** Want to add a new feature or experiment without affecting the main codebase.
-- **Use:** Create a Git branch to isolate development work from the main codebase. Merge back into the main branch after completing and testing the feature.
-
-### When to use tags
-
-- **Scenario:** Ready to release a new software version to users.
-- **Use:** Apply a Git tag to mark the current state of the codebase as a new version release. Tag with a version number and brief description of changes for easy reference and rollback if needed.
-
-> Additionally, using tags and branches in **CI/CD Pipelines** help to keep development organized and efficient for streamlined collaboration, automated testing, CI/CD integration, documentation, and visibility.
-
-### When to use release branches
-
-Release branches are handy when your team struggles to maintain a healthy mainline. They help focus on bug fixes for production readiness.
-
-Best teams skip release branches for single-production products. Instead, they directly release commits from the mainline.
-
-Use release branches for managing multiple versions in production or when facing significant release process friction.
-
-They can act as a quarantine zone during approval delays. Streamline the release process where possible.
-
-Consider them as Environment Branches and understand the long-lived release branch variant.
-
-![alt text](../../../img/image-21.png)

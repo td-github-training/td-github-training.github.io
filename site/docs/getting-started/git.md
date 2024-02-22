@@ -2,17 +2,69 @@
 
 **Git** is an open source version control application. You will need git installed for this class.
 
-## Opening Your Shell
 
-- If you are working on Windows, we recommend **Git Bash** which is installed with the Git package, so that you can follow along with the facilitator who will be using Bash
-- If you are working on macOS or another Unix-like system, you can use the built-in **Terminal** application
+## Installing git
 
-### Installing Git
+### Windows
 
-If you don't already have Git installed, you can download Git at www.git-scm.com.
+1. Download the latest Git for Windows installer from the [Git official website](https://git-scm.com/download/win).
 
+2. When you've successfully started the installer, you should see the Git Setup wizard screen. Follow the Next and Finish prompts to complete the installation. The default options are pretty sensible for most users.
 
-### Testing Your Install
+3. Open a Command Prompt (or Git Bash if during installation you elected not to use Git from the Windows Command Prompt).
+
+4. Confirm that Git was properly installed by typing `git --version` into the command prompt.
+
+```bash
+git --version
+```
+
+### Mac
+
+1. If you are on a Mac, you can download Git from Git official website or install it via Homebrew with the following command:
+
+```bash
+brew install git
+```
+
+2. Verify the installation was successful by typing git --version:
+
+```bash
+git --version
+```
+
+### Linux
+
+#### Ubuntu / Debian
+
+1. If you're on a Debian-based distribution like Ubuntu, try apt-get:
+
+```bash
+sudo apt-get update
+sudo apt-get install git
+```
+
+2. Confirm that Git was properly installed by typing git --version:
+
+```bash
+git --version
+```
+
+#### Fedora
+
+1. For Fedora systems, use dnf:
+
+```bash
+sudo dnf install git
+```
+
+2. Confirm that Git was properly installed by typing git --version:
+
+```bash
+git --version
+```
+
+## Testing your install
 
 Open your chosen shell, and type:
 
@@ -31,9 +83,10 @@ remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (6/6), done.
 ```
 
-If your clone is unsuccessful, read about [authenticating with GitHub from Git](https://docs.github.com/github/getting-started-with-github/set-up-git#next-steps-authenticating-with-github-from-git). Please note: many corporate networks restrict SSH traffic, so we highly recommend using. Also, if you have two-factor authentication enabled and wish to use HTTPS, you will need to [set up a personal access token](https://docs.github.com/github/authenticating-to-github/accessing-github-using-two-factor-authentication#using-two-factor-authentication-with-the-command-line).
+> **Note:** If your clone is unsuccessful, read about [authenticating with GitHub from Git](https://docs.github.com/github/getting-started-with-github/set-up-git#next-steps-authenticating-with-github-from-git). 
 
-## Configuring Git
+
+## Configuring git
 
 Git uses the config settings for your user name and email address to generate a unique fingerprint for each of the commits you create. You can't create commits without these settings:
 

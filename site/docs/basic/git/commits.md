@@ -1,21 +1,19 @@
 # What is a Commit?
 
-A commit captures a snapshot of the changes made to the files in a project at a specific point in time
-
 Every commit in Git is a **snapshot** of the project at that point in time and contains:
 
-- Pointers to the current objects in the repository
-- Commit author and email (from your config settings)
+- Pointers to the current files in the repository
+- Commit author and email
 - Commit date and time
 - Commit message
 
-The four commands copy files between the working directory, the stage (also called the index), and the history (in the form of commits).
-
-## Saving changes
+## Staging changes
 
 ### git add
 
 `git add` files copies files (at their current state) to the stage.
+
+## Saving changes
 
 ### git commit
 
@@ -43,13 +41,12 @@ When you clone a repository, you receive the history of all the commits made in 
 
 ```sh
 git log
-git log --oneline
-git log --oneline --graph
-git log --oneline --graph --decorate
 git log --oneline --graph --decorate --all
 git log --stat
 git log --patch
 ```
+
+## Comparing changes
 
 ### git diff
 
@@ -210,26 +207,6 @@ The reflog is a record of every place HEAD has been. In a few minutes we will se
 > Sometimes, you'll want to save your work in a commit without having to think of a commit message, or before you're ready to organize your changes. If that's the case, you can create aliases to create "save points". See the appendix with aliases to learn how!
 
 
-
-## The two stage commit
-
-When you work locally, your files exist in one of four states. They are either untracked, modified, staged, or committed.
-
-![The Two Stage Commit - Part 1](../../../img/two-stage-commit-a.png ':size=400')
-
-An untracked file is a new file that has never been committed.
-
-Git tracks these files, and keeps track of your history by organizing your files and changes in three working trees. They are Working, Staging (also called Index), and History. When we are actively making changes to files, this is happening in the working tree.
-
-![The Two Stage Commit - Part 2](../../../img/two-stage-commit-b.png ':size=400')
-
-To add these files to version control, we use `git add`, which creates a collection of files that represent a discrete unit of work. We build this unit in the staging area.
-
-![The Two Stage Commit - Part 3](../../../img/two-stage-commit-c.png ':size=400')
-
-When we are satisfied with the unit of work we have assembled, we create a commit using `git commit`, which will take a snapshot of everything in the staging area.
-
-![The Two Stage Commit - Part 4](../../../img/two-stage-commit-d.png ':size=400')
 
 <center>
 

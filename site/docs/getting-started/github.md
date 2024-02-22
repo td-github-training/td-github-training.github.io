@@ -1,39 +1,27 @@
 # Setting up GitHub
 
-For this class, we will use a public account on GitHub.com
+To get the most out of this tutorial, you'll need both a GitHub account and a working install of the GitHub CLI.
 
-You can set up your free account by following these steps:
+## Creating a GitHub account
+
+You can create a GitHub account by following these steps:
 
 1. Access GitHub.com and click Sign up
 1. Choose the free account
 1. You will receive a verification email at the address provided
 1. Click the link to complete the verification process
 
-If you already have an account, verify that you can visit `github.com` within your organization's network.
-
----
+If you already have an account, verify that you can visit [github.com](https://github.com) from within your organization's network.
 
 ## Setting up GitHub CLI
 
-Adding the GitHub CLI to your workflow can help you:
-- View, create, clone, and fork repositories
-- Create, close, edit, and view issues and pull requests
-- Review, diff, and merge pull requests
-- Run, view, and list workflows
-- Create, list, view, and delete releases
-- Create, edit, list, view, and delete gists
-- List, create, delete, and connect to a codespace
-- Retrieve information from the GitHub API
-
-## Installation
+### Installation
 
 Follow the installation instructions, here: [**gh cli installation instructions**](https://github.com/cli/cli#installation) 
 
-## Authenticate with a GitHub host
+### Authentication
 
-**Starting the setup process:**
-
-```sh
+```bash
 gh auth login
 ? What account do you want to log into? GitHub.com
 ? What is your preferred protocol for Git operations on this host? HTTPS
@@ -52,5 +40,5 @@ Press Enter to open github.com in your browser...
 
 ![Alt text](../../../img/image-5.png ':size=500')
 
-## References
+#### References
 * [**gh cli manual**](https://cli.github.com/manual/)

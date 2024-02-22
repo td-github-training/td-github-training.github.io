@@ -1,19 +1,35 @@
 # What is a Repository?
 
-A _repository_ is a centralized location that stores a collection of files along with their git history  
+A _repository_ is a centralized location that stores a collection of files along with their git history.
 
 ## Creating a repository
 
+Repositories are created in one of two ways depending on whether you are starting from scratch or from an existing repository.
+
 ### git init
 
-Repositories are created with git on the command line by using `git init`, for example:
+Creates a new local repository in the current directory.
 
-```sh
-git init new-repo
-Initialized empty Git repository in /home/me/practice-repo/.git/
+```bash
+git init 
+Initialized empty Git repository in /home/me/newrepo/.git/
+```
+
+### git init _repo_
+
+Creates a new local repository in the specified directory.
+
+```bash
+git init repo
+Initialized empty Git repository in /home/me/repo/.git/
 ```
 
 ### git clone
+
+```bash
+git clone
+Initialized empty Git repository in /home/me/repo/.git/
+```
 
 TODO: 
 
@@ -30,9 +46,11 @@ Your branch is up-to-date with 'origin/main'.
 nothing to commit, working tree clean
 ```
 
-Right now, we can see that we are on branch `main`, everything is up-to-date with `origin/main` and our working tree is clean.
+In the above example, we can see that we are on branch `main`, everything is up-to-date with `origin/main` and our working tree is clean.
 
 ## Configuration
+
+TODO: Add line ending configuration
 
 ### .gitignore
 

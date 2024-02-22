@@ -13,12 +13,13 @@
   - [Repositories](./docs/basic/git/repositories.md)
   - [Commits](./docs/basic/git/commits.md)
   - [Branches](./docs/basic/git/branches.md)
+  - [Tags](./docs/basic/git/tags.md)
   - [Exercises]()
-    - [Creating a Repo](./docs/basic/git/create_local_repo.md)
+    - [Creating a Repo](./docs/basic/git/exercises/create_local_repo.md)
     - [Versioning Files]()
     - [Fixing Mistakes]()
-    - [Navigating Branches](./docs/basic/git/forgot_to_branch.md)
-    - [Creating a .gitignore](./docs/basic/git/gitignore.md)
+    - [Navigating Branches](./docs/basic/git/exercises/forgot_to_branch.md)
+    - [Creating a .gitignore](./docs/basic/git/exercises/gitignore.md)
 
 - GitHub 101
   - [What is GitHub?](./docs/basic/github/github_101.md)

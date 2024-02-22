@@ -173,3 +173,17 @@ The GitHub flow is a lightweight workflow that allows developers to experiment w
 Here are some interesting things you can check out later:
 
 - *[guides.github.com/introduction/flow/](https://guides.github.com/introduction/flow/)* An interactive review of the GitHub Workflow. -->
+
+### When to use release branches
+
+Release branches are handy when your team struggles to maintain a healthy mainline. They help focus on bug fixes for production readiness.
+
+Best teams skip release branches for single-production products. Instead, they directly release commits from the mainline.
+
+Use release branches for managing multiple versions in production or when facing significant release process friction.
+
+They can act as a quarantine zone during approval delays. Streamline the release process where possible.
+
+Consider them as Environment Branches and understand the long-lived release branch variant.
+
+![alt text](../../../img/image-21.png)
