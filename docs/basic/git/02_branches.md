@@ -4,7 +4,7 @@ A Git branch represents an independent line of development within a project. Bra
 
 <center>
 
-![Alt text](img/image-2.png)
+![Alt text](../../../img/image-2.png)
 
 </center>
 
@@ -72,7 +72,7 @@ git merge <BRANCH-NAME>
 
 <center>
 
-![Alt text](img/image-13.png ':size=500')
+![Alt text](../../../img/image-13.png ':size=500')
 
 </center>
 

@@ -5,7 +5,7 @@
 
 <center>
 
-![Alt text](img/image-3.png)
+![Alt text](../../../img/image-3.png)
 
 </center>
 
@@ -13,21 +13,21 @@
 
 When you work locally, your files exist in one of four states. They are either untracked, modified, staged, or committed.
 
-![The Two Stage Commit - Part 1](./img/two-stage-commit-a.png ':size=400')
+![The Two Stage Commit - Part 1](../../../img/two-stage-commit-a.png ':size=400')
 
 An untracked file is a new file that has never been committed.
 
 Git tracks these files, and keeps track of your history by organizing your files and changes in three working trees. They are Working, Staging (also called Index), and History. When we are actively making changes to files, this is happening in the working tree.
 
-![The Two Stage Commit - Part 2](./img/two-stage-commit-b.png ':size=400')
+![The Two Stage Commit - Part 2](../../../img/two-stage-commit-b.png ':size=400')
 
 To add these files to version control, we use `git add`, which creates a collection of files that represent a discrete unit of work. We build this unit in the staging area.
 
-![The Two Stage Commit - Part 3](./img/two-stage-commit-c.png ':size=400')
+![The Two Stage Commit - Part 3](../../../img/two-stage-commit-c.png ':size=400')
 
 When we are satisfied with the unit of work we have assembled, we create a commit using `git commit`, which will take a snapshot of everything in the staging area.
 
-![The Two Stage Commit - Part 4](./img/two-stage-commit-d.png ':size=400') -->
+![The Two Stage Commit - Part 4](../../../img/two-stage-commit-d.png ':size=400') -->
 
 ## How commits are made
 
@@ -73,7 +73,7 @@ The diagram below shows how you can compare the content of your working area, st
 
 <center>
 
-![Git Diff Options](./img/diff-options.png ':size=500')
+![Git Diff Options](../../../img/diff-options.png ':size=500')
 
 </center>
 
@@ -122,7 +122,7 @@ Sometimes we are working on a branch, and we decide things aren't going quite li
 
 <center>
 
-![Git Reset Before and After](./img/reset-visual.png ':size=500')
+![Git Reset Before and After](../../../img/reset-visual.png ':size=500')
 
 </center>
 

@@ -60,7 +60,7 @@ If everything looks good we will start to merge!
 
 When you merge your branch, you are taking the content and history from your feature branch and adding it to the content and history of the `main` branch.
 
-![image](img/image-15.png)
+![image](../../../img/image-15.png)
 
 Many project teams have established rules about who should merge a pull request.
 
@@ -191,7 +191,7 @@ Now that you have made the requested changes, your pull request should be ready 
 
 When you merge your branch, you are taking the content and history from your feature branch and adding it to the content and history of the `main` branch.
 
-![Merging Pull Requests](./img/merging-prs.png)
+![Merging Pull Requests](../../../img/merging-prs.png)
 
 Many project teams have established rules about who should merge a pull request.
 
