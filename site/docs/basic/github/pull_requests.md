@@ -1,7 +1,98 @@
-# Pull Requests 
-PRs are used to propose changes to the git commit history. A pull request introduces an action that could address an Issue or other change. A Pull Request is considered a work in progress until it is merged into the target branch.
+# Pull Requests
 
-## Creating an Issue
+**Definition:** PRs are used to propose changes to the git commit history. A pull request introduces an action that could address an Issue or other change. A Pull Request is considered a work in progress until it is merged into the target branch.
+
+### Working on a PR means that:
+1. A developer works on their contribution in a fork (clone) of the central repository.
+2. Once finished, they create a PR to notify the appropriate teams of changes.
+3. Code review passes along with status checks before merging.
+4. Merge the PR
+
+**A few Considerations**
+- *PRs encourage wider code review adoption*.
+- *Continuous refinement through iteration is crucial and we do so with a Pull Request*.
+- *PRs are not the only means for code reviews, but are central to GitHub's review process*.
+
+**Benefits of Pull Requests:**
+
+- **Streamlined Collaboration:** PRs facilitate seamless collaboration where contributors can propose changes on their own branch, ensuring a clean and working history.
+
+- **Clear Communication:** Pull requests provide a structured platform for discussing proposed changes. Through comments and discussions within the pull request thread while the contributor can still push commits into the PR.
+
+- **Code Review:** PRs on GitHub are a helpful utility for code reviews. Before merging changes into the main repository, contributors submit their pull requests for review by codeowners for open-ended quality assurance.
+
+- **Automated Testing and CI/CD Integration:** GitHub integrates seamlessly with various continuous integration (CI) and continuous deployment (CD) tools, integrating with GitHub Actions for processes to run like linting, and status checks for test cases on the code that is pushed into a PR.
+
+- **Documentation and Visibility:** Pull requests serve as a valuable documentation tool, capturing the rationale behind code changes, discussions, and decisions made during the development process.
+
+
+
+Downsides of this workflow might be:
+- Pull requests introduce an additional step in the integration process.
+- Code review process can sometimes lead to delays.
+- Continuous integration may face challenges when PRs become a bottleneck.
+---
+
+PR Best Practices (PRBP's)
+===
+
+**Why Context on A Pull Request Matters**
+
+Context is the guiding light that allows developers to swiftly navigate pull requests. When it comes to enhancing both the speed and quality of pull-request reviews, there is a golden best practice: **provide as much upfront context as possible to the reviewer.**
+
+Consider these proven strategies for boosting pickup time:
+
+- **Estimated Review Time:** Labeling pull requests with an estimated review time (ETR) is a game-changer. Whether it's 5 minutes or 60, providing this insight empowers developers to work lean.
+  
+- **Risk Identification:** Differentiating between low-risk changes (e.g., Documentation or Test changes only) and high-risk changes (e.g., Core services, API Database, or Security) offers invaluable clarity.
+  
+- **Integration Links:** Including ticket or issue links alongside pull requests streamlines understanding and collaboration.
+  
+- **Test-Coverage Impact:** Highlighting test-coverage impact helps reviewers gauge the impact of proposed changes.
+
+So, what's the magic of adding an ETR to pull requests? It's simple: when developers know how long a review might take – whether it's a short 5 minutes or a more involved 60 – they're more likely to pick up the request promptly and complete their reviews efficiently.
+
+**The Psychology Behind Swift Reviews**
+
+Developers aren't just code machines; they're knowledge workers. By incorporating estimated review times, we cater to their cognitive biases. Here's why it works:
+
+- **Optimal Scheduling:** Knowing the expected review time allows reviewers to schedule their reviews strategically, minimizing interruptions and maximizing focus.
+  
+- **Avoiding Cognitive Reload:** Starting a review and then getting interrupted can lead to cognitive reload, forcing reviewers to start from scratch therefore prolonging the review process.
+  
+- **Maintaining Quality:** Rushing through a review due to time constraints can *compromise quality*. By providing clear expectations upfront, we mitigate the risk of rushed reviews and ensure thorough evaluations.
+
+### Improving Pull Request Clarity
+
+To enhance the **clarity** of pull requests, it's essential to provide a comprehensive checklist of relevant information regarding the proposed code changes. Instead of relying solely on a single-line summary, consider including details such as:
+
+-   **Bug Fix Description:** Explain how the bug was addressed and provide a description of the solution.
+
+-   **New Feature Summary:** Offer a summary or description of any new features being introduced.
+
+-   **Unit Test Coverage:** Outline the unit test cases covered to ensure code reliability.
+
+-   **Impact on Existing Functionalities:** Indicate whether the code changes have any impact on existing functionalities.
+
+-   **Testing Details:** Provide information about the testing procedures conducted.
+
+-   **Cross-Device and Browser Testing:** Specify whether the code was tested across different devices and browsers.
+
+These checklists can be automatically populated in the description field every time a new pull request is made through **PR Templates**!
+
+If your project repository is on GitHub, the name of the template and where it's located in your repository matters a lot. The template created as a Markdown file should be named `PULL_REQUEST_TEMPLATE.md` by default and placed in either the project's root folder, the `PULL_REQUEST_TEMPLATE` folder if you are saving multiple templates or the `.github` directory.
+
+Create a Markdown file, name it `PULL_REQUEST_TEMPLATE.md`, and place it in the project's root folder.
+
+![alt text](docs/img/image-20.png)
+
+*NOTE: Make sure to place the Markdown file within one of the previously mentioned locations and save and merge it with the same name.*
+
+Now, when you create a new pull request, you will see the template content automatically loaded into the description field as shown in the following image.
+
+![alt text](docs/img/image-19.png)
+
+<!-- ### Creating an Issue
 **1.** Navigate to the Issues tab
 
 **2.** Click on New Issue
@@ -120,7 +211,7 @@ If you type `git branch --all` you will probably see that even though you delete
 
 > Adding the `--merged` option to the `git branch` command allows you to see which branches **do not contain unique work** when compared to the checked out branch. In this case, since we are checked out to main, we will use this command to ensure all of the changes on our feature branch have been merged to production before we delete the branch.
 
-If you would like pruning of the remote tracking branches to be set as your default behavior when you pull, you can use the following configuration option: `git config --global fetch.prune true`.
+If you would like pruning of the remote tracking branches to be set as your default behavior when you pull, you can use the following configuration option: `git config --global fetch.prune true`. -->
 
 
 <!-- [include](07a_activity_create_pull_request.md ':include') -->

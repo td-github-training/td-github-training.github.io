@@ -1,45 +1,102 @@
-# Administration
+# GitHub's Learning Pathway for Enterpries Administration: 
+### [Essentials of administration and governance with GitHub Enterprise Cloud](https://resources.github.com/learn/pathways/administration-governance/essentials/administration-governance-github-enterprise-cloud/)
 
-## Protected branches & code owners
 
-In some workflows, you will want to protect critical branches to ensure the code being merged to those branches has passed the required checks and received appropriate peer review. There are several methods for this, including **protected branches** and **code owners**.
 
-### Protected branches
+## Enterprise Account Management
 
-Repository maintainers can prevent merges to specific branches that have not met predefined criteria. These criteria can include peer reviews, tests run by integrations such as a Continuous Integration services or code quality, or until a specific code owner has reviewed and approved changes.
 
-Let's enable protected branches:
+**Enterprise Accounts and Organizations:**  
+Enterprise accounts centralize policy and billing management for multiple GitHub.com organizations. Billing is managed at the enterprise level, with organization settings remaining read-only.
 
-1. Select the **Settings** tab.
-1. Select **Branches** from the menu on the left side of the screen.
-1. Click the **Add rule** button next to **Branch protection rules**.
-1. In the **Branch name pattern** text box type the name of the branch you would like to protect, for example, `main`.
-1. Click the **Create** button.
+**Continuity and Access:**  
+Ensure project accessibility by appointing multiple owners with appropriate permissions.
 
-Without checking any other options, basic branch protection prevents force-pushes and prevents it from being deleted. To learn more about the options available, check out [the documentation for this feature](https://help.github.com/articles/defining-the-mergeability-of-pull-requests/).
+**Best Practices for Enterprise Owners:**  
+Maintain lean organizational structures and appoint multiple owners for redundancy. Grant enterprise owners organization owner privileges for comprehensive control.
 
-> **Pro-tip:** You can use wildcards (`*`, `?`) and regular expressions to make a branch protection rule apply to multiple branches.  Check out the [branch protection documentation](https://help.github.com/en/articles/configuring-protected-branches) for more information on how wildcards and regular expression matching work.
+**Administrative Settings:**  
+Explore specific organization-level administrative settings for enhanced management efficiency and policy adherence.
 
-### Code owners
+In summary, efficient enterprise organization management is vital for seamless development operations. Adherence to best practices and utilization of available tools ensure streamlined processes.
 
-Repository maintainers can define exactly which people and teams need to review sets of changes by creating a **CODEOWNERS** file. For example, you could use CODEOWNERS to ensure:
+Understanding GitHub's Organizational Structure
+---
+![alt text](<img/Screenshot 2024-02-16 at 3.16.19 PM.png>)
 
-- your team's JavaScript expert reviews all files with a `.js` extension
-- your technical documentation team reviews all changes in the `docs/` folder
-- your security team reviews any new dependencies listed in the `package.json` file
+GitHub organizations were designed to keep companies separate, ensuring data privacy. However, when companies deploy GitHub Enterprise, they often misunderstand "organization" as synonymous with internal departments. The goal should be to consolidate all entities within one or two GitHub organizations.
 
-Let's create a CODEOWNERS file:
+### Guidance on consolidating organizations
+**Teams help create structure**
+- Teams facilitate communication and repository permissions within organizations. Leveraging nested teams enables representation of internal departments, promoting collaboration while maintaining a robust permissions model.
 
-1. Go out to the **Code** tab of your repository.
-1. Click the **Add file** drop down and then **Create new file**.
-1. In the **Name your file...** text box enter `CODEOWNERS` (no extension necessary). You can add this to a `.github/` directory if desired by entering `.github/CODEOWNERS`.
-1. On the first line, type `*          @YOUR_USERNAME`
-   - This means that you will be the default owner for everything in the repo, unless a later match takes preference.
-1. On the next line, type `*.js       @GITHUBTEACHER`
-   - Order is important. The last matching pattern for a given change takes precedence.
-1. Scroll down, and type a commit message into the **Commit new file** dialog box.
-1. Click the **Commit new file** button to save your changes.
-1. Now that you have created a CODEOWNERS file, go back to your branch protection settings and click the **Edit** button next to `main`.
-1. Under **Protect matching branches**, select the option to **Require pull request reviews before merging** and **Require review from Code Owners**. Remember to click **Save changes**.
+**Challenges of Multiple Organizations**
+- Communication barriers arise with multiple organizations, hindering team mentions and cross-team collaboration. 
+- Access to repositories becomes fragmented, discouraging collaboration and InnerSource practices.
+- Manual administration predominates in GitHub organizations, complicating policy management across multiple entities. Streamlining permissions and operational procedures becomes challenging, necessitating a more cohesive approach.
+- Managing permissions and onboarding/offboarding processes becomes cumbersome with multiple organizations. Efficient licensing management and monitoring of pay-per-use products are simplified with consolidated organizational structures.
 
-For more information on how to format the CODEOWNERS file, check out [the documentation](https://help.github.com/articles/about-codeowners/)
+<!-- 
+### Streamlining a Consolidation Process
+
+Empowering users to handle repository transfers and leveraging automation scripts expedites consolidation efforts. Strategic scoping and effective communication ensure a smooth transition.
+
+**Migrations: Planning and Execution**
+
+Meticulous planning and collaboration with developers are essential for successful migrations. Attention to detail is crucial, particularly for projects with intricate CI/CD integrations.
+
+**Conclusion**
+
+Consolidating organizations on GitHub demands strategic planning, effective communication, and meticulous execution. By adhering to best practices and leveraging available tools, developers can navigate the consolidation process efficiently. -->
+
+# Repo Admins:
+
+### Rolling Back Commits
+
+- Sometimes, it's necessary to undo changes made in commits. Git provides several methods for rolling back commits:
+
+### Reverting Commits
+
+- Use `git revert <commit>` to create a new commit that undoes the changes introduced by the specified commit.
+- This method keeps a record of the undo operation, preserving the history.
+
+### Resetting Commits
+
+- Use `git reset <commit>` to move the current branch to the specified commit.
+- Be cautious with this command as it can alter history. Use `--hard` to discard changes, `--soft` to keep changes staged, and `--mixed` to keep changes in the working directory.
+
+## Using Filter-Branch
+
+`git filter-branch` allows rewriting the repository history by applying custom filters. It's useful for tasks like removing sensitive data or reorganizing commits.
+
+### Example Usage
+
+- Remove a file from all commits: `git filter-branch --tree-filter 'rm -f <file>' HEAD`
+- Change author email in all commits: `git filter-branch --commit-filter 'if [ "$GIT_AUTHOR_EMAIL" = "old@email.com" ]; then GIT_AUTHOR_EMAIL="new@email.com"; fi; git commit-tree "$@"' HEAD`
+
+## Git Large File Storage (Git LFS)
+
+Git LFS is an extension for Git that deals with large files by storing them outside the repository, while still keeping track of their versions.
+
+### What is Git LFS (end-user)?
+
+- Git LFS allows seamless handling of large files (>100 MB) within Git repositories.
+- It replaces large files with tiny pointer files, reducing repository size and improving performance.
+- End-users can work with large files as if they were normal Git-managed files.
+
+### How to Setup Git LFS
+
+1. Install Git LFS by downloading the installer from the [Git LFS website](https://git-lfs.github.com/).
+2. Navigate to your Git repository and run `git lfs install` to initialize Git LFS.
+3. Track large files using `git lfs track <pattern>` where `<pattern>` is a wildcard pattern matching the large files.
+4. Commit and push changes as usual. Git LFS will handle large files transparently.
+
+## Secret Management
+
+Managing secrets, such as API keys or passwords, within a repository requires caution to prevent accidental exposure.
+
+### Best Practices
+
+- **Avoid storing secrets in code:** Instead, use environment variables or dedicated secret management tools.
+- **Encrypt secrets:** If storing secrets in the repository is unavoidable, encrypt them before committing.
+- **Restrict access:** Limit access to sensitive files using Git's access control features or repository hosting platform permissions.

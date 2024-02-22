@@ -104,3 +104,70 @@ eanu482 adding file 4
 Is the commit ID the same as the one you used in the cherry-pick command? Why or why not?
 
 !> Remember, when using any commands that change history, it's important to make these changes before pushing to GitHub. When you change a commit ID that has been pushed to the remote, you risk creating problems for your collaborators.
+
+Renaming a Branch
+-----------------
+
+You can effortlessly rename a local branch with just one command!
+
+### Step 1: Ensure You're in the Main Branch
+
+To confirm whether you're in the main branch, execute:
+
+`git status`
+
+If you're not in the main branch, switch to it using:
+
+`git switch main`
+
+### Step 2: Renaming the Branch
+
+Utilize the `-m` flag to rename the branch using the following syntax:
+
+`git branch -m old-branch new-branch`
+
+For example, to rename `test-branch` to `test-branch2`, execute:
+
+`git branch -m test-branch test-branch2`
+
+To view your new branch name, run:
+
+`git branch`
+
+This command will list all branches, including your newly renamed one.
+
+# Differences Between Git Tags and Branches
+
+Tags and branches serve different purposes in version control:
+
+- **Branches** are for ongoing development, such as adding new features or fixing bugs. They allow separate lines of development without impacting the main codebase. After completing work on a branch, changes can be merged back into the main codebase.
+
+- **Tags** mark specific points in the repository's history, indicating important milestones like releases. Unlike branches, tags are not intended for ongoing development but rather to reference specific points in the development timeline.
+
+### When to Use Branches
+
+- **Scenario:** Want to add a new feature or experiment without affecting the main codebase.
+- **Use:** Create a Git branch to isolate development work from the main codebase. Merge back into the main branch after completing and testing the feature.
+
+### When to Use Tags
+
+- **Scenario:** Ready to release a new software version to users.
+- **Use:** Apply a Git tag to mark the current state of the codebase as a new version release. Tag with a version number and brief description of changes for easy reference and rollback if needed.
+
+> Additionally, using tags and branches in **CI/CD Pipelines** help to keep development organized and efficient for streamlined collaboration, automated testing, CI/CD integration, documentation, and visibility.
+
+
+
+# When to Use Release Branches
+
+Release branches are handy when your team struggles to maintain a healthy mainline. They help focus on bug fixes for production readiness.
+
+Best teams skip release branches for single-production products. Instead, they directly release commits from the mainline.
+
+Use release branches for managing multiple versions in production or when facing significant release process friction.
+
+They can act as a quarantine zone during approval delays. Streamline the release process where possible.
+
+Consider them as Environment Branches and understand the long-lived release branch variant.
+
+![alt text](docs/img/image-21.png)
