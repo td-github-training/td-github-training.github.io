@@ -1,10 +1,10 @@
-## Git subtrees
+# Git subtrees
 
 Subtrees are a git tool for including the content of another repository as a dependency of your project. As an example, if you are working on a repository that would benefit from having the contents of another repository, subtrees might be the tool you need. Unlike submodules which require the use of a `.gitmodule` file to manage the inclusion of another repository in your repository, subtrees don't rely on external files to be managed.
 
-### Activity: Adding a subtree
+## Activity: Adding a subtree
 
-#### Setting up the empty repository for a subtree merge
+### Setting up the empty repository for a subtree merge
 
 1. Open your preferred command line tool.
 1. Create a new directory and navigate to it.
@@ -32,7 +32,7 @@ Subtrees are a git tool for including the content of another repository as a dep
     create mode 100644 .gitignore
    ```
 
-#### Adding a new repository as a subtree
+### Adding a new repository as a subtree
 
 1. Add a new remote URL pointing to the separate project that we're interested in.
 
@@ -82,7 +82,7 @@ Although we've only added one subproject, any number of subprojects can be incor
 
 ?> **Tip**: If you create a fresh clone of the repository in the future, the remotes you've added will not be created for you. You will have to add them again using [the `git remote add` command](https://docs.github.com/github/using-git/adding-a-remote).
 
-#### Synchronizing with updates and changes
+### Synchronizing with updates and changes
 
 When a subproject is added, it is not automatically kept in sync with the upstream changes. You will need to update the subproject with the following command:
 

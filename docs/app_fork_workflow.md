@@ -1,4 +1,4 @@
-## Fork and Pull Workflow
+# Fork and Pull Workflow
 
 Let's distinguish between a few vocabulary words in Git and discuss a common workflow that involves forking.
 

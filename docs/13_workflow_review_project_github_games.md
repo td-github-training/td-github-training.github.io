@@ -1,4 +1,4 @@
-## Project: GitHub Games
+# Project: GitHub Games
 
 In this section, we will work on a project repository called `github-games`.
 
@@ -6,7 +6,7 @@ A `github-games` repository has been created for you in the githubschool organiz
 
 If you're using the Fork and Pull Workflow, [don't forget to look in the appendix for a more thorough explanation](app_fork_workflow.md).
 
-### Workflow Review: Updating the README.md
+## Workflow Review: Updating the README.md
 
 Now you will practice the GitHub Flow from beginning to end by updating the link in the README to point to your fork of the repository.
 

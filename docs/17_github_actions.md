@@ -1,4 +1,4 @@
-## ![actions](img/actions.png ':size=5%') GitHub Actions
+# ![actions](img/actions.png ':size=5%') GitHub Actions
 
 Actions are sharable individual tasks that perform units of work; they allow you to automate and execute your software development workflows right in your repository.
 
@@ -15,7 +15,7 @@ Actions are sharable individual tasks that perform units of work; they allow you
 - In an open sourced public repository
 - [GitHub Marketplace](https://github.com/marketplace?type=actions)
 
-### How it works
+## How it works
 
 An **event** would _trigger_ a **workflow** which _uses_ an **action** to complete the job.
 

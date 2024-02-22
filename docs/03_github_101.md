@@ -1,4 +1,4 @@
-## What is GitHub?
+# What is GitHub?
 
 
 - Technology platform built on top of **Git**

@@ -2,31 +2,31 @@
 
 So far we have learned quite a few commands. Some, like the log commands, can be long and tedious to type. In this section, you will learn how to create custom shortcuts for Git commands.
 
-## Creating custom aliases
+# Creating custom aliases
 
 An alias allows you to type a shortened command to represent a long string on the command line.
 
 For example, let's create an alias for the log command we learned earlier.
 
-### Original command
+## Original command
 
 ```sh
 git log --oneline --graph --decorate --all
 ```
 
-### Creating the alias
+## Creating the alias
 
 ```sh
 git config --global alias.lol "log --oneline --graph --decorate --all"
 ```
 
-### Using the alias
+## Using the alias
 
 ```sh
 git lol
 ```
 
-## Explore other helpful aliases
+# Explore other helpful aliases
 
 Check out these resources for a list of common aliases:
 
@@ -38,7 +38,7 @@ We also encourage you to read through these three blog posts by GitHub developer
 - [Git Migrate](http://haacked.com/archive/2015/06/29/git-migrate/)
 - [Git Alias Open URL](http://haacked.com/archive/2017/01/04/git-alias-open-url/)
 
-### Example aliases
+## Example aliases
 
 To edit your global aliases manually, you can open the `.gitconfig` file with your default editor:
 

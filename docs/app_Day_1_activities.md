@@ -1,6 +1,6 @@
-## Day 1 Activities
+# Day 1 Activities
 
-### Add a new slide
+## Add a new slide
 
 Just like we did in class, open a new pull request adding a new slide to the deck.
 
@@ -41,7 +41,7 @@ Just like we did in class, open a new pull request adding a new slide to the dec
 In the body of the pull request, @ mention anyone you'd like to review your changes.
 1. Once the tests pass on your pull request, merge the pull request.
 
-### Add a caption to an existing slide
+## Add a caption to an existing slide
 
 Add a caption to an existing slide in someone else's pull request.
 
@@ -55,7 +55,7 @@ Add a caption to an existing slide in someone else's pull request.
     - If you are working locally, push the changes up to the remote: `git push`.
 1. Do not merge the pull request, simply `@` mention the user who opened the pull request to let them know about your changes.
 
-### Improve the `README.md`
+## Improve the `README.md`
 
 Improve our `README.md` by adding some of your favorite resources.
 
@@ -67,7 +67,7 @@ In the body of the pull request, with `base: main` and `compare: NEWBRANCHNAME`.
 1. `@` mention anyone you'd like to review your changes.
 1. Once the tests pass on your pull request, merge the pull request.
 
-### Restyle slides
+## Restyle slides
 
 If you'd like a more advanced challenge, and you have an eye for style, change the colors, font, and other aspects of the class slide deck. **Note: If multiple participants attempt this, there may be merge conflicts.**
 

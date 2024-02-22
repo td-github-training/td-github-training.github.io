@@ -1,4 +1,4 @@
-## What is a Branch?
+# What is a Branch?
 
 A Git branch represents an independent line of development within a project. Branches are lightweight, movable pointers to a specific commit, allowing developers to diverge from the main line of development and work on new features or bug fixes without affecting the main codebase. 
 
@@ -8,7 +8,7 @@ A Git branch represents an independent line of development within a project. Bra
 
 </center>
 
-### Viewing Branches
+## Viewing Branches
 
 Type `git branch --all` to see all the local branches, including the read-only copies of your remote branches (you can add the `--all` option or just `-a`).
 
@@ -22,18 +22,18 @@ git branch --all
 > The `--all` and `-a` are actually synonyms for the branch command. Git often provides a verbose and a short option.
 
 
-### Creating branches
+## Creating branches
 
 Type `git branch <name>` to create a new branch.
 
 
-### Switching branches
+## Switching branches
 
 `git switch` allows you to switch your current HEAD branch. 
 
 > It's relatively new (added in Git v2.23) and provides a simpler alternative to the classic "checkout" command.
 
-#### Usage Examples
+### Usage Examples
 
 The most common scenario is to simply specify the local branch you want to switch to:
 
@@ -56,17 +56,17 @@ $ git switch remote-branch
 This will not only create a local branch, but also set up a "tracking relationship" between the two branches, making sure that pulling and pushing will be as easy as "git pull" and "git push".
 
 
-## Integrating changes
+# Integrating changes
 
-### Merging Branches
+## Merging Branches
 The `git merge` command lets you take the commits(or changes) created on a git branch and integrate them into the target branch.
 
-##### For example:
+#### For example:
 ```sh
 git merge <BRANCH-NAME>
 ```
 
-### Cherry-Picking
+## Cherry-Picking
 
 **Cherry-picking** allows you to pick up a commit from your reflog or another branch of your project and move it to your current branch.
 

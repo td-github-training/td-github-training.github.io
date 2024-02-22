@@ -1,4 +1,4 @@
-## Fostering a participative culture
+# Fostering a participative culture
 
 Your project's presence on GitHub signals to others that you're invested in its success and that as a result they, too, can contribute to that success. Simply having your project on GitHub isn't the only way to promote collaboration, GitHub features multiple ways to reduce the "onboarding" for your repository. Even in enterprise situations, providing input on another team's repository can seem like a daunting task for veteran and first-day employees, so, use the power of GitHub to throw down a welcome mat and increase cross-team collaboration.
 
@@ -16,7 +16,7 @@ With an issue template, you take emptiness out of the equation and guide your us
 
 ![issue-template](https://user-images.githubusercontent.com/16547949/43394981-7ad62bea-93ca-11e8-9e65-c6a107611895.gif)
 
-### Group activity: make an issue template
+## Group activity: make an issue template
 
 GitHub supports multiple issue templates, so within our groups we are going to create a `bug`, `issue`, and `custom` template for issues created in our repository. While creating these issue templates, it is important to remember the GitHub Flow, so the template should be created on a branch, submitted as a pull request to receive feedback from the team, and merged into the `main` branch.
 
@@ -43,7 +43,7 @@ Share and receive feedback on the issue template from other class participants v
 
 [Source](https://help.github.com/articles/creating-issue-templates-for-your-repository/)
 
-### More collaboration tools
+## More collaboration tools
 
 Issue and pull request templates were mentioned as ways to improve the experience contributors have in your repository, but there are other GitHub features that can be helpful as well.
 
@@ -51,7 +51,7 @@ Issue and pull request templates were mentioned as ways to improve the experienc
 - **Contributing** provides an easily accessible description of how someone should contribute to a repository. This document is automatically linked to when an issue or pull request is opened.
 - **License** are _very_ important when a user considers open sourcing a project, although most internal projects might not need a license applied to them.
 
-### Individual activity: Repository labels
+## Individual activity: Repository labels
 
 In the `answer-this` repository, create a new label that can be applied to existing or future issues and pull requests. Some examples of labels that could be helpful include:
 

@@ -1,18 +1,18 @@
-## Cleaning out your loaner PC
+# Cleaning out your loaner PC
 
 If you borrowed a laptop or used a virtual machine for this class, you will want to clear out your configs and credentials before you give it back. Here's how:
 
-### Step 1: Clear your configs
+## Step 1: Clear your configs
 
 1. `git config --unset --global user.name`
 1. `git config --unset --global user.email`
 
-### Step 2: Clear your command line history
+## Step 2: Clear your command line history
 
 - **Bash:** `history -c && history -w && exit`
 - **Windows command prompt:** Alt+F7
 
-### Step 3: Clear the credential manager
+## Step 3: Clear the credential manager
 
 **For Windows:**
 

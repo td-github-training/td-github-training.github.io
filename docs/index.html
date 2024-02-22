@@ -34,10 +34,18 @@
       themeColor: '#0366d6',
       paths: 'auto',
       noCompileLinks: ['book.pdf'],
-      maxLevel: 4,
+      maxLevel: 0,
+      subMaxLevel: 2,
 
       // PLUGIN SETTINGS
       // -----------------------------------------------------------------
+      // Search Plugin Configuration
+      search: {
+        placeholder: 'Type to search',
+        noData: 'No matches found.',
+        // Headline depth, 1 - 6
+        depth: 4,
+      },
       pagination: {
         previousText: 'PREV',
         nextText: 'NEXT',
@@ -59,6 +67,7 @@
               localStorage.setItem("dark_mode", darkModeSwitch.checked ? "true" : "false")
             })
             next(html);
+
           });
         },
 
@@ -72,7 +81,7 @@
               'primaryColor': '#24ae1dff',
             };
             for (let i = 0; i < node.length; i++) {
-              import(`./src/quizzes/${node[i].firstElementChild.id}`).then(module => {
+              import(`./quizzes/${node[i].firstElementChild.id}`).then(module => {
                 const { rawQuizdown } = module;
                 quizdown.createApp(rawQuizdown, node[i], config);
               }).catch(error => {

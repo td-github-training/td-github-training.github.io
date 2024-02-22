@@ -1,4 +1,4 @@
-## Add the Git branch to your terminal prompt
+# Add the Git branch to your terminal prompt
 
 To show your active Git branch in your terminal prompt, you will need to do the following:
 
@@ -6,7 +6,7 @@ To show your active Git branch in your terminal prompt, you will need to do the 
 - If you are on **Linux**, you will add the code shown below to your `.bashrc` file.
 - If you are on **Windows**, you probably aren't reading this because Windows provides this behavior by default.
 
-### The script
+## The script
 
 ```shell
 parse_git_branch() {

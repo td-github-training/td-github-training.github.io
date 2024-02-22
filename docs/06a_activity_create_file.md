@@ -1,4 +1,4 @@
-### Activity: Edit Your File
+## Activity: Edit Your File
 
 Now it is time to put an image and a caption into your file:
 

@@ -1,6 +1,6 @@
-### Activity: Use GitHub Actions to automate releases
+## Activity: Use GitHub Actions to automate releases
 
-#### Add an Action to your repository from the Marketplace
+### Add an Action to your repository from the Marketplace
 
 ![actions-workflow-image](https://user-images.githubusercontent.com/6351798/82076100-8b096480-969a-11ea-95bc-ad25920867d9.png)
 
@@ -36,7 +36,7 @@
          - 'patch'
      default: patch
    template: |
-     ## Changes
+     # Changes
 
      $CHANGES
    ```
@@ -77,7 +77,7 @@
 
 > NOTE: Before triggering the action, ensure you already have an existing release in your repository.
 
-#### Trigger the Action
+### Trigger the Action
 
 1. Let's add a Release before we introduce new changes, we can name this Release `v0.0.1`.
 1. Since the **Configuration file** contains `chore` as a label in your releases, let's go ahead and add a label called `chore`.
@@ -101,13 +101,13 @@
 
    ![actions-run](img/actions-run.png)
 
-#### Congratulations 🎉
+### Congratulations 🎉
 
 Head over to **Releases** and marvel at the outcome:
 
 ![release](img/release-actions.png ':size=600')
 
-#### Keep on practicing
+### Keep on practicing
 
 - Edit the Configuration file to your liking and run your Action again
 - Try out other Actions in the [Marketplace](https://github.com/marketplace?type=actions)

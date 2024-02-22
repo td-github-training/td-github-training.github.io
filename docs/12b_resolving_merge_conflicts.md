@@ -1,4 +1,4 @@
-### Resolving a merge conflict
+## Resolving a merge conflict
 
 Let's try to create a merge conflict, and fix it together. You and a partner will each create separate branches, create a file with the same name, and then try to merge. The first will merge cleanly, the second will have a merge conflict. Work together to resolve the merge conflict.
 
@@ -15,7 +15,7 @@ Let's try to create a merge conflict, and fix it together. You and a partner wil
     1. Push the feature branch up to the remote, and see the resolution in the pull request.
 1. Merge the pull request.
 
-### Resolving a Merge Conflict (practice alone)
+## Resolving a Merge Conflict (practice alone)
 
 If it's difficult to practice with a partner, you can do that by alone by following below.
 

@@ -1,4 +1,4 @@
-## Commit signature verification
+# Commit signature verification
 
 Verifying the authenticity of the source of commits submitted to your repository might be important to you and your team. GitHub supports methods of ensuring that the author of the commit in a pull request was actually created from a trusted source. Commit signature verification is a cryptographically verifiable method of ensuring that commits coming from Mona Lisa are in fact coming from Mona Lisa.
 
@@ -8,7 +8,7 @@ Signed commits can be created by implementing a GPG or S/MIME signature that is 
 
 An unsigned commit on the local downstream repo will not display the "Verified" tag in the GitHub interface. Any commits made directly on the GitHub interface will automatically include the "Verified" tag.
 
-### Activity: Generate a new GPG key
+## Activity: Generate a new GPG key
 
 > **Note:** Before generating a new GPG key, make sure you have verified your email address. If you haven't verified your email address, you won't be able to sign commits and tags with GPG.
 
@@ -44,7 +44,7 @@ An unsigned commit on the local downstream repo will not display the "Verified" 
 
 1. Copy your GPG key, beginning with `----BEGIN PGP PUBLIC KEY BLOCK----` and ending with `----END PGP PUBLIC KEY BLOCK----`. You will use this value to add the GPG key to your GitHub account.
 
-### Activity: Add a GPG key to your GitHub account
+## Activity: Add a GPG key to your GitHub account
 
 1. On the GitHub site, click your profile photo in the top right corner and select **Settings**.
 1. In the user setting sidebar, click **SSH and GPG keys**.
@@ -56,7 +56,7 @@ An unsigned commit on the local downstream repo will not display the "Verified" 
 1. Click **Add GPG key**.
 1. To confirm the action, enter your GitHub password.
 
-### Activity: Tell Git about your signing key
+## Activity: Tell Git about your signing key
 
 1. Open your preferred command line application.
 1. Enter the following command to list the GPG keys that have both a public and private key:
@@ -72,7 +72,7 @@ An unsigned commit on the local downstream repo will not display the "Verified" 
     git config --global user.signingkey GPG_key_ID
     ```
 
-### Activity: Signing commits with your signing key
+## Activity: Signing commits with your signing key
 
 1. On your computer, navigate to the `github-games` repository you cloned before.
 1. Create a new branch named `add-author` by entering:

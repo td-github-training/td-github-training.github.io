@@ -1,24 +1,24 @@
-## Merge strategies: Rebase
+# Merge strategies: Rebase
 
 In this section, we will discuss another popular merge strategy, rebasing.
 
-### Understanding Git merge strategies
+## Understanding Git merge strategies
 
 Git uses three primary merge strategies:
 
-#### Recursive
+### Recursive
 
 A recursive merge means that changes have been made on both the base branch and the feature branch and git needs to recursively combine them. With a recursive merge, a new "merge commit" is made to mark the point in time when the two branches came together. This merge commit is used the most often when you click `merge` on a pull request.
 
-#### Fast-forward
+### Fast-forward
 
 A fast-forward merge assumes that no changes have been made on the base branch since the feature branch was created. This means that the branch pointer for base can simply be "fast forwarded" to point to the same commit as the feature branch.
 
-#### Octopus
+### Octopus
 
 A merge of 3 or more branches is an octopus merge. This will also create a merge commit with multiple parents.
 
-### About Git rebase
+## About Git rebase
 
 `git rebase` should be used with purpose, as it will be rewriting the history of commits on a repository.
 
@@ -35,13 +35,13 @@ Typically, you would use `git rebase -i` to:
 - Combine multiple commits into one
 - Delete or revert commits that are no longer necessary
 
-### Creating a linear history with `git rebase`
+## Creating a linear history with `git rebase`
 
 One of the most common uses of rebase is to eliminate recursive merges and create a linear history.
 
 ![Git Rebase](./img/git-rebase.png)
 
-#### Setup
+### Setup
 
 1. First, switch back to the `main` branch: `git switch main`
 1. Find the SHA of the initial commit: `git log --oneline`
@@ -53,7 +53,7 @@ One of the most common uses of rebase is to eliminate recursive merges and creat
 1. Look at your history: `git log --oneline --graph --decorate --all`
 1. If you merged now, it would be a recursive merge.
 
-#### Begin the rebase
+### Begin the rebase
 
 1. Switch to the `rebase-me` branch: `git switch rebase-me`
 1. Start the merge: `git rebase -i main`
@@ -63,7 +63,7 @@ One of the most common uses of rebase is to eliminate recursive merges and creat
 1. Take another look at your history: `git log --oneline --graph --decorate --all`
 1. If you merged now, it would be a fast-forward merge.
 
-#### Finish the merge
+### Finish the merge
 
 1. Switch to main, the branch you will merge into: `git switch main`
 1. Merge your changes in to main: `git merge rebase-me`

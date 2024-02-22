@@ -1,6 +1,6 @@
-## Exercise: Creating a `.gitignore` file
+# Exercise: Creating a `.gitignore` file
 
-#### Ignore files for a single repository
+### Ignore files for a single repository
 
 1. In your Terminal or Git Bash, `cd` to a repository of interest and create a `.gitignore` file:
 
@@ -23,7 +23,7 @@
    git commit -m "add gitignore file"
    ```
 
-#### Ignore files for all repositories on your local machine
+### Ignore files for all repositories on your local machine
 
 1. You can also create a global `.gitignore` file to define a list of rules for ignoring files in every local Git repository.
 

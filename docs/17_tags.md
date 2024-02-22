@@ -1,4 +1,4 @@
-## What is a Tag?
+# What is a Tag?
 
 A tag is a pointer that points to a specific commit. Git tags are of two variants, an _annotated tag_ and a _lightweight tag_. An annotated tag is an immutable object unlike a lightweight tag which is mutable. Let's practice a bit with tags.
 

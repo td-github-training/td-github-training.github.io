@@ -1,4 +1,4 @@
-## What is a Repository?
+# What is a Repository?
 
 A repository is the most basic element of GitHub. It is easiest to imagine as a project's folder. However, unlike an ordinary folder on your laptop, a GitHub repository offers simple yet powerful tools for collaborating with others.
 
@@ -24,7 +24,7 @@ Kanban style boards that all you to visualize your work. Projects can be created
 
 Wikis are to communicate project details, display user documentation, or almost anything your heart desires. GitHub utilizes git to help keep track of the edits to the Wiki in version control.
 
-### Files to keep in Your GitHub Repository as a best practice:
+## Files to keep in Your GitHub Repository as a best practice:
 
 - **README.md**
     - File that should live in your repositories contents. GitHub looks for this file and helpfully displays it below the repository. The README can explain the project and point readers to helpful information within the project.
@@ -35,9 +35,9 @@ Wikis are to communicate project details, display user documentation, or almost 
 
 ---
 
-### Creating Repositories
+## Creating Repositories
 
-#### GitHub Web
+### GitHub Web
 
 - New Repository
 	- Initialize repo using GitHub.com UI
@@ -47,7 +47,7 @@ Wikis are to communicate project details, display user documentation, or almost 
 	- Create repo using GitHub.com UI
 	- Follow instructions on GitHub.com to push existing repo
 
-#### GitHub CLI
+### GitHub CLI
 
 - Existing source code via GitHub CLI
 	- Initialize repo locally

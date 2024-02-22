@@ -1,8 +1,8 @@
-## GitHub events
+# GitHub events
 
 As well as spreading organically by colleagues working together, learning spreads by organized events. Not every event is a great fit for every organization. Below, we'll explore some different types of events, and then plan one that might work for your organization.
 
-### GitHub workshop
+## GitHub workshop
 
 Workshops are hands-on, GitHub focused gatherings accessible to people of all experience levels. The timing of a workshop may range from 45 minutes to several hours. Workshops can include presentations from those already using GitHub about their experiences, but almost always include Learning Lab.
 
@@ -14,7 +14,7 @@ We recommend having a brief presentation at the beginning of the workshop, along
 
 Since this requires a lot of hardware to be successful, make sure you consider the technical limitations of the space (Wi-Fi, power outlets, tables, etc.).
 
-### Office hours
+## Office hours
 
 Office hours can serve as a drop-in way for anyone within your organization to ask their burning Git and GitHub questions. Office hours can be in person, physically at a particular office, but they can also be remote.
 
@@ -22,7 +22,7 @@ Office hours can serve as a drop-in way for anyone within your organization to a
 
 Remote office hours allow people from any location to call in and ask their questions in a low-pressure environment. We find remote office hours to be most successful when they're scheduled in advance, in a time that is amiable to all employees, and communicated thoroughly.
 
-### Lunch & learn
+## Lunch & learn
 
 A "lunch & learn," or sometimes called a "brown bag" event focuses around a presentation at mealtime. Lunch & learns can have an interactive element, but since they normally occur while eating lunch, they're most commonly presentations.
 
@@ -30,7 +30,7 @@ A "lunch & learn," or sometimes called a "brown bag" event focuses around a pres
 
 "Lunch & learn" presentations can range from very specific technical topics to broad, highly approachable topics. Depending on the culture (and lunchroom layout) of your organization, you may find that the broader presentations work better. As with the workshops, lunch & learns are a place to grow excitement and enthusiasm, and to introduce GitHub to those who may not already be familiar.
 
-### Formal training
+## Formal training
 
 Formal training is an immersive way to learn and practice Git and GitHub. However, formal training requires a large investment from all parties involved. We typically recommend a two-day training, which can be too much time away from a desk for some teams.
 
@@ -38,11 +38,11 @@ Formal training is an immersive way to learn and practice Git and GitHub. Howeve
 
 If you think that formal training would be a good option for some teams within your organization, you may want to reach out to us for help on delivering the training or helping you learn how to deliver training.
 
-#### Question and answer session
+### Question and answer session
 
 The Question and Answer session is one of the easier events to plan as it can be provided as a regularly scheduled event where members across the organization can "call in" and ask Git and GitHub questions. Additionally, the Q&A session brings awareness within the organization on whom to go to when there is a question relating to Git and GitHub.
 
-##### Event preparation
+#### Event preparation
 
 Your facilitator will partner with you to lead a Q&A session. The question and answer session should be available as both an in-person and remote engagement. An invitation to the event should be forwarded to individuals within the organization to provide them an opportunity to ask any Git and GitHub-related questions they have. The following text can be used in the event invitation:
 
@@ -54,7 +54,7 @@ Your facilitator will partner with you to lead a Q&A session. The question and a
 
 > Our organization has been using Git and GitHub for a while now, but we want to mature our development operations and want to provide you resources on how to effectively use GitHub within your team and the organization as a whole. Join us for a question and answer session led by our internal GitHub experts.
 
-##### Questions to kick off a session
+#### Questions to kick off a session
 
 During times when no one is asking questions, use the following:
 

@@ -1,4 +1,4 @@
-## Git stash
+# Git stash
 
 Git stash takes the changes you have made to your working tree ("dirty") and puts them in a holding pattern until you are ready to re-apply them, so you have a fresh working directory ("clean").
 
@@ -12,13 +12,13 @@ When these scenarios happen, figuring out what to do with your in-progress work 
 
 There are different solutions to these problems, but this section is going to review the use of `git stash` to store changes you have made in the event that you do not want to commit them to the project's history.
 
-### How to use `git stash`
+## How to use `git stash`
 
 The `git stash` command enables you to store changes that live in the working directory (unstaged changes) and staging area (staged changes) for later use. These stored changes, like the `reflog`, are only reflected on your *local copy* of the repository. The latest stash is stored in `refs/stash` and older stashes are found in the `reflog` of that reference.
 
 You can have multiple stashes, and they can be referenced by specifying the stash index, or they can be named using `reflog` syntax (example: `stash@{2.hours.ago}`). You can also add a descriptive message to stashes with `git stash save "message"`. Once you are ready to retrieve those changes, you can apply and delete them with `git pop` or apply and continue to store them with `git stash apply`.
 
-#### Commands
+### Commands
 
 - `git stash`
   - Use this when you want to record the current working state, but want a clean working directory

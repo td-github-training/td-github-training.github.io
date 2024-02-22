@@ -1,7 +1,7 @@
-## Pull Requests 
+# Pull Requests 
 PRs are used to propose changes to the git commit history. A pull request introduces an action that could address an Issue or other change. A Pull Request is considered a work in progress until it is merged into the target branch.
 
-### Creating an Issue
+## Creating an Issue
 **1.** Navigate to the Issues tab
 
 **2.** Click on New Issue
@@ -17,7 +17,7 @@ PRs are used to propose changes to the git commit history. A pull request introd
 
 **7.** Submit the issue
 
-### Working on the Issue on GitHub
+## Working on the Issue on GitHub
 **1.** On your new issue under "Development", click `create a branch`
 
 **2.** Click on the README.md file on your new branch
@@ -29,7 +29,7 @@ PRs are used to propose changes to the git commit history. A pull request introd
 **5.** Commit directly to your branch
 
 
-### Creating a Pull Request
+## Creating a Pull Request
 Now that you have started to change your file, you will open a pull request to discuss the file with your team mates. Follow these steps to create a Pull Request in the class repository:
 
 **1.** Click the *Pull Request* tab.
@@ -56,7 +56,7 @@ Now that you have started to change your file, you will open a pull request to d
 
 If everything looks good we will start to merge!
 
-### Merging Your Pull Request
+## Merging Your Pull Request
 
 When you merge your branch, you are taking the content and history from your feature branch and adding it to the content and history of the `main` branch.
 
@@ -74,7 +74,7 @@ Many project teams have established rules about who should merge a pull request.
 - **Squash and merge:** This option will take all of the commits on your branch and compress them into a single commit. The commit messages will be preserved in the extended commit message for the commit, but the individual commits will be lost.
 - **Rebase and merge:** This option will take all of the commits and replay them as if they just happened. This allows GitHub to perform a fast forward merge (and avoids the addition of the merge commit).
 
-#### Let's take a look at how you can merge the pull request.
+### Let's take a look at how you can merge the pull request.
 
 **1.** Navigate to your Pull Request (HINT: Use the Author or Assignee drop downs to find your Pull Request quickly)
 
@@ -88,7 +88,7 @@ Many project teams have established rules about who should merge a pull request.
 > Your issue will be closed through the link created with the `fixes` keyword.
 
 
-### Updating Your Local Git Repository
+## Updating Your Local Git Repository
 
 When you merged your Pull Request, you deleted the branch on GitHub, but this will not automatically update your local copy of the repository. Let's go back to our command line application and get everything in sync.
 
@@ -101,7 +101,7 @@ First, we need to get the changes we made on GitHub into our local copy of the r
 > `git pull` is a combination command that retrieves all of the changes from GitHub and then updates the branch you are currently on to include the changes from the remote. The two separate commands being run are `git fetch` and `git merge`. `git fetch` is a primary command used to download contents from a remote repository, and `git merge` joins two or more development histories together.
 
 
-### Cleaning Up the Unneeded Branches
+## Cleaning Up the Unneeded Branches
 
 If you type `git branch --all` you will probably see that even though you deleted your branch on the remote, it is still listed in your local copy of the repository, both as a local branch and as a read-only remote tracking branch. 
 
@@ -125,39 +125,39 @@ If you would like pruning of the remote tracking branches to be set as your defa
 
 <!-- [include](07a_activity_create_pull_request.md ':include') -->
 <!-- 
-### Exploring a pull request -->
+## Exploring a pull request -->
 
 <!-- Now that we have created a Pull Request, let's explore a few of the features that make Pull Requests the center of collaboration:
 
-#### ![octicon-comment-discussion] Conversation tab
+### ![octicon-comment-discussion] Conversation tab
 
 Similar to the discussion thread on an Issue, a Pull Request contains a discussion about the changes being made to the repository. This discussion is found in the **Conversation** tab and also includes a record of all the commits made on the branch as well as assignments, labels and reviews that have been applied to the pull request.
 
-#### ![octicon-git-commit] Commits tab
+### ![octicon-git-commit] Commits tab
 
 The **Commits** tab contains more detailed information about who has made changes to the files. Clicking each commit ID will allow you to see the changes applied in that specific commit.
 
-#### ![octicon-diff] Files changed tab
+### ![octicon-diff] Files changed tab
 
 The **Files changed** tab allows you to see cumulative effect of all the changes made on the branch. We call this the `diff`. Our diff isn't very interesting yet, but as we make changes your diff will become very colorful.
 
-### Code review in pull requests
+## Code review in pull requests
 
 To provide feedback on proposed changes, GitHub offers three levels of commenting:
 
-#### General conversation
+### General conversation
 
 You can provide general comments on the Pull Request within the **Conversation** tab.
 
-#### Line comments
+### Line comments
 
 In the **Files changed** tab, you can hover over a line to see a blue ![`+`][octicon-diff-added] icon. Clicking this icon will allow you to enter a comment on a specific line. These line level comments are a great way to give additional context on recommended changes. They will also be displayed in the **Conversation** tab.
 
-#### Review
+### Review
 
 When you are making line comments, you can also choose to **Start a Review**. When you create a review, you can group many line comments together with a general message: Comments, Approve, or Request Changes. Reviews have special power in GitHub when used in conjunction with protected branches.
 
-### Activity: Code review
+## Activity: Code review
 
 One of the best ways to ensure code quality is to make peer reviews a part of every Pull Request. Let's review your partner's code now:
 
@@ -183,11 +183,11 @@ One of the best ways to ensure code quality is to make peer reviews a part of ev
 
 ---
 
-## Merging pull requests
+# Merging pull requests
 
 Now that you have made the requested changes, your pull request should be ready to merge.
 
-### Merge explained
+## Merge explained
 
 When you merge your branch, you are taking the content and history from your feature branch and adding it to the content and history of the `main` branch.
 
@@ -201,7 +201,7 @@ Many project teams have established rules about who should merge a pull request.
 
 This is a discussion you should have with the other members of your team.
 
-### Merging your pull request
+## Merging your pull request
 
 Let's take a look at how you can merge the pull request:
 
@@ -228,5 +228,3 @@ GitHub offers three different merge strategies for pull requests:
 - **Rebase and merge**
 
   This option will take all the commits and replay them as if they just happened. This allows GitHub to perform a fast-forward merge (and avoids the addition of the merge commit). -->
-
-

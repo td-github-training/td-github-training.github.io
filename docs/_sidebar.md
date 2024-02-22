@@ -15,8 +15,8 @@
   - [Branches](02_branches.md)
   - [Configuration](02_configuration.md)
   - [Exercise: Creating a Repo](18_create_local_repo.md)
-  - [Exercise: Versioning Files](TBD.md)
-  - [Exercise: Fixing Mistakes](TBD.md)
+  - [Exercise: Versioning Files]()
+  - [Exercise: Fixing Mistakes]()
   - [Exercise: Navigating Branches](19_forgot_to_branch.md)
   - [Exercise: Creating a .gitignore](02_gitignore.md)
 

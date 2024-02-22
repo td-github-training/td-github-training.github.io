@@ -1,4 +1,4 @@
-## Case studies
+# Case studies
 
 While starting something new at an organization always has unique challenges, there are likely others in similar fields who can offer their expertise. Let's learn from the experience of others.
 
@@ -15,9 +15,9 @@ Each topic has a list of resources (articles, white papers, videos, etc.) and a 
 1. First, we'll each get to know the available resources and respond to issue prompts individually. You won't have time to get through every resource, and that's OK.
 1. Then, as a group, we'll discuss the prompts. Most importantly, we'll discuss how the information is useful within your organization.
 
-### Topic Focus: Creating an innersource culture
+## Topic Focus: Creating an innersource culture
 
-#### Resources
+### Resources
 
 - [InnerSource Fundamentals course on GitHub Learning Lab](https://lab.github.com/githubtraining/innersource-fundamentals)
 - [Innersource commons](https://paypal.github.io/InnerSourceCommons/)
@@ -29,7 +29,7 @@ Each topic has a list of resources (articles, white papers, videos, etc.) and a 
 - [Tools as a catalyst for culture change](https://www.youtube.com/watch?v=kb2VRTeWG5Y) video, 40 minutes
 - [Global software development with InnerSource](https://www.youtube.com/watch?v=64gaATwzXvE) video, 31 minutes
 
-#### Prompts
+### Prompts
 
 - What do you think are the biggest challenges of innersource?
 - Have you seen innersource concepts at your organization already? If so, how did they come about, and how was the team affected? If not, what are some instances where innersource concepts could have improved an outcome?
@@ -39,9 +39,9 @@ Each topic has a list of resources (articles, white papers, videos, etc.) and a 
 - How do you think innersource as cultural change intersects with new tools, like GitHub?
 - What problems do you think many of your colleagues face that could be alleviated by adopting innersource collaboration?
 
-### Topic Focus: Leadership as an internal stakeholder
+## Topic Focus: Leadership as an internal stakeholder
 
-#### Resources
+### Resources
 
 - [4 user adoption strategies to help employees embrace new tech](https://highfive.com/blog/4-user-adoption-strategies-help-employees-embrace-new-tech/)
 - [User adoption methodology](https://www.randgroup.com/about/methodology/user-adoption-methodology/)
@@ -57,7 +57,7 @@ Each topic has a list of resources (articles, white papers, videos, etc.) and a 
 - [The emotionally fit leader](https://www.youtube.com/watch?v=YA0Cgjca_EE) video, 33 minutes
 - [Transformative changes in challenging times](https://www.youtube.com/watch?v=wtSSM6xvTzI) video, 23 minutes
 
-#### Prompts
+### Prompts
 
 - How are you a leader in your current role?
 - How can you become more of a leader in your current role?
@@ -71,9 +71,9 @@ Each topic has a list of resources (articles, white papers, videos, etc.) and a 
 - What are some examples of change or transition within your organization? How can you learn from those examples when moving forward change in the future?
 - What are the social aspects involved in transition? How can these social aspects negatively or positively influence a transition or change?
 
-### Topic Focus: Open source for enterprises
+## Topic Focus: Open source for enterprises
 
-#### Resources
+### Resources
 
 - [Case studies from being a maintainer](https://github.community/t5/Studies-in-Community/bg-p/StudiesinCommunity)
 - Resources from [The Todo group](https://todogroup.org/)
@@ -91,7 +91,7 @@ Each topic has a list of resources (articles, white papers, videos, etc.) and a 
 - [The power of the Open Source community](https://www.youtube.com/watch?v=TlQcwNnqpnE) video, 27 minutes
 - [Git much? The Top 10 companies contributing to Open Source](https://resources.whitesourcesoftware.com/blog-whitesource/git-much-the-top-10-companies-contributing-to-open-source)
 
-#### Prompts
+### Prompts
 
 - How have you experienced Open Source software as a user, contributor, or maintainer?
 - What do you think most people don't know, but should, about Open Source software?
@@ -102,9 +102,9 @@ Each topic has a list of resources (articles, white papers, videos, etc.) and a 
 - Do you think your organization has any products which would be good candidates for becoming Open Source software? If not, why not? If so, what are the qualities of those products which make them good candidates?
 - What questions do you have about Open Source software?
 
-### Topic Focus: Teaching Git & GitHub
+## Topic Focus: Teaching Git & GitHub
 
-#### Resources
+### Resources
 
 - [Characteristics of a good teacher](https://owlcation.com/academia/Characteristics-Of-A-Good-Teacher)
 - [GitHub best practices](app_github-best-practices.md)
@@ -127,7 +127,7 @@ Each topic has a list of resources (articles, white papers, videos, etc.) and a 
 - [Teaching GitHub Flow with LEGO and Arduino](https://www.youtube.com/watch?v=bUxXjfmUDYs) video, 25 minutes
 - [Git tips and tricks](https://www.youtube.com/watch?v=moDdhDxzg2k) video, 25 minutes
 
-#### Prompts
+### Prompts
 
 - What was the hardest thing about learning Git and GitHub for you?
 - How have good teachers influenced your life? Think beyond school.
@@ -141,9 +141,9 @@ Each topic has a list of resources (articles, white papers, videos, etc.) and a 
 - What are the biggest challenges when teaching? Are those specific to Git and GitHub? Are they specific to you or your organization?
 - How could you have benefited from more Git and GitHub learning opportunities? How could your colleagues benefit?
 
-### Topic Focus: GitHub workflow success stories
+## Topic Focus: GitHub workflow success stories
 
-#### Resources
+### Resources
 
 - [GitHub at SAP](https://enterprise.github.com/case-studies/sap)
 - [Regulated industries, limitless possibilities](https://www.youtube.com/watch?v=vZI9d2hFpLc) video, 40 minutes
@@ -159,7 +159,7 @@ Each topic has a list of resources (articles, white papers, videos, etc.) and a 
 - [Using Git in a team: A cheatsheet](https://jameschambers.co/writing/git-team-workflow-cheatsheet/)
 - [How we use GitHub to manage change in software engineering teams](https://blog.newrelic.com/2015/07/28/github-engineering-culture/)
 
-#### Prompts
+### Prompts
 
 - What workflows are currently in use within your organization? Do you think they're the most beneficial workflows? If yes, what can be shared with other teams? If not, what could be improved?
 - Do you think a workflow should be stipulated for your entire organization? Why or why not?

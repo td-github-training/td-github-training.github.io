@@ -1,6 +1,6 @@
-## How to generate Jekyll sites locally
+# How to generate Jekyll sites locally
 
-### Before you begin
+## Before you begin
 
 The repositories we use in class are deployed using GitHub Pages, so you don't _need_ to do any local serving. But, if you'd like to see what your changes look like locally before they actually are pushed to the default branch, you can.
 
@@ -11,7 +11,7 @@ This script uses Ruby. If you don't already have Ruby installed locally, you sho
 - On Windows, you can do so from <https://rubyinstaller.org,> select version `2.3.3`, ensure you select to "Add Ruby executables to your PATH" during setup, and restart your machine.
 - If you need to install Ruby on a Mac, install [Homebrew](https://brew.sh) and then run `brew install ruby`.
 
-### Generating locally
+## Generating locally
 
 1. Using a Bash-like terminal, `cd` to the class repository locally.
 1. Check that Ruby is installed.

@@ -1,13 +1,13 @@
-## Day 2 activities
+# Day 2 activities
 
-### Merge conflict practice
+## Merge conflict practice
 
 Depending on how you're interacting with this manual, you may be in a class. The instructor may have set up a repository for you to practice merge conflicts. If this is the case:
 
 - _Every person_ has their own repository. Each person should fix the merge conflicts in their own repo. It will be called `github.com/githubschool/conflict-practice-USERNAME`, with username being your actual username.
 - We won't make you turn in your homework, but we will run a script to see if the activities are completed later. :wink:
 
-### Work to resolve the merge conflicts in the conflicts repository
+## Work to resolve the merge conflicts in the conflicts repository
 
 1. Find your repository. It will be at `github.com/githubschool/conflict-practice-USERNAME`, where your username is replacing the word USERNAME.
 1. In your repository, navigate to the **Pull Requests** tab.
@@ -17,7 +17,7 @@ Depending on how you're interacting with this manual, you may be in a class. The
     - Updates to game manual
 1. View the pull request, and follow the steps to resolve the merge conflicts. When the merge conflict is resolved, merge the pull request.
 
-### Refresher: Fixing a merge conflict locally
+## Refresher: Fixing a merge conflict locally
 
 We've learned a lot! Try resolving the conflicts yourself first. If you need extra assistance, use these instructions.
 
@@ -45,7 +45,7 @@ We've learned a lot! Try resolving the conflicts yourself first. If you need ext
 
     `git push`
 
-### Multiple conflict markers in "Minor CSS fixes"
+## Multiple conflict markers in "Minor CSS fixes"
 
 In some cases, you may notice multiple conflict markers. When these appear, it is either because:
 
@@ -113,7 +113,7 @@ Regardless of the reason, it's up to you to resolve it as a steward of this proj
     }
     ```
 
-### The different types of merge conflicts in "Updates to game manual"
+## The different types of merge conflicts in "Updates to game manual"
 
 Not every conflict deals with content. For example, in the pull request "Updates to game manual", you can see content-type conflicts, but something new as well:
 

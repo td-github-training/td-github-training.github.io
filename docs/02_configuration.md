@@ -1,4 +1,4 @@
-## Configuring Git
+# Configuring Git
 
 Git allows you to set configuration options at three different levels.
 

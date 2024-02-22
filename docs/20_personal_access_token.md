@@ -1,10 +1,10 @@
-## Interacting with SSO-enabled organizations
+# Interacting with SSO-enabled organizations
 
 If the repositories you interact with daily are contained in an organization that enforces SSO you might encounter difficulty working with those repositories when trying to perform Git operations like `clone`, `pull`, and `push`. This issue can be remedied by creating a personal access token (PAT) for use with your GitHub account.
 
 > **Note:** While personal access tokens have multiple uses, this is the most common reason to create one.
 
-### Creating a PAT on GitHub.com
+## Creating a PAT on GitHub.com
 
 1. Access your account [Settings](https://github.com/settings/profile) page.
 1. On the Settings page, click **Developer settings**.
@@ -17,7 +17,7 @@ If the repositories you interact with daily are contained in an organization tha
 
 > **Note:** Read this for more information about [OAuth scopes](https://docs.github.com/apps/building-oauth-apps/scopes-for-oauth-apps/).
 
-### Using your new PAT
+## Using your new PAT
 
 1. Interact with a repository that belongs to an organization with SSO enabled.
 1. After performing a Git operation that prompts you to sign in, such as `git push`, sign in with your username and instead of entering your normal password, use the PAT value from the PAT you created above.

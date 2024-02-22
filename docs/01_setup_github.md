@@ -1,4 +1,4 @@
-## Setting up GitHub
+# Setting up GitHub
 
 For this class, we will use a public account on GitHub.com
 
@@ -13,7 +13,7 @@ If you already have an account, verify that you can visit `github.com` within yo
 
 ---
 
-### Setting up GitHub CLI
+## Setting up GitHub CLI
 
 Adding the GitHub CLI to your workflow can help you:
 - View, create, clone, and fork repositories
@@ -25,11 +25,11 @@ Adding the GitHub CLI to your workflow can help you:
 - List, create, delete, and connect to a codespace
 - Retrieve information from the GitHub API
 
-#### Installation
+## Installation
 
 Follow the installation instructions, here: [**gh cli installation instructions**](https://github.com/cli/cli#installation) 
 
-#### Authenticate with a GitHub host
+## Authenticate with a GitHub host
 
 **Starting the setup process:**
 
@@ -52,5 +52,5 @@ Press Enter to open github.com in your browser...
 
 ![Alt text](docs/img/image-5.png ':size=500')
 
-#### References
+## References
 * [**gh cli manual**](https://cli.github.com/manual/)

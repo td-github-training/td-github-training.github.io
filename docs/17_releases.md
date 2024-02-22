@@ -1,8 +1,8 @@
-## What is a Release?
+# What is a Release?
 
 Releases are a GitHub feature that allow you to add an executable to the tag for easier access by visitors who just want to download and install your software. Releases are tags, because they point to a specific commit and can be named like any other tag. However, releases can also include attached binaries.
 
-### Add a release to GitHub Games
+## Add a release to GitHub Games
 
 1. On GitHub, navigate to the **Code** tab of the repository.
 1. Under your repository name, click Releases.

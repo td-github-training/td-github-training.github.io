@@ -1,20 +1,20 @@
-## Git LFS (Large File Storage)
+# Git LFS (Large File Storage)
 
 While Git is a great version control system when used for non-binary files, it can sometimes struggle with binary files. One of the best ways to store binary files with the rest of your repository files is by using Git Large File Storage (LFS). Git LFS replaces large files such as audio samples, videos, datasets, and graphics with a SHA-256 hash pointer known as OID, short for Object ID inside Git, while storing the file contents on a remote server like GitHub.com or a GitHub Enterprise Server instance.
 
 > **Note:** The following activities utilize the [githubschool/lfs-example](https://github.com/githubschool/lfs-example) repository, to follow along with the activities, you will need to Fork the repository to your account.
 
-### Background story
+## Background story
 
 ACME Incorporated is planning on using Toggl for time tracking and are using this repository to provide information on how to use Toggl and download the desktop application that has passed the IT Security team's audit.
 
 Unfortunately, the `.dmg` file was added to the Git repository without using Git LFS, and we need to fix that mistake. Perform the steps found in the upcoming sections to successfully retain the `.dmg` file in the project but utilizing Git LFS to maintain it in the project.
 
-### Activity: Install Git LFS
+## Activity: Install Git LFS
 
 Before we can begin using Git LFS, we need to install it on our local machine. Below are the steps for installing Git LFS on your machine based on your operating system.
 
-#### macOS
+### macOS
 
 1. Navigate to [git-lfs.github.com](https://git-lfs.github.com/) and click **Download**. Alternatively, you can install Git LFS using a package manager:
 
@@ -48,7 +48,7 @@ Before we can begin using Git LFS, we need to install it on our local machine. B
     git lfs install
     ```
 
-#### Windows
+### Windows
 
 1. Navigate to [git-lfs.github.com](https://git-lfs.github.com/) and click **Download**.
 
@@ -66,11 +66,11 @@ Before we can begin using Git LFS, we need to install it on our local machine. B
     git lfs install
     ```
 
-## Tracking files with Git LFS
+# Tracking files with Git LFS
 
 Before we tell Git LFS what files to track, we should identify what files are taking up the most space in our repository.
 
-### Activity: Exploring the repository files
+## Activity: Exploring the repository files
 
 1. Open your command line application.
 1. Change your current working directory to the `lfs-example` repository.
@@ -115,7 +115,7 @@ Before we tell Git LFS what files to track, we should identify what files are ta
 
 Now that we have identified the file that needs to be tracked with Git LFS it is time to import it into Git LFS and automatically fix the existing history of the project.
 
-### Activity: Migrating the file to Git LFS
+## Activity: Migrating the file to Git LFS
 
 1. Convert all DMG files in every local branch:
 

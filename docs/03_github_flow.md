@@ -1,8 +1,8 @@
-## Understanding the GitHub flow
+# Understanding the GitHub flow
 
 In this section, we discuss the collaborative workflow enabled by GitHub.
 
-### The essential GitHub workflow
+## The essential GitHub workflow
 
 ![GitHub Workflow](./img/github-workflow.png)
 
@@ -18,7 +18,7 @@ When you are ready to start a discussion about your changes, you will open a pul
 
 When the changes contained in the pull request are approved, the feature branch is merged onto the main branch. In the next section, you will learn how to put this GitHub workflow into practice.
 
-### Exploring
+## Exploring
 
 Here are some interesting things you can check out later:
 
