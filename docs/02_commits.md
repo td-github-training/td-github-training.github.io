@@ -5,7 +5,7 @@
 
 <center>
 
-![Alt text](docs/img/image-3.png)
+![Alt text](img/image-3.png)
 
 </center>
 

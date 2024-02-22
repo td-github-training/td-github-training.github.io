@@ -9,7 +9,7 @@ PRs are used to propose changes to the git commit history. A pull request introd
 **3.** Get started with the Error Issue Template which will have prompts
 
 **4.** Copy the below formatting:
-> <img width="1253" alt="Screenshot 2024-01-26 at 1 35 22 PM" src="docs/img/image-14.png">
+> <img width="1253" alt="Screenshot 2024-01-26 at 1 35 22 PM" src="img/image-14.png">
 
 **5.** Assign Yourself to the issue
 
@@ -60,7 +60,7 @@ If everything looks good we will start to merge!
 
 When you merge your branch, you are taking the content and history from your feature branch and adding it to the content and history of the `main` branch.
 
-![image](docs/img/image-15.png)
+![image](img/image-15.png)
 
 Many project teams have established rules about who should merge a pull request.
 

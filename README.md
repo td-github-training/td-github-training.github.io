@@ -35,7 +35,7 @@ The repository includes a `.devcontainer` which makes editing the documentation 
 
 When you first open the workspace, you should get the following pop-up:
 
-![Dev Container Pop-up](docs/img/image.png)
+![Dev Container Pop-up](img/devcontainer.png)
 
 Select `Reopen in Container`.
 
@@ -47,7 +47,7 @@ The workspace's `.vscode/settings.json` includes the following setting, which al
 
 ```json
     "markdown.copyFiles.destination": {
-        "**/*": "docs/img/"
+        "**/*": "img/"
     }
 ```
 

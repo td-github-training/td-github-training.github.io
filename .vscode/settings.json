@@ -21,6 +21,6 @@
     "peacock.color": "#dd923d",
     "peacock.remoteColor": "#7ef102",
     "markdown.copyFiles.destination": {
-        "**/*": "docs/img/"
+        "**/*": "img/"
     }
 }

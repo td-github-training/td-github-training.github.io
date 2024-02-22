@@ -13,4 +13,4 @@
   - **Projects**
 
 
-<img src="docs/img/image-7.png" alt="code" width="720"/>
+<img src="img/image-7.png" alt="code" width="720"/>
