@@ -1,37 +1,8 @@
 # What is a Commit?
 
-* A commit captures a snapshot of the changes made to the files in a project at a specific point in time
-* Each commit also contains the commit ID of its parent commit
+A commit captures a snapshot of the changes made to the files in a project at a specific point in time
 
-<center>
-
-![Alt text](../../../img/image-3.png)
-
-</center>
-
-<!-- ## The two stage commit
-
-When you work locally, your files exist in one of four states. They are either untracked, modified, staged, or committed.
-
-![The Two Stage Commit - Part 1](../../../img/two-stage-commit-a.png ':size=400')
-
-An untracked file is a new file that has never been committed.
-
-Git tracks these files, and keeps track of your history by organizing your files and changes in three working trees. They are Working, Staging (also called Index), and History. When we are actively making changes to files, this is happening in the working tree.
-
-![The Two Stage Commit - Part 2](../../../img/two-stage-commit-b.png ':size=400')
-
-To add these files to version control, we use `git add`, which creates a collection of files that represent a discrete unit of work. We build this unit in the staging area.
-
-![The Two Stage Commit - Part 3](../../../img/two-stage-commit-c.png ':size=400')
-
-When we are satisfied with the unit of work we have assembled, we create a commit using `git commit`, which will take a snapshot of everything in the staging area.
-
-![The Two Stage Commit - Part 4](../../../img/two-stage-commit-d.png ':size=400') -->
-
-## How commits are made
-
-Every commit in Git is a **snapshot** of the project at that point in time and will contain:
+Every commit in Git is a **snapshot** of the project at that point in time and contains:
 
 - Pointers to the current objects in the repository
 - Commit author and email (from your config settings)
@@ -40,18 +11,35 @@ Every commit in Git is a **snapshot** of the project at that point in time and w
 
 The four commands copy files between the working directory, the stage (also called the index), and the history (in the form of commits).
 
-- `git add` files copies files (at their current state) to the stage.
-- `git commit - m "Commit message"` saves a snapshot of the stage as a commit with its message.
-- `git reset` -- files unstages files; that is, it copies files from the latest commit to the stage. Use this command to "undo" a git add files. You can also git reset to unstage everything.
-- `git checkout` -- files copies files from the stage to the working directory. Use this to throw away local changes
+## Saving changes
 
-## Viewing commit history
+### git add
+
+`git add` files copies files (at their current state) to the stage.
+
+### git commit
+
+`git commit -m "Commit message"` saves a snapshot of the stage as a commit with its message.
+
+## Syncing changes
+
+Git provides three primary ways for syncing changes between local and remote repositories:
+
+### git push
+
+- `git push` Uploads local repository content to a remote repository.
+
+### git pull
+- `git pull` Fetches and downloads content from a remote repository and immediately updates the local repository to match that content.
+
+### git fetch
+- `git fetch` Downloads remote content without altering the state of the local repository, allowing for checking changes before merging them into the local branch.
+
+## Viewing history
+
+### git log
 
 When you clone a repository, you receive the history of all the commits made in that repository. The log command allows us to view that history on our local machine.
-
-Let's take a look at some option switches you can use to customize your view of the project history. You can find these options, and many more, on [git-scm.com](https://git-scm.com/docs/git-log). 
-
-> **Note:** `--graph` is default on most Git Bash for Windows terminals.
 
 ```sh
 git log
@@ -63,9 +51,7 @@ git log --stat
 git log --patch
 ```
 
-> Use the up and down arrows or press enter to view additional log entries. Type `q` to quit viewing the log and return to the command prompt.
-
-## Viewing local changes
+### git diff
 
 `git diff` allows you to see the difference between any two refs in the repository. 
 
@@ -99,24 +85,9 @@ git diff 2710 b745
 > 
 > The final example shows how to compare two commits based on their commit hashes.  This exact command will not work for everyone since the commits in your own repository will have different hashes.
 
-# Fixing mistakes
+## Fixing mistakes
 
-`git commit --amend` allows us to make changes to the commit that HEAD is currently pointing to. 
-
-Two of the most common uses are:
-- Re-writing commit messages
-- Adding files to the commit
-
-## Reverting commits
-
-`git revert` is used to create a new commit that undoes the changes made in a previous commit.
-
-It's useful for fixing mistakes and for safely removing changes without rewriting the project's history. 
-
-
-# Rewriting history 
-
-## Git reset
+### git reset
 
 Sometimes we are working on a branch, and we decide things aren't going quite like we had planned. We want to reset some, or even all, of our files to look like what they were at a different point in history.
 
@@ -132,7 +103,7 @@ The `git reset` command has three modes, and they allow us to change some or all
 
 It also helps to know what branches technically are: each is a pointer, or reference, to the latest commit in a line of work. As we add new commits, the currently checked-out branch "moves forward," so that it always points to the most recent commit.
 
-### Reset modes
+#### Reset modes
 
 The three modes for git reset are: `--soft`, `--mixed`, and `--hard`. For these examples, assume that we have a "clean" working directory, i.e. there are no uncommitted changes.
 
@@ -140,7 +111,25 @@ The three modes for git reset are: `--soft`, `--mixed`, and `--hard`. For these 
 - `git reset --mixed <SHA>` makes the current branch *and* the staging area look like the `<SHA>` snapshot. *This is the default mode:* if you don't include a mode flag, Git will assume you want to do a `--mixed` reset. `--mixed` is useful if you want to keep all of your changes in the working directory, but change whether and how you commit those changes.
 - `git reset --hard <SHA>` is the most drastic option. With this, Git will make all 3 snapshots, the current branch, the staging area, *and* your working directory, look like they did at `<other-commit>`. This can be dangerous! We've assumed so far that our working directory is clean. If it is not, and you have uncommitted changes, `git reset --hard` will *delete all of those changes*. Even with a clean working directory, use `--hard` only if you're sure you want to completely undo earlier changes.
 
-## Git rebase
+### git checkout
+
+-- files copies files from the stage to the working directory. Use this to throw away local changes
+
+### git commit --amend
+
+`git commit --amend` allows us to make changes to the commit that HEAD is currently pointing to. 
+
+Two of the most common uses are:
+- Re-writing commit messages
+- Adding files to the commit
+
+### git revert
+
+`git revert` is used to create a new commit that undoes the changes made in a previous commit.
+
+It's useful for fixing mistakes and for safely removing changes without rewriting the project's history. 
+
+### git rebase
 
 Reordering commit history with `git rebase -i` is a powerful way to clean up your project's timeline. 
 
@@ -203,7 +192,9 @@ Here's how to do it:
 
 Remember to use `git rebase -i` with care, especially when working with branches that others might be using, as it rewrites commit history[1][2][4].
 
-## Does 'gone' really mean gone?
+### git reflog
+
+#### Does 'gone' really mean gone?
 
 The answer: It depends!
 
@@ -218,10 +209,30 @@ The reflog is a record of every place HEAD has been. In a few minutes we will se
 
 > Sometimes, you'll want to save your work in a commit without having to think of a commit message, or before you're ready to organize your changes. If that's the case, you can create aliases to create "save points". See the appendix with aliases to learn how!
 
-# Syncing Changes
 
-Git provides three primary ways for syncing changes between local and remote repositories:
 
-- `git push` Uploads local repository content to a remote repository.
-- `git pull` Fetches and downloads content from a remote repository and immediately updates the local repository to match that content.
-- `git fetch` Downloads remote content without altering the state of the local repository, allowing for checking changes before merging them into the local branch.
+## The two stage commit
+
+When you work locally, your files exist in one of four states. They are either untracked, modified, staged, or committed.
+
+![The Two Stage Commit - Part 1](../../../img/two-stage-commit-a.png ':size=400')
+
+An untracked file is a new file that has never been committed.
+
+Git tracks these files, and keeps track of your history by organizing your files and changes in three working trees. They are Working, Staging (also called Index), and History. When we are actively making changes to files, this is happening in the working tree.
+
+![The Two Stage Commit - Part 2](../../../img/two-stage-commit-b.png ':size=400')
+
+To add these files to version control, we use `git add`, which creates a collection of files that represent a discrete unit of work. We build this unit in the staging area.
+
+![The Two Stage Commit - Part 3](../../../img/two-stage-commit-c.png ':size=400')
+
+When we are satisfied with the unit of work we have assembled, we create a commit using `git commit`, which will take a snapshot of everything in the staging area.
+
+![The Two Stage Commit - Part 4](../../../img/two-stage-commit-d.png ':size=400')
+
+<center>
+
+![Alt text](../../../img/image-3.png)
+
+</center>

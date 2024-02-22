@@ -7,29 +7,32 @@ In GitHub, you will use issues to record and discuss ideas, enhancements, tasks,
 - Creating a single, comprehensive record of how and why you made certain decisions.
 - Allowing you to easily pull the right people into a conversation with @ mentions and team mentions.
 
-<!-- [include](02a_activity_create_github_issue.md ':include') -->
-<p align="center">
-  <img src="img/issue-tasks-progress-reduced-motion-d920d5bbc273.png" alt="code" width="440"/>
-</p>
+## Creating an issue
 
-[GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/quickstart-for-projects) and Issues
----
-<p align="center">
-  <img src="img/ezgif-5-f7a61cf113.jpg" alt="code" width="600"/>
-</p>
+Follow these steps to create an issue in the class repository:
 
-GitHub Projects allow teams to organize their work into boards, where issues represent tasks, bugs, features, or enhancements. Each card on the board typically corresponds to an issue, providing a visual representation of the project's progress.
+1. Click the **Issues** tab.
+1. Click **New Issue**.
+1. Type the following in the Subject line: `YOUR-USERNAME Workflow`
+1. In the body of the issue, include the text below:
+
+   ```md
+   YOUR-USERNAME will update a file by replacing a caption.
+
+   - [ ] Create a branch
+   - [ ] Edit the file
+   - [ ] Commit the changes
+   - [ ] Create a Pull Request
+   - [ ] Request a Review
+   - [ ] Make more changes
+   - [ ] Get an approval
+   - [ ] Merge the Pull Request
+   ```
+
+1. Click the *Submit new issue* button to open your issue.
 
 
-#### Features of GitHub Projects with Issues:
-- Tailor your project's table/board layout, and include statuses of tasks that are then automatically tracked on GitHub through Todo-InProgress-Done status 
-
-- Save different tabs to navigate to specific project aspects of interest, facilitating seamless workflow management.
-   
-- Open draft issues directly from your project table or board to integrate new tasks seamlessly.
-
-## How to write effective GitHub Issues
-
+## Best practices
 
 ### Avoid Duplication
 
@@ -52,7 +55,7 @@ While some issues may be complex, particularly with significant feature requests
 
 **Markdown** is a simple way to style text on GitHub, making well-formatted issues easier to read and understand.
 
-#### Writing and Formatting Markdown
+### Writing and Formatting Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling all forms of writing on the GitHub platform. [Learn more about Markdown](https://guides.github.com/features/mastering-markdown/).
 
@@ -74,6 +77,3 @@ Avoid hypothetical scenarios unless backed by a genuine need, reinforcing the us
 When logging a bug, provide **clear** instructions to reproduce it. Simplify the steps and verify their reliability.
 
 Be precise in instructions; for example, instead of "enter text in the search input," specify the exact text causing the error.
-
-
-> Many GitHub projects also offer [issue templates!](https://github.com/stevemao/github-issue-templates)

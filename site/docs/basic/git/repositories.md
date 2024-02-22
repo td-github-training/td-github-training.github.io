@@ -1,9 +1,10 @@
 # What is a Repository?
 
-* A centralized location that stores a collection of files along with their git history  
-* Each developer maintains a local copy of the entire git repository
+A _repository_ is a centralized location that stores a collection of files along with their git history  
 
-### Creating a Repository
+## Creating a repository
+
+### git init
 
 Repositories are created with git on the command line by using `git init`, for example:
 
@@ -12,7 +13,13 @@ git init new-repo
 Initialized empty Git repository in /home/me/practice-repo/.git/
 ```
 
-### Repository Status
+### git clone
+
+TODO: 
+
+## Using a repository
+
+### git status
 
 To verify the current state of your repository type: `git status`
 
@@ -25,9 +32,9 @@ nothing to commit, working tree clean
 
 Right now, we can see that we are on branch `main`, everything is up-to-date with `origin/main` and our working tree is clean.
 
----
+## Configuration
 
-## Ignoring Files
+### .gitignore
 
 A `.gitignore` file in your repository stores names and file types. This file and its contents instruct Git to stop tracking changes of certain files, which means that these files will not be pushed to GitHub from your local.
 
@@ -38,6 +45,6 @@ A `.gitignore` file in your repository stores names and file types. This file an
 1. Log files, e.g. `*.log`
 1. Build files, e.g. `Build/*`
 
-### Links  
+#### Links  
 - Collection of .gitignore templates from GitHub: [github/gitignore repository](https://github.com/github/gitignore)
 - Collection of .gitignore templates from toptal: [gitignore.io](https://www.toptal.com/developers/gitignore) 

@@ -1,5 +1,6 @@
-Git-flow vs GitHub-flow
-=======================
+# Workflows
+
+## Git-flow vs GitHub-flow
 
 A list of requirements:
 
@@ -7,9 +8,6 @@ A list of requirements:
 -   Every change must have been reviewed before being deployed.
 -   Every change must have passed our automated checks before being deployed.
 -   Every change must have been verified by QA staff before being deployed.
-
-Recap on git-flow and GitHub-flow
----------------------------------
 
 ### git-flow Structure
 See: [A Successful Git Branching Model](https://nvie.com/posts/a-successful-git-branching-model/) (original article)

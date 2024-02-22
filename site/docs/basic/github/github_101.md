@@ -3,7 +3,7 @@
 <!-- <img src="docs/img/image-16.png" alt="code" width="300"/> -->
 
 <p align="center">
-  <img src="docs/img/image-16.png" alt="code" width="300"/>
+  <img src="../../../img/image-16.png" alt="code" width="300"/>
 </p>
 
 
@@ -20,4 +20,4 @@
   - **Projects**
 
 
-<img src="img/image-7.png" alt="code" width="720"/>
+<img src="../../../img/image-7.png" alt="code" width="720"/>

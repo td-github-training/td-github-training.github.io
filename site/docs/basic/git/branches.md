@@ -8,7 +8,13 @@ A Git branch represents an independent line of development within a project. Bra
 
 </center>
 
-## Viewing Branches
+## Creating branches
+
+### git branch
+
+Type `git branch <name>` to create a new branch.
+
+### git branch --all
 
 Type `git branch --all` to see all the local branches, including the read-only copies of your remote branches (you can add the `--all` option or just `-a`).
 
@@ -21,19 +27,13 @@ git branch --all
 
 > The `--all` and `-a` are actually synonyms for the branch command. Git often provides a verbose and a short option.
 
-
-## Creating branches
-
-Type `git branch <name>` to create a new branch.
-
-
 ## Switching branches
+
+### git switch
 
 `git switch` allows you to switch your current HEAD branch. 
 
 > It's relatively new (added in Git v2.23) and provides a simpler alternative to the classic "checkout" command.
-
-### Usage Examples
 
 The most common scenario is to simply specify the local branch you want to switch to:
 
@@ -55,18 +55,29 @@ $ git switch remote-branch
 
 This will not only create a local branch, but also set up a "tracking relationship" between the two branches, making sure that pulling and pushing will be as easy as "git pull" and "git push".
 
+## Renaming branches
 
-# Integrating changes
+### git branch -m
 
-## Merging Branches
+Utilize the `-m` flag to rename the branch using the following syntax:
+
+`git branch -m old-branch new-branch`
+
+For example, to rename `test-branch` to `test-branch2`, execute:
+
+`git branch -m test-branch test-branch2`
+
+## Integrating changes
+
+### git merge
+
 The `git merge` command lets you take the commits(or changes) created on a git branch and integrate them into the target branch.
 
 #### For example:
 ```sh
 git merge <BRANCH-NAME>
 ```
-
-## Cherry-Picking
+### git cherry-pick
 
 **Cherry-picking** allows you to pick up a commit from your reflog or another branch of your project and move it to your current branch.
 
@@ -105,38 +116,8 @@ Is the commit ID the same as the one you used in the cherry-pick command? Why or
 
 !> Remember, when using any commands that change history, it's important to make these changes before pushing to GitHub. When you change a commit ID that has been pushed to the remote, you risk creating problems for your collaborators.
 
-Renaming a Branch
------------------
 
-You can effortlessly rename a local branch with just one command!
-
-### Step 1: Ensure You're in the Main Branch
-
-To confirm whether you're in the main branch, execute:
-
-`git status`
-
-If you're not in the main branch, switch to it using:
-
-`git switch main`
-
-### Step 2: Renaming the Branch
-
-Utilize the `-m` flag to rename the branch using the following syntax:
-
-`git branch -m old-branch new-branch`
-
-For example, to rename `test-branch` to `test-branch2`, execute:
-
-`git branch -m test-branch test-branch2`
-
-To view your new branch name, run:
-
-`git branch`
-
-This command will list all branches, including your newly renamed one.
-
-# Differences Between Git Tags and Branches
+## Tagging branches
 
 Tags and branches serve different purposes in version control:
 
@@ -144,21 +125,19 @@ Tags and branches serve different purposes in version control:
 
 - **Tags** mark specific points in the repository's history, indicating important milestones like releases. Unlike branches, tags are not intended for ongoing development but rather to reference specific points in the development timeline.
 
-### When to Use Branches
+### When to use branches
 
 - **Scenario:** Want to add a new feature or experiment without affecting the main codebase.
 - **Use:** Create a Git branch to isolate development work from the main codebase. Merge back into the main branch after completing and testing the feature.
 
-### When to Use Tags
+### When to use tags
 
 - **Scenario:** Ready to release a new software version to users.
 - **Use:** Apply a Git tag to mark the current state of the codebase as a new version release. Tag with a version number and brief description of changes for easy reference and rollback if needed.
 
 > Additionally, using tags and branches in **CI/CD Pipelines** help to keep development organized and efficient for streamlined collaboration, automated testing, CI/CD integration, documentation, and visibility.
 
-
-
-# When to Use Release Branches
+### When to use release branches
 
 Release branches are handy when your team struggles to maintain a healthy mainline. They help focus on bug fixes for production readiness.
 
@@ -170,4 +149,4 @@ They can act as a quarantine zone during approval delays. Streamline the release
 
 Consider them as Environment Branches and understand the long-lived release branch variant.
 
-![alt text](docs/img/image-21.png)
+![alt text](../../../img/image-21.png)
