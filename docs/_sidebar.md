@@ -5,47 +5,47 @@
   ><i class="fas fa-moon"></i></div>
 
 - Getting Started
-  - [Setting up Git](01_setup_git.md)
-  - [Setting up GitHub](01_setup_github.md)
+  - [Setting up Git](./getting-started/01_setup_git.md)
+  - [Setting up GitHub](./getting-started/01_setup_github.md)
 
 - Git 101
-  - [What is Git?](02_git_101.md)
-  - [Repositories](02_repositories.md)
-  - [Commits](02_commits.md)
-  - [Branches](02_branches.md)
-  - [Configuration](02_configuration.md)
-  - [Exercise: Creating a Repo](18_create_local_repo.md)
+  - [What is Git?](./basic/git/02_git_101.md)
+  - [Repositories](./basic/git/02_repositories.md)
+  - [Commits](./basic/git/02_commits.md)
+  - [Branches](./basic/git/02_branches.md)
+  - [Configuration](./basic/git/02_configuration.md)
+  - [Exercise: Creating a Repo](./basic/git/18_create_local_repo.md)
   - [Exercise: Versioning Files]()
   - [Exercise: Fixing Mistakes]()
-  - [Exercise: Navigating Branches](19_forgot_to_branch.md)
-  - [Exercise: Creating a .gitignore](02_gitignore.md)
+  - [Exercise: Navigating Branches](./basic/git/19_forgot_to_branch.md)
+  - [Exercise: Creating a .gitignore](./basic/git/02_gitignore.md)
 
 - GitHub 101
-  - [What is GitHub?](03_github_101.md)
-  - [Repositories](03_repositories.md)
-  - [Pull Requests](03_pull_requests.md)
-  - [Issues](03_issues.md)
-  - [Workflows](03_github_flow.md)
-  - [Markdown](03_markdown.md)
-  - [Administration](03_administration.md)
-  - [Exercise: Creating a Repo](03_repositories.md)
-  - [Exercise: Creating a PR](03_pull_requests.md)
-  - [Exercise: Creating an Issue](03_issues.md)
+  - [What is GitHub?](./basic/github/03_github_101.md)
+  - [Repositories](./basic/github/03_repositories.md)
+  - [Pull Requests](./basic/github/03_pull_requests.md)
+  - [Issues](./basic/github/03_issues.md)
+  - [Workflows](./basic/github/03_github_flow.md)
+  - [Markdown](./basic/github/03_markdown.md)
+  - [Administration](./basic/github/03_administration.md)
+  - [Exercise: Creating a Repo](./basic/github/03_repositories.md)
+  - [Exercise: Creating a PR](./basic/github/03_pull_requests.md)
+  - [Exercise: Creating an Issue](./basic/github/03_issues.md)
 
 - Advanced Topics
   - **Git**
-    - [Git Stash](25_git_stash.md)
-    - [Git Tags](17_tags.md)
-    - [Git Bisect](14_git_bisect.md)
-    - [Git LFS](26_git_lfs.md)
-    - [Git aliases](app_aliases.md)
-    - [Git submodules](27_git_submodules.md)
-    - [Git subtrees](28_git_subtrees.md)
+    - [Git Stash](./advanced/git/25_git_stash.md)
+    - [Git Tags](./advanced/git/17_tags.md)
+    - [Git Bisect](./advanced/git/14_git_bisect.md)
+    - [Git LFS](./advanced/git/26_git_lfs.md)
+    - [Git aliases](./advanced/git/app_aliases.md)
+    - [Git submodules](./advanced/git/27_git_submodules.md)
+    - [Git subtrees](./advanced/git/28_git_subtrees.md)
   - **GitHub**
-    - [Releases](17_releases.md)
-      - [Exercise: Creating a Release](17_releases.md)
-    - [Personal Access Tokens](20_personal_access_token.md)
-    - [Forks](app_fork_workflow.md)
+    - [Releases](./advanced/github/17_releases.md)
+      - [Exercise: Creating a Release](./advanced/github/17_releases.md)
+    - [Personal Access Tokens](./advanced/github/20_personal_access_token.md)
+    - [Forks](./advanced/github/app_fork_workflow.md)
 
 ---
 
