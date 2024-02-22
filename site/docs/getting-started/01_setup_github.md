@@ -46,11 +46,11 @@ Press Enter to open github.com in your browser...
 
 **You should see the following:**
 
-![Alt text](img/image-6.png ':size=500')
+![Alt text](../../../img/image-6.png ':size=500')
 
 **Your browser should open and display the activation page where you enter the one-time code:**
 
-![Alt text](img/image-5.png ':size=500')
+![Alt text](../../../img/image-5.png ':size=500')
 
 ## References
 * [**gh cli manual**](https://cli.github.com/manual/)
