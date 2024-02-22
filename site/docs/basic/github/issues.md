@@ -7,4 +7,4 @@ In GitHub, you will use issues to record and discuss ideas, enhancements, tasks,
 - Creating a single, comprehensive record of how and why you made certain decisions.
 - Allowing you to easily pull the right people into a conversation with @ mentions and team mentions.
 
-[include](02a_activity_create_github_issue.md ':include')
+[include](activity_create_github_issue.md ':include')
