@@ -8,32 +8,32 @@ Branches are lightweight, movable bookmarks to a specific commit that allow sepa
 
 </center>
 
+## Using branches
+
+```bash
+git branch
+```
+
+If you type `git branch` you will see a list of local branches.
+
+```sh
+git branch --all
+git branch -a
+```
+
+If you want to see all the local branches, including the read-only copies of your remote branches, you can add the `--all` option or just `-a`.
+
 ## Creating branches
 
 ### git branch
 
 Type `git branch <name>` to create a new branch.
 
-### git branch --all
-
-Type `git branch --all` to see all the local branches, including the read-only copies of your remote branches (you can add the `--all` option or just `-a`).
-
-```sh
-git branch --all
-* main
-  remotes/origin/HEAD -> origin/main
-  remotes/origin/main
-```
-
-> The `--all` and `-a` are actually synonyms for the branch command. Git often provides a verbose and a short option.
-
 ## Switching branches
 
 ### git switch
 
 `git switch` allows you to switch your current HEAD branch. 
-
-> It's relatively new (added in Git v2.23) and provides a simpler alternative to the classic "checkout" command.
 
 The most common scenario is to simply specify the local branch you want to switch to:
 
@@ -115,3 +115,9 @@ eanu482 adding file 4
 Is the commit ID the same as the one you used in the cherry-pick command? Why or why not?
 
 !> Remember, when using any commands that change history, it's important to make these changes before pushing to GitHub. When you change a commit ID that has been pushed to the remote, you risk creating problems for your collaborators.
+
+## Quiz
+
+<div class="quizdown">
+  <div id="branches-quiz.js" ></div>
+</div>

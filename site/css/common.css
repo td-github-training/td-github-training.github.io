@@ -13,6 +13,16 @@
   --sidebar-width: 22rem;
 }
 
+.markdown-section blockquote {
+  background: none;
+  margin: 0;
+  padding: 0 0 0 1.5em;
+}
+
+.markdown-section blockquote p {
+  font-weight: 600;
+}
+
 .pagination-item, .pagination-item-title, .pagination-item-label {
     opacity: .8 !important;
     transition: all .2s;

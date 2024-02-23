@@ -43,13 +43,6 @@ git --version
 sudo apt-get update
 sudo apt-get install git
 ```
-
-2. Confirm that Git was properly installed by typing git --version:
-
-```bash
-git --version
-```
-
 #### Fedora
 
 1. For Fedora systems, use dnf:
@@ -58,15 +51,15 @@ git --version
 sudo dnf install git
 ```
 
-2. Confirm that Git was properly installed by typing git --version:
+## Testing your install
+
+1. Confirm that Git was properly installed by typing `git --version`:
 
 ```bash
 git --version
 ```
 
-## Testing your install
-
-Open your chosen shell, and type:
+2. Next, try cloning a repository to make sure you can access GitHub:
 
 ```sh
 git clone https://github.com/githubschool/scratch.git
@@ -90,10 +83,31 @@ Unpacking objects: 100% (6/6), done.
 
 Git uses the config settings for your user name and email address to generate a unique fingerprint for each of the commits you create. You can't create commits without these settings:
 
+### Global configuration
+
+If you are using a personal computer, apply the `--global` flag so you only have to set these settings once.
+
 ```sh
 git config --global user.name "First-name Surname"
 git config --global user.email "you@email.com"
 ```
+
+### Local configuration
+
+If you are using a computer without a private, personal account, don't apply the `--global` flag. This way, the settings will only be stored in your current repository. 
+
+However, if you work in another repository on this same computer, you will need to set these configuration options again.
+
+```sh
+git config user.name "First-name Surname"
+git config user.email "you@email.com"
+```
+
+> **Tip:** If you make a typo a when entering a property, you can delete the property with the following command:
+>
+> ```sh
+> git config --global --unset <property_name>
+> ```
 
 ### Handling Line Endings
 
@@ -101,15 +115,3 @@ Different systems handle line endings and line breaks differently. If you open a
 
 - **Windows users:** `git config --global core.autocrlf true`
 - **Mac users:** `git config --global core.autocrlf input`
-
-> **Tip:** If you make a typo when setting one of your config properties, don't worry.  You can rerun the same `git config` command with different values between the double quotes to update the property to a new value.  If you typo a property name, you can delete the property with the following command:
->
-> ```sh
-> git config --global --unset <property_name>
-> ```
-
-## Quiz
-
-<div class="quizdown">
-  <div id="example-quiz.js" ></div>
-</div>

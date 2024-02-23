@@ -66,3 +66,9 @@ A `.gitignore` file in your repository stores names and file types. This file an
 #### Links  
 - Collection of .gitignore templates from GitHub: [github/gitignore repository](https://github.com/github/gitignore)
 - Collection of .gitignore templates from toptal: [gitignore.io](https://www.toptal.com/developers/gitignore) 
+
+## Quiz
+
+<div class="quizdown">
+  <div id="repositories-quiz.js" ></div>
+</div>

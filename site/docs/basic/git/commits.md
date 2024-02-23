@@ -1,43 +1,44 @@
 # What is a Commit?
 
-Every commit in Git is a **snapshot** of the project at that point in time and contains:
+A **commit** is a **snapshot** of your _entire_ repository at a given point in time.  A commit occurs when one or more changes are copied from the staging area to the repository.
 
-- Pointers to the current files in the repository
-- Commit author and email
-- Commit date and time
-- Commit message
+![text](../../../img/img-7.png)
+
 
 ## Staging changes
 
 ### git add
 
-`git add` files copies files (at their current state) to the stage.
+`git add <files>` copies changes from the working directory to the staging area.
 
 ## Saving changes
 
 ### git commit
 
-`git commit -m "Commit message"` saves a snapshot of the stage as a commit with its message.
+`git commit -m "Commit message"` saves a snapshot of the changes in staging area to the local repository as a commit.
 
 ## Syncing changes
 
-Git provides three primary ways for syncing changes between local and remote repositories:
+### git fetch
+
+`git fetch` This command downloads commits, files, and refs from a remote repository to your local repository, but it does not merge them with your local branches. 
+
+It's a safe way to see what's happening on the remote repository before integrating changes into your local working copy. After fetching, you can inspect the changes or merge them manually with `git merge`.
+
+### git pull
+
+`git pull` This command is essentially a combination of `git fetch` followed by `git merge`. It downloads changes from the remote repository and immediately applies those changes to your current branch. 
+
+This is typically used when you want to update your local branch with all data from its remote counterpart.
 
 ### git push
 
-- `git push` Uploads local repository content to a remote repository.
+`git push` Uploads local repository content to a remote repository.
 
-### git pull
-- `git pull` Fetches and downloads content from a remote repository and immediately updates the local repository to match that content.
-
-### git fetch
-- `git fetch` Downloads remote content without altering the state of the local repository, allowing for checking changes before merging them into the local branch.
 
 ## Viewing history
 
 ### git log
-
-When you clone a repository, you receive the history of all the commits made in that repository. The log command allows us to view that history on our local machine.
 
 ```sh
 git log
@@ -60,27 +61,16 @@ The diagram below shows how you can compare the content of your working area, st
 
 </center>
 
-Let's try these commands on the repository:
-
 ```sh
 git diff
 git diff --staged
 git diff HEAD
 git diff --color-words
-```
-
-`git diff` will also allow you to compare between branches, commits, and tags by simply typing:
-
-```sh
 git diff <REF-1> <REF-2>
 git diff main slow-down
 git diff origin/main main
 git diff 2710 b745
 ```
-
-> Notice that, just like merges, diffs are directional. It is easiest to think of it as "diff back to `<REF-1>` starting at `<REF-2>`" or "see what is *not* in `<REF-1>` but *is* in `<REF-2>`".  
-> 
-> The final example shows how to compare two commits based on their commit hashes.  This exact command will not work for everyone since the commits in your own repository will have different hashes.
 
 ## Fixing mistakes
 
@@ -213,3 +203,9 @@ The reflog is a record of every place HEAD has been. In a few minutes we will se
 ![Alt text](../../../img/image-3.png)
 
 </center>
+
+## Quiz
+
+<div class="quizdown">
+  <div id="commit-quiz.js" ></div>
+</div>
