@@ -2,8 +2,16 @@
 
 A **commit** is a **snapshot** of your _entire_ repository at a given point in time.  A commit occurs when one or more changes are copied from the staging area to the repository.
 
-![text](../../../img/img-7.png)
+## A typical workflow
 
+As we mentioned in [How Git Works](git_101?id=how-git-works), git has a two-step process to save changes to a repository.
+
+![alt text](../../../img/image-24.png ':size=550px')
+
+In practice, this looks like:
+1. You make changes in your **working directory**
+2. When you're ready to save these changes, you **stage** them using `git add`
+3. Then you the **commit** the staged changes to the repository using `git commit`
 
 ## Staging changes
 
@@ -11,29 +19,11 @@ A **commit** is a **snapshot** of your _entire_ repository at a given point in t
 
 `git add <files>` copies changes from the working directory to the staging area.
 
-## Saving changes
+## Committing changes
 
 ### git commit
 
 `git commit -m "Commit message"` saves a snapshot of the changes in staging area to the local repository as a commit.
-
-## Syncing changes
-
-### git fetch
-
-`git fetch` This command downloads commits, files, and refs from a remote repository to your local repository, but it does not merge them with your local branches. 
-
-It's a safe way to see what's happening on the remote repository before integrating changes into your local working copy. After fetching, you can inspect the changes or merge them manually with `git merge`.
-
-### git pull
-
-`git pull` This command is essentially a combination of `git fetch` followed by `git merge`. It downloads changes from the remote repository and immediately applies those changes to your current branch. 
-
-This is typically used when you want to update your local branch with all data from its remote counterpart.
-
-### git push
-
-`git push` Uploads local repository content to a remote repository.
 
 
 ## Viewing history
@@ -195,6 +185,24 @@ The reflog is a record of every place HEAD has been. In a few minutes we will se
 - **The reflog is a limited time offer.** By default, reachable commits are displayed in the reflog for 90 days, but unreachable commits (meaning commits that are not attached to a branch) are only displayed for 30 days.
 
 > Sometimes, you'll want to save your work in a commit without having to think of a commit message, or before you're ready to organize your changes. If that's the case, you can create aliases to create "save points". See the appendix with aliases to learn how!
+
+## Syncing changes
+
+### git fetch
+
+`git fetch` This command downloads commits, files, and refs from a remote repository to your local repository, but it does not merge them with your local branches. 
+
+It's a safe way to see what's happening on the remote repository before integrating changes into your local working copy. After fetching, you can inspect the changes or merge them manually with `git merge`.
+
+### git pull
+
+`git pull` This command is essentially a combination of `git fetch` followed by `git merge`. It downloads changes from the remote repository and immediately applies those changes to your current branch. 
+
+This is typically used when you want to update your local branch with all data from its remote counterpart.
+
+### git push
+
+`git push` Uploads local repository content to a remote repository.
 
 
 

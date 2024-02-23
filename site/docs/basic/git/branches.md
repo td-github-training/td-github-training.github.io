@@ -1,71 +1,133 @@
 # What is a Branch?
 
-Branches are lightweight, movable bookmarks to a specific commit that allow separate lines of development without impacting the main codebase. After completing work on a branch, changes can be merged back into the main codebase.
+Branches are lightweight, movable bookmarks to a specific commit that allow separate lines of development without impacting the main codebase. 
 
-<center>
-
-![Alt text](../../../img/image-2.png)
-
-</center>
-
-## Using branches
-
-```bash
-git branch
+```mermaid
+%%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'showBranches': true, 'showCommitLabel': false}} }%%
+    gitGraph
+       commit
+       commit
+       commit
+       branch feature
+       checkout main
+       commit
+       commit
+       checkout feature
+       commit
+       commit
 ```
 
-If you type `git branch` you will see a list of local branches.
+After completing work on a branch, changes can be merged back into the main codebase.
 
-```sh
-git branch --all
-git branch -a
+```mermaid
+%%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'showBranches': true, 'showCommitLabel': false}} }%%
+    gitGraph
+       commit
+       commit
+       commit
+       branch feature
+       checkout main
+       commit
+       commit
+       checkout feature
+       commit
+       commit
+       checkout main
+       merge feature
+       commit
+       commit
+       commit
 ```
-
-If you want to see all the local branches, including the read-only copies of your remote branches, you can add the `--all` option or just `-a`.
 
 ## Creating branches
 
 ### git branch
 
-Type `git branch <name>` to create a new branch.
+To create a new branch, use the `git branch` command followed by the name of the new branch.
+
+```bash
+git branch new-feature
+```
+
+This creates a new branch named new-feature. However, it does not switch to the new branch. To verify that the branch has been created, you can use the git branch command with no arguments:
+
+```bash
+git branch
+```
+
+Output:
+
+```bash
+* master
+  new-feature
+```
+
+The `*` next to master indicates that master is the currently active branch.
 
 ## Switching branches
 
 ### git switch
 
-`git switch` allows you to switch your current HEAD branch. 
+To switch to the `new-feature` branch, you can use the `git switch` command:
 
-The most common scenario is to simply specify the local branch you want to switch to:
-
-```sh
-$ git switch other-branch
+```bash
+git switch new-feature
 ```
 
-This will make the given branch the new HEAD branch. If, in one go, you also want to create a new local branch, you can use the "-c" parameter:
+Now, if you run `git branch` again, you'll see that the `*` is next to `new-feature`, indicating that it's the currently active branch:
 
-```sh
-$ git switch -c new-branch
+Output:
+
+```bash
+  master
+* new-feature
 ```
 
-If you want to check out a remote branch (that doesn't yet exist as a local branch in your local repository), you can simply provide the remote branch's name. When Git cannot find the specified name as a local branch, it will assume you want to check out the respective remote branch of that name:
+### git switch -c
 
-```sh
-$ git switch remote-branch
+If you want to create a new branch and switch to it in one command, you can use the `-c` option with the `git switch` command:
+
+```bash
+git switch -c another-feature
 ```
 
-This will not only create a local branch, but also set up a "tracking relationship" between the two branches, making sure that pulling and pushing will be as easy as "git pull" and "git push".
+This creates a new branch named `another-feature` and immediately switches to it.
+
+## Deleting branches
+
+### git branch -d
+
+To delete a branch, use the `-d` option with the `git branch` command:
+
+```bash
+git branch -d new-feature
+```
+
+This deletes the `new-feature` branch. If you try to delete a branch that has changes that haven't been merged, Git will prevent you from doing so to avoid data loss. 
+
+### git branch -D
+
+In such cases, if you're sure you want to delete the branch, you can use the `-D` option instead:
+
+```bash
+git branch -D unmerged-feature
+```
+
+This forcefully deletes the `unmerged-feature` branch, discarding any unmerged changes.
 
 ## Renaming branches
 
 ### git branch -m
 
-Utilize the `-m` flag to rename the branch using the following syntax:
+To rename a branch, you can use the `-m` option with the `git branch` command:
 
-`git branch -m old-branch new-branch`
+```bash
+git branch -m old-name new-name
+```
 
-For example, to rename `test-branch` to `test-branch2`, execute:
+This renames the branch `old-name` to `new-name`.
 
-`git branch -m test-branch test-branch2`
+Remember to replace `old-name` and `new-name` with the current and new names of your branch, respectively.
 
 ## Integrating changes
 
