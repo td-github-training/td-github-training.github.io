@@ -1,4 +1,4 @@
-# Pull Requests
+# What is a Pull Request?
 
 Pull Requests (PRs) are a key collaboration feature on GitHub. They allow you to propose changes to a repository, request a review of those changes, and then merge the changes into another branch (usually the `main` or `master` branch).
 
