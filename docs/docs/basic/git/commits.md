@@ -19,11 +19,98 @@ In practice, this looks like:
 
 `git add <files>` copies changes from the working directory to the staging area.
 
+The `git add` command is a fundamental Git command used to add changes in the working directory to the staging area. It tells Git that you want to include updates to a particular file in the next commit. However, `git add` doesn't affect the repository; changes are not actually recorded until you run `git commit`.
+
+#### Staging files
+
+The simplest way to use `git add` is to add all changes (new, modified, and removed files) in the current directory and its subdirectories:
+
+```bash
+git add .
+```
+
+If you want to add changes from a specific file, you can do so by specifying the file:
+
+```bash
+git add filename
+```
+
+You can also add multiple files at once:
+
+```bash
+git add filename1 filename2
+```
+
+#### Staging hunks
+
+If you've made several changes to a file but only want to stage some of them, you can use `git add -p`:
+
+```bash
+git add -p filename
+```
+
+This command will prompt you to stage individual changes (or 'hunks') in the file. You can choose to stage, skip, or split each hunk.
+
+#### Viewing Staged Changes
+
+After you've staged some changes, you can view them with `git diff --staged`:
+
+```bash
+git diff --staged
+```
+
+This command will show you a diff of what's been staged but not yet committed.
+
+#### Unstaging Changes
+
+If you've staged some changes with `git add` but then decide you don't want to commit them, you can unstage them with `git restore --staged`:
+
+```bash
+git restore --staged filename
+```
+
+This command will remove the changes from the staging area but won't alter the working directory. The changes will still be there, but they won't be included in the next commit.
+
+
 ## Committing changes
 
 ### git commit
 
 `git commit -m "Commit message"` saves a snapshot of the changes in staging area to the local repository as a commit.
+
+The `git commit` command is one of the core primary functions of Git. Prior to this operation, `git add` is used to add any new or modified files to the staging area.
+
+This command takes the current state of the staging area and saves it as a new commit in the local Git repository. This commit serves as a record of the project history, and it includes the changes made to the code and an associated message describing those changes.
+
+#### Committing staged changes
+
+The simplest way to use `git commit` is to commit all staged changes with a message:
+
+```bash
+git commit -m "Your commit message"
+```
+
+The `-m` option allows you to write the commit message directly in the command line.
+
+#### Committing all changes
+
+If you've made several changes but haven't staged them yet, you can commit all changes (modified and deleted files, but not new files) with one command:
+
+```bash
+git commit -a -m "Your commit message"
+```
+
+The `-a` option tells Git to automatically stage every file that is tracked and has been modified or deleted.
+
+#### Amending the Last Commit
+
+If you need to change the last commit (to modify the commit message or add new changes), you can use the `--amend` option:
+
+```bash
+git commit --amend -m "New commit message"
+```
+
+!> This command replaces the last commit with a new one. Be careful with this option if you've already pushed your commits to a remote repository.
 
 
 ## Viewing history

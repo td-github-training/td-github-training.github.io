@@ -5,11 +5,11 @@
   ><i class="fas fa-moon"></i></div>
 
 - Getting Started
-  - [Setting up Git](./docs/getting-started/git.md)
-  - [Setting up GitHub](./docs/getting-started/github.md)
+  - [Setting up Git](./docs/getting-started/setting-up-git.md)
+  - [Setting up GitHub](./docs/getting-started/setting-up-github.md)
 
 - Git 101
-  - [What is Git?](./docs/basic/git/git_101.md)
+  - [What is Git?](./docs/basic/git/what-is-git.md)
   - [Repositories](./docs/basic/git/repositories.md)
   - [Commits](./docs/basic/git/commits.md)
   - [Branches](./docs/basic/git/branches.md)
@@ -22,7 +22,7 @@
     - [Creating a .gitignore](./docs/basic/git/exercises/gitignore.md)
 
 - GitHub 101
-  - [What is GitHub?](./docs/basic/github/github_101.md)
+  - [What is GitHub?](./docs/basic/github/what-is-github.md)
   - [Repositories](./docs/basic/github/repositories.md)
   - [Pull Requests](./docs/basic/github/pull_requests.md)
   - [Issues](./docs/basic/github/issues.md)
