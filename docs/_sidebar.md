@@ -15,7 +15,7 @@
     - [Commits](./docs/basic/git/commits.md)
     - [Branches](./docs/basic/git/branches.md)
     - [Tags](./docs/basic/git/tags.md)
-    - [Exercises]()
+    - Exercises
       - [Creating a Repo](./docs/basic/git/exercises/create_local_repo.md)
       - [Versioning Files]()
       - [Fixing Mistakes]()
@@ -28,8 +28,11 @@
     - [Issues](./docs/basic/github/issues.md)
     - [Workflows](./docs/basic/github/github_flow.md)
     - [Markdown](./docs/basic/github/markdown.md)
-    - [Administration](./docs/basic/github/administration.md)
-    - [Exercises]()
+    - Administration
+      - [Fixing Mistakes](./docs/basic/github/fixing-mistakes.md)
+      - [Handling Large Files](./docs/basic/github/handling-large-files.md)
+      - [Managing Secrets](./docs/basic/github/managing-secrets.md)
+    - Exercises
       - [Creating a Repo](./docs/basic/github/repositories.md)
       - [Creating a PR](./docs/basic/github/pull_requests.md)
       - [Creating an Issue](./docs/basic/github/issues.md)
@@ -38,14 +41,10 @@
   - **Git**
     - [Git Configuration](./docs/basic/git/configuration.md)
     - [Git Stash](./docs/advanced/git/git_stash.md)
-    - [Git Tags](./docs/advanced/git/tags.md)
     - [Git Bisect](./docs/advanced/git/git_bisect.md)
     - [Git LFS](./docs/advanced/git/git_lfs.md)
-    - [Git aliases](./docs/advanced/git/app_aliases.md)
-    - [Git submodules](./docs/advanced/git/git_submodules.md)
-    - [Git subtrees](./docs/advanced/git/git_subtrees.md)
   - **GitHub**
     - [Releases](./docs/advanced/github/releases.md)
-      - [Exercise: Creating a Release](./docs/advanced/github/releases.md)
     - [Personal Access Tokens](./docs/advanced/github/personal_access_token.md)
-    - [Forks](./docs/advanced/github/app_fork_workflow.md)
+    - [Exercises]()
+      - [Creating a Release](./docs/advanced/github/releases.md)
