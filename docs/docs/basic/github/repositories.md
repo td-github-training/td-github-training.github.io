@@ -2,9 +2,9 @@
 
 A _repository_ is a centralized location that stores a collection of files along with their git history.
 
-## Repository sections
-
 ![Example GitHub Repository](../../../img/image-26.png)
+
+## Navigating a repository
 
 <img src="../../../img/image-8.png" alt="code" width="80"/>
 
