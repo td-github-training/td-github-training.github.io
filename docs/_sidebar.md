@@ -44,7 +44,4 @@
     - [Git Bisect](./docs/advanced/git/git_bisect.md)
     - [Git LFS](./docs/advanced/git/git_lfs.md)
   - **GitHub**
-    - [Releases](./docs/advanced/github/releases.md)
     - [Personal Access Tokens](./docs/advanced/github/personal_access_token.md)
-    - [Exercises]()
-      - [Creating a Release](./docs/advanced/github/releases.md)
