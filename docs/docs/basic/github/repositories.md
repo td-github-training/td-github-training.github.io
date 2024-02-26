@@ -2,6 +2,31 @@
 
 A _repository_ is a centralized location that stores a collection of files along with their git history.
 
+## Repository sections
+
+![Example GitHub Repository](../../../img/image-26.png)
+
+<img src="../../../img/image-8.png" alt="code" width="80"/>
+
+Location where GitHub displays the files included in the repository. GitHub also displays an About section, the most recent commit in history and the current working branch (there could be more to display as well depending on repository settings).
+
+<img src="../../../img/image-9.png" alt="code" width="90"/>
+
+Tickets to track bugs and feature requests. Issues can be assigned to specific team members and are designed to encourage discussion and collaboration.
+
+<img src="../../../img/image-10.png" alt="code" width="140"/>
+
+Pull requests represent a change, such as adding, modifying, or deleting files, which the author would like to make to files on the repository. Pull Requests enable collaboration through conversations and pull request reviews.
+
+
+<img src="../../../img/image-11.png" alt="code" width="110"/>
+
+Kanban style boards that all you to visualize your work. Projects can be created at the repository or organization level.
+
+<img src="../../../img/image-12.png" alt="code" width="85"/>
+
+Wikis are to communicate project details, display user documentation, or almost anything your heart desires. GitHub utilizes git to help keep track of the edits to the Wiki in version control.
+
 ## Creating a repository
 
 ### GitHub Website
@@ -62,39 +87,6 @@ To create a remote repository non-interactively, supply the repository name and 
 
 To create a remote repository from an existing local repository, specify the source directory with `--source`. By default, the remote repository name will be the name of the source directory. Pass `--push` to push any local commits to the new repository.
 
-## Navigating a repository
-
-<div class="grid2">
-<div class="col">
-
-<img src="../../../img/image-8.png" alt="code" width="80"/>
-
-</div><div class="col">
-
-Location where GitHub displays the files included in the repository. GitHub also displays an About section, the most recent commit in history and the current working branch (there could be more to display as well depending on repository settings).
-
-</div>
-</div>
-
-
-
-<img src="../../../img/image-9.png" alt="code" width="90"/>
-
-Tickets to track bugs and feature requests. Issues can be assigned to specific team members and are designed to encourage discussion and collaboration.
-
-
-<img src="../../../img/image-10.png" alt="code" width="140"/>
-
-Pull requests represent a change, such as adding, modifying, or deleting files, which the author would like to make to files on the repository. Pull Requests enable collaboration through conversations and pull request reviews.
-
-
-<img src="../../../img/image-11.png" alt="code" width="110"/>
-
-Kanban style boards that all you to visualize your work. Projects can be created at the repository or organization level.
-
-<img src="../../../img/image-12.png" alt="code" width="85"/>
-
-Wikis are to communicate project details, display user documentation, or almost anything your heart desires. GitHub utilizes git to help keep track of the edits to the Wiki in version control.
 
 ## Best practices
 

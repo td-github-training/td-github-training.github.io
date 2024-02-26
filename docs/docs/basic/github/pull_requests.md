@@ -1,68 +1,81 @@
 # Pull Requests
 
-PRs are used to propose changes to the git commit history. A pull request introduces an action that could address an Issue or other change. A Pull Request is considered a work in progress until it is merged into the target branch.
+Pull Requests (PRs) are a key collaboration feature on GitHub. They allow you to propose changes to a repository, request a review of those changes, and then merge the changes into another branch (usually the `main` or `master` branch).
 
-## Creating a PR
+![alt text](../../../img/image-27.png)
 
-TBD
 
-## PR templates
+## Step 1: Create a New Branch
 
-To enhance the **clarity** of pull requests, it's essential to provide a comprehensive checklist of relevant information regarding the proposed code changes. Instead of relying solely on a single-line summary, consider including details such as:
+Before you create a Pull Request, you should create a new branch in your local repository where you can make your changes. This keeps your work separate from the main codebase.
 
--   **Bug Fix Description:** Explain how the bug was addressed and provide a description of the solution.
+```bash
+# Create a new branch
+git checkout -b my-feature-branch
+```
 
--   **New Feature Summary:** Offer a summary or description of any new features being introduced.
+## Step 2: Make Your Changes
 
--   **Unit Test Coverage:** Outline the unit test cases covered to ensure code reliability.
+Now you can make your changes in this branch. Add or modify files as needed, then stage and commit your changes.
 
--   **Impact on Existing Functionalities:** Indicate whether the code changes have any impact on existing functionalities.
+```bash
+# Edit files...
 
--   **Testing Details:** Provide information about the testing procedures conducted.
+# Stage changes
+git add .
 
--   **Cross-Device and Browser Testing:** Specify whether the code was tested across different devices and browsers.
+# Commit changes
+git commit -m "Add my new feature"
+```
 
-These checklists can be automatically populated in the description field every time a new pull request is made through **PR Templates**!
+## Step 3: Push Your Changes to GitHub
 
-If your project repository is on GitHub, the name of the template and where it's located in your repository matters a lot. The template created as a Markdown file should be named `PULL_REQUEST_TEMPLATE.md` by default and placed in either the project's root folder, the `PULL_REQUEST_TEMPLATE` folder if you are saving multiple templates or the `.github` directory.
+Once you've committed your changes, you can push your branch to GitHub.
 
-Create a Markdown file, name it `PULL_REQUEST_TEMPLATE.md`, and place it in the project's root folder.
+```bash
+# Push branch to GitHub
+git push origin my-feature-branch
+```
 
-![alt text](../../../img/image-20.png)
+## Step 4: Create a Pull Request
 
-*NOTE: Make sure to place the Markdown file within one of the previously mentioned locations and save and merge it with the same name.*
+Now that your branch is on GitHub, you can create a Pull Request.
 
-Now, when you create a new pull request, you will see the template content automatically loaded into the description field as shown in the following image.
+1. Go to your repository on GitHub.
+2. Click the "New pull request" button.
+3. In the "base" dropdown, choose the branch you want to merge your changes into (usually `main` or `master`).
+4. In the "compare" dropdown, choose your feature branch.
+5. Click "Create pull request".
+6. Fill out the title and description of your changes.
+7. Click "Create pull request".
 
-![alt text](../../../img/image-19.png)
+## Step 5: Review and Merge the Pull Request
 
-### Creating an Issue
-**1.** Navigate to the Issues tab
+Once your Pull Request is open, others can review your changes and leave comments. You can also continue to push commits to your feature branch; they'll automatically be added to the Pull Request.
 
-**2.** Click on New Issue
+When the changes have been reviewed and approved, you (or someone with write access to the repository) can merge the Pull Request.
 
-**3.** Get started with the Error Issue Template which will have prompts
+1. Click the "Merge pull request" button.
+2. Click "Confirm merge".
 
-**4.** Copy the below formatting:
-> <img width="1253" alt="Screenshot 2024-01-26 at 1 35 22 PM" src="img/image-14.png">
+Your changes are now in the base branch you selected!
 
-**5.** Assign Yourself to the issue
+## Step 6: Clean Up Your Branch
 
-**6.** Label issue as a bug
+After your Pull Request has been merged, you can delete your feature branch (both locally and on GitHub) as it's no longer needed.
 
-**7.** Submit the issue
+```bash
+# Delete local branch
+git branch -d my-feature-branch
 
-## Working on the Issue on GitHub
-**1.** On your new issue under "Development", click `create a branch`
+# Delete remote branch on GitHub
+git push origin --delete my-feature-branch
+```
 
-**2.** Click on the README.md file on your new branch
+And that's it! You've successfully used a GitHub Pull Request to propose, review, and merge changes.
 
-**3.** Click on the pencil in the top right to open the editor
 
-**4.** Change the filename to README.**md**
-
-**5.** Commit directly to your branch
-
+---
 
 ## Creating a Pull Request
 Now that you have started to change your file, you will open a pull request to discuss the file with your team mates. Follow these steps to create a Pull Request in the class repository:
@@ -70,16 +83,22 @@ Now that you have started to change your file, you will open a pull request to d
 **1.** Click the *Pull Request* tab.
 
 **2.** Click *New Pull Request*.
+  ![alt text](../../../img/image-30.png)
+  ![alt text](../../../img/image-32.png)
 
 **3.** In the *base* dropdown, choose `main`
 
+  ![alt text](../../../img/image-33.png ':size=300px')
+
 **4.** In the *compare* dropdown, choose the branch you just committed.
 
-**5.** Type a subject line and enter a concise description.
+  ![alt text](../../../img/image-34.png ':size=300px')
 
-**6.** Enter the description as `fixes #1` to tag it to the issue
+**5.** Click *Create Pull Request*.
+  ![alt text](../../../img/image-35.png)
 
-**6.** Click *Preview* to see how your Pull Request will look.
+**6.** Enter a subject line and a concise description.
+  ![alt text](../../../img/image-39.png)
 
 **7.** Assign the Pull Request to yourself.
 
@@ -87,9 +106,40 @@ Now that you have started to change your file, you will open a pull request to d
 
 **9.** Click on *Create pull request*.
 
-> When you navigate to the class repository, you should see a banner at the top of the page indicating you have recently pushed branches, along with a button that reads *Compare & pull request*. This helpful button will automatically create a pull request between your branch and `main` as well.
+![alt text](../../../img/image-38.png)
 
-If everything looks good we will start to merge!
+## Exploring a pull request
+
+Now that we have created a Pull Request, let's explore a few of the features that make Pull Requests the center of collaboration:
+
+### ![octicon-comment-discussion] Conversation tab
+
+Similar to the discussion thread on an Issue, a Pull Request contains a discussion about the changes being made to the repository. This discussion is found in the **Conversation** tab and also includes a record of all the commits made on the branch as well as assignments, labels and reviews that have been applied to the pull request.
+
+### ![octicon-git-commit] Commits tab
+
+The **Commits** tab contains more detailed information about who has made changes to the files. Clicking each commit ID will allow you to see the changes applied in that specific commit.
+
+### ![octicon-diff] Files changed tab
+
+The **Files changed** tab allows you to see cumulative effect of all the changes made on the branch. We call this the `diff`. Our diff isn't very interesting yet, but as we make changes your diff will become very colorful.
+
+## Code review in pull requests
+
+To provide feedback on proposed changes, GitHub offers three levels of commenting:
+
+### General conversation
+
+You can provide general comments on the Pull Request within the **Conversation** tab.
+
+### Line comments
+
+In the **Files changed** tab, you can hover over a line to see a blue ![`+`][octicon-diff-added] icon. Clicking this icon will allow you to enter a comment on a specific line. These line level comments are a great way to give additional context on recommended changes. They will also be displayed in the **Conversation** tab.
+
+### Review
+
+When you are making line comments, you can also choose to **Start a Review**. When you create a review, you can group many line comments together with a general message: Comments, Approve, or Request Changes. Reviews have special power in GitHub when used in conjunction with protected branches.
+
 
 ## Merging Your Pull Request
 
@@ -159,38 +209,6 @@ If you would like pruning of the remote tracking branches to be set as your defa
 
 
 [include](07a_activity_create_pull_request.md ':include')
-
-## Exploring a pull request
-
-Now that we have created a Pull Request, let's explore a few of the features that make Pull Requests the center of collaboration:
-
-### ![octicon-comment-discussion] Conversation tab
-
-Similar to the discussion thread on an Issue, a Pull Request contains a discussion about the changes being made to the repository. This discussion is found in the **Conversation** tab and also includes a record of all the commits made on the branch as well as assignments, labels and reviews that have been applied to the pull request.
-
-### ![octicon-git-commit] Commits tab
-
-The **Commits** tab contains more detailed information about who has made changes to the files. Clicking each commit ID will allow you to see the changes applied in that specific commit.
-
-### ![octicon-diff] Files changed tab
-
-The **Files changed** tab allows you to see cumulative effect of all the changes made on the branch. We call this the `diff`. Our diff isn't very interesting yet, but as we make changes your diff will become very colorful.
-
-## Code review in pull requests
-
-To provide feedback on proposed changes, GitHub offers three levels of commenting:
-
-### General conversation
-
-You can provide general comments on the Pull Request within the **Conversation** tab.
-
-### Line comments
-
-In the **Files changed** tab, you can hover over a line to see a blue ![`+`][octicon-diff-added] icon. Clicking this icon will allow you to enter a comment on a specific line. These line level comments are a great way to give additional context on recommended changes. They will also be displayed in the **Conversation** tab.
-
-### Review
-
-When you are making line comments, you can also choose to **Start a Review**. When you create a review, you can group many line comments together with a general message: Comments, Approve, or Request Changes. Reviews have special power in GitHub when used in conjunction with protected branches.
 
 ## Activity: Code review
 
@@ -319,3 +337,33 @@ Developers aren't just code machines; they're knowledge workers. By incorporatin
 - **Avoiding Cognitive Reload:** Starting a review and then getting interrupted can lead to cognitive reload, forcing reviewers to start from scratch therefore prolonging the review process.
   
 - **Maintaining Quality:** Rushing through a review due to time constraints can *compromise quality*. By providing clear expectations upfront, we mitigate the risk of rushed reviews and ensure thorough evaluations.
+
+## PR templates
+
+To enhance the **clarity** of pull requests, it's essential to provide a comprehensive checklist of relevant information regarding the proposed code changes. Instead of relying solely on a single-line summary, consider including details such as:
+
+-   **Bug Fix Description:** Explain how the bug was addressed and provide a description of the solution.
+
+-   **New Feature Summary:** Offer a summary or description of any new features being introduced.
+
+-   **Unit Test Coverage:** Outline the unit test cases covered to ensure code reliability.
+
+-   **Impact on Existing Functionalities:** Indicate whether the code changes have any impact on existing functionalities.
+
+-   **Testing Details:** Provide information about the testing procedures conducted.
+
+-   **Cross-Device and Browser Testing:** Specify whether the code was tested across different devices and browsers.
+
+These checklists can be automatically populated in the description field every time a new pull request is made through **PR Templates**!
+
+If your project repository is on GitHub, the name of the template and where it's located in your repository matters a lot. The template created as a Markdown file should be named `PULL_REQUEST_TEMPLATE.md` by default and placed in either the project's root folder, the `PULL_REQUEST_TEMPLATE` folder if you are saving multiple templates or the `.github` directory.
+
+Create a Markdown file, name it `PULL_REQUEST_TEMPLATE.md`, and place it in the project's root folder.
+
+![alt text](../../../img/image-20.png)
+
+*NOTE: Make sure to place the Markdown file within one of the previously mentioned locations and save and merge it with the same name.*
+
+Now, when you create a new pull request, you will see the template content automatically loaded into the description field as shown in the following image.
+
+![alt text](../../../img/image-19.png)

@@ -21,7 +21,7 @@
     "peacock.color": "#dd923d",
     "peacock.remoteColor": "#1857a4",
     "markdown.copyFiles.destination": {
-        "**/*": "/site/img/"
+        "**/*": "/docs/img/"
     },
-    "docsifyPreview.indexFile": "/site/index.html"
+    "docsifyPreview.indexFile": "/docs/index.html"
 }
