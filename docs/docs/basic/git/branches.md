@@ -3,7 +3,7 @@
 Branches are lightweight, movable bookmarks to a specific commit that allow separate lines of development without impacting the main codebase. 
 
 ```mermaid
-%%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'showBranches': true, 'showCommitLabel': false}} }%%
+%%{init: { 'logLevel': 'debug', 'gitGraph': {'showBranches': true, 'showCommitLabel': false, 'parallelCommits': true}} }%%
     gitGraph
        commit
        commit
@@ -20,7 +20,7 @@ Branches are lightweight, movable bookmarks to a specific commit that allow sepa
 After completing work on a branch, changes can be merged back into the main codebase.
 
 ```mermaid
-%%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'showBranches': true, 'showCommitLabel': false}} }%%
+%%{init: { 'logLevel': 'debug', 'gitGraph': {'showBranches': true, 'showCommitLabel': false, 'parallelCommits': true }} }%%
     gitGraph
        commit
        commit

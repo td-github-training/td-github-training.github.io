@@ -116,7 +116,15 @@
     import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
     mermaid.initialize({ 
       startOnLoad: true,
-      theme: 'base',
+      'theme': 'default',
+      'themeVariables': {
+        'git0': '#6C8EBF',
+        'git1': '#D79B00',
+        'git2': '#82B366',
+        'gitBranchLabel0': 'white',
+        'gitBranchLabel1': 'white',
+        'gitBranchLabel2': 'white',
+      }
     });
     window.mermaid = mermaid;
   </script>
