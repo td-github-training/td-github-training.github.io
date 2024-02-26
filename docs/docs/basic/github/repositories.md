@@ -2,9 +2,24 @@
 
 A _repository_ is a centralized location that stores a collection of files along with their git history.
 
-![Example GitHub Repository](../../../img/image-26.png)
+
+## Local vs Remote
+
+As Git is a **distributed** version control system, it has the concept of a _**local**_ and _**remote**_ repositories.
+
+![text](../../../img/img-6.png)
+
+### Local Repositories
+
+See [Local Repositories](/docs/basic/git/repositories#local-repositories)
+
+### Remote Repositories
+
+Repositories located on GitHub are remote repositories.
 
 ## Navigating a repository
+
+![Example GitHub Repository](../../../img/image-26.png)
 
 <img src="../../../img/image-8.png" alt="code" width="80"/>
 
@@ -50,8 +65,6 @@ GitHub repositories store a variety of projects. In this guide, you'll create a 
 
 2.  Type a short, memorable name for your repository. 
 
-  For example, "hello-world".
-
 </div><div class="col">
 
 ![Screenshot of the first step in creating a GitHub repository. The "Repository name" field contains the text "hello-world" and is outlined in dark orange.](../../../img/image-18.png)
@@ -60,7 +73,7 @@ GitHub repositories store a variety of projects. In this guide, you'll create a 
 </div>
 
 
-3.  Optionally, add a description of your repository. For example, "My first repository on GitHub."
+3.  Optionally, add a description of your repository. 
 
 4.  Choose a repository visibility. For more information, see "[About repositories](https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories#about-repository-visibility)."
 
@@ -68,7 +81,6 @@ GitHub repositories store a variety of projects. In this guide, you'll create a 
 
 6.  Click Create repository.
 
-Congratulations! You've successfully created your first repository, and initialized it with a *README* file.
 
 ### GitHub CLI
 

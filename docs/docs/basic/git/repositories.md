@@ -10,8 +10,9 @@ As Git is a **distributed** version control system, it has the concept of a _**l
 
 ### Local Repositories
 
-Git manages and tracks changes to your code using three main areas: the Working Directory, the Staging Area, and the Repository.
+Repositories located on _your_ local computer are local repositories.
 
+Git manages and tracks changes to your code using three main areas: the Working Directory, the Staging Area, and the Repository.
 
 1. **Working Directory**: This is where you'll be doing all your work: creating, editing, deleting and organizing files. When you make changes, Git recognizes that a file has changed in the working directory but it won't keep track of these changes until you tell it to.
 
@@ -21,8 +22,7 @@ Git manages and tracks changes to your code using three main areas: the Working 
 
 ### Remote Repositories
 
-TBD
-
+See [Remote Repositories](/docs/basic/github/repositories#remote-repositories)
 
 ## Creating a repository
 
