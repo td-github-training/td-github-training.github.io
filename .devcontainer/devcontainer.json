@@ -10,7 +10,8 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "dzylikecode.docsify-preview"
+        "dzylikecode.docsify-preview",
+        "yzhang.markdown-all-in-one"
       ]
     }
   }

@@ -4,37 +4,37 @@
   ><label for="dark_mode_switch">Toggle</label
   ><i class="fas fa-moon"></i></div>
 
-- Getting Started
+- **Getting Started**
   - [Setting up Git](./docs/getting-started/setting-up-git.md)
   - [Setting up GitHub](./docs/getting-started/setting-up-github.md)
 
-- Git 101
-  - [What is Git?](./docs/basic/git/what-is-git.md)
-  - [Repositories](./docs/basic/git/repositories.md)
-  - [Commits](./docs/basic/git/commits.md)
-  - [Branches](./docs/basic/git/branches.md)
-  - [Tags](./docs/basic/git/tags.md)
-  - [Exercises]()
-    - [Creating a Repo](./docs/basic/git/exercises/create_local_repo.md)
-    - [Versioning Files]()
-    - [Fixing Mistakes]()
-    - [Navigating Branches](./docs/basic/git/exercises/forgot_to_branch.md)
-    - [Creating a .gitignore](./docs/basic/git/exercises/gitignore.md)
+- **Basic Topics**
+  - **Git**
+    - [What is Git?](./docs/basic/git/what-is-git.md)
+    - [Repositories](./docs/basic/git/repositories.md)
+    - [Commits](./docs/basic/git/commits.md)
+    - [Branches](./docs/basic/git/branches.md)
+    - [Tags](./docs/basic/git/tags.md)
+    - [Exercises]()
+      - [Creating a Repo](./docs/basic/git/exercises/create_local_repo.md)
+      - [Versioning Files]()
+      - [Fixing Mistakes]()
+      - [Navigating Branches](./docs/basic/git/exercises/forgot_to_branch.md)
+      - [Creating a .gitignore](./docs/basic/git/exercises/gitignore.md)
+  - **GitHub**
+    - [What is GitHub?](./docs/basic/github/what-is-github.md)
+    - [Repositories](./docs/basic/github/repositories.md)
+    - [Pull Requests](./docs/basic/github/pull_requests.md)
+    - [Issues](./docs/basic/github/issues.md)
+    - [Workflows](./docs/basic/github/github_flow.md)
+    - [Markdown](./docs/basic/github/markdown.md)
+    - [Administration](./docs/basic/github/administration.md)
+    - [Exercises]()
+      - [Creating a Repo](./docs/basic/github/repositories.md)
+      - [Creating a PR](./docs/basic/github/pull_requests.md)
+      - [Creating an Issue](./docs/basic/github/issues.md)
 
-- GitHub 101
-  - [What is GitHub?](./docs/basic/github/what-is-github.md)
-  - [Repositories](./docs/basic/github/repositories.md)
-  - [Pull Requests](./docs/basic/github/pull_requests.md)
-  - [Issues](./docs/basic/github/issues.md)
-  - [Workflows](./docs/basic/github/github_flow.md)
-  - [Markdown](./docs/basic/github/markdown.md)
-  - [Administration](./docs/basic/github/administration.md)
-  - [Exercises]()
-    - [Creating a Repo](./docs/basic/github/repositories.md)
-    - [Creating a PR](./docs/basic/github/pull_requests.md)
-    - [Creating an Issue](./docs/basic/github/issues.md)
-
-- Advanced Topics
+- **Advanced Topics**
   - **Git**
     - [Git Configuration](./docs/basic/git/configuration.md)
     - [Git Stash](./docs/advanced/git/git_stash.md)

@@ -1,6 +1,6 @@
 # What is a Repository?
 
-A repository is the most basic element of GitHub. It is easiest to imagine as a project's folder. However, unlike an ordinary folder on your laptop, a GitHub repository offers simple yet powerful tools for collaborating with others.
+A _repository_ is a centralized location that stores a collection of files along with their git history.
 
 ## Creating a repository
 
@@ -8,13 +8,32 @@ A repository is the most basic element of GitHub. It is easiest to imagine as a 
 
 GitHub repositories store a variety of projects. In this guide, you'll create a repository and commit your first change.
 
+<div class="grid2">
+<div class="col">
+
 1.  In the upper-right corner of any page, select , then click New repository.
 
-    ![Screenshot of a GitHub dropdown menu showing options to create new items. The menu item "New repository" is outlined in dark orange.](../../../img/image-17.png)
+</div><div class="col">
 
-2.  Type a short, memorable name for your repository. For example, "hello-world".
+![Screenshot of a GitHub dropdown menu showing options to create new items. The menu item "New repository" is outlined in dark orange.](../../../img/image-17.png ':size=300')
 
-    ![Screenshot of the first step in creating a GitHub repository. The "Repository name" field contains the text "hello-world" and is outlined in dark orange.](../../../img/image-18.png)
+</div>
+</div>
+
+<div class="grid2">
+<div class="col">
+
+2.  Type a short, memorable name for your repository. 
+
+  For example, "hello-world".
+
+</div><div class="col">
+
+![Screenshot of the first step in creating a GitHub repository. The "Repository name" field contains the text "hello-world" and is outlined in dark orange.](../../../img/image-18.png)
+
+</div>
+</div>
+
 
 3.  Optionally, add a description of your repository. For example, "My first repository on GitHub."
 
@@ -45,9 +64,19 @@ To create a remote repository from an existing local repository, specify the sou
 
 ## Navigating a repository
 
+<div class="grid2">
+<div class="col">
+
 <img src="../../../img/image-8.png" alt="code" width="80"/>
 
+</div><div class="col">
+
 Location where GitHub displays the files included in the repository. GitHub also displays an About section, the most recent commit in history and the current working branch (there could be more to display as well depending on repository settings).
+
+</div>
+</div>
+
+
 
 <img src="../../../img/image-9.png" alt="code" width="90"/>
 

@@ -1,12 +1,12 @@
 # What is GitHub?
 
-<!-- <img src="docs/img/image-16.png" alt="code" width="300"/> -->
 
-<p align="center">
+<div class="grid2">
+<div class="col">
   <img src="../../../img/image-16.png" alt="code" width="300"/>
-</p>
+</div>
 
-
+<div class="col">
 
 - Technology platform built on top of **Git**
 - **Social** side of Git
@@ -19,5 +19,5 @@
   - **Organisation and teams**
   - **Projects**
 
-
-<img src="../../../img/image-7.png" alt="code" width="720"/>
+</div>
+</div>
