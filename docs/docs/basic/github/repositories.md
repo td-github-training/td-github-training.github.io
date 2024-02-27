@@ -2,22 +2,7 @@
 
 A _repository_ is a centralized location that stores a collection of files along with their git history.
 
-
-## Local vs Remote
-
-As Git is a **distributed** version control system, it has the concept of a _**local**_ and _**remote**_ repositories.
-
-![text](../../../img/img-6.png)
-
-### Local Repositories
-
-See [Local Repositories](/docs/basic/git/repositories#local-repositories)
-
-### Remote Repositories
-
-Repositories located on GitHub are remote repositories.
-
-## Navigating a repository
+## Navigating repositories
 
 ![Example GitHub Repository](../../../img/image-26.png)
 
@@ -42,7 +27,7 @@ Kanban style boards that all you to visualize your work. Projects can be created
 
 Wikis are to communicate project details, display user documentation, or almost anything your heart desires. GitHub utilizes git to help keep track of the edits to the Wiki in version control.
 
-## Creating a repository
+## Creating repositories
 
 ### GitHub Website
 
