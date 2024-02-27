@@ -96,6 +96,14 @@ git commit -a -m "Your commit message"
 
 > The `-a` option automatically stages every file that is tracked and has been modified or deleted
 
+**Amending the last commit**
+
+If you need to change the last commit (to modify the commit message or add new changes), you can use the `--amend` option:
+
+```bash
+git commit --amend -m "New commit message"
+```
+
 ## Viewing history
 
 ### git log
@@ -325,79 +333,6 @@ git rebase --abort
 This will stop the rebase and return your repository to the state it was in before you started the rebase.
 
 
-## Syncing changes
-
-### git fetch
-
-`git fetch` This command downloads commits, files, and refs from a remote repository to your local repository, but it does not merge them with your local branches. 
-
-It's a safe way to see what's happening on the remote repository before integrating changes into your local working copy. After fetching, you can inspect the changes or merge them manually with `git merge`.
-
-### git pull
-
-`git pull` This command is essentially a combination of `git fetch` followed by `git merge`. It downloads changes from the remote repository and immediately applies those changes to your current branch. 
-
-This is typically used when you want to update your local branch with all data from its remote counterpart.
-
-### git push
-
-The `git push` command is used to upload local repository content to a remote repository. It's a fundamental command in Git that allows you to share your commits with others.
-
-#### Basic Push
-
-The simplest use of `git push` is to upload your commits to the default remote repository (usually called `origin`) and the branch that you're currently on:
-
-```bash
-git push
-```
-
-#### Pushing to a Specific Remote
-
-If you have multiple remote repositories, you can specify which one to push to:
-
-```bash
-git push <remote-name>
-```
-
-Replace `<remote-name>` with the name of the remote repository you want to push to.
-
-#### Pushing a Specific Branch
-
-You can also specify which branch you want to push:
-
-```bash
-git push <remote-name> <branch-name>
-```
-
-Replace `<branch-name>` with the name of the branch you want to push.
-
-#### Setting the Upstream Branch
-
-The first time you push a branch, you may need to set the upstream branch:
-
-```bash
-git push -u <remote-name> <branch-name>
-```
-
-The `-u` option sets the upstream branch, which means that future `git push` commands without a branch specified will know to push to `<branch-name>` on `<remote-name>`.
-
-#### Force Pushing
-
-If your local branch and the remote branch have diverged (i.e., they both have commits that the other doesn't have), `git push` will fail. You can force Git to overwrite the remote branch with your local branch using the `--force` option:
-
-```bash
-git push --force <remote-name> <branch-name>
-```
-
-Be careful with this command, as it can permanently delete commits on the remote branch.
-
-#### Deleting a Remote Branch
-
-You can use `git push` to delete a branch on the remote repository:
-
-```bash
-git push <remote-name> --delete <branch-name>
-```
 
 ## Quiz
 

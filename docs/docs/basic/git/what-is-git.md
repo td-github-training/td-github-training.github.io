@@ -1,6 +1,6 @@
 # What is Git?
 
-Git is a popular version control system used for both open source and commercial software development
+Git is a popular version control system used for both open source and commercial software development.
 
 Git has the following unique features:
 
