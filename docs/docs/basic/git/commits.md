@@ -1,10 +1,10 @@
 # What is a Commit?
 
-A **commit** is a **snapshot** of your _entire_ repository at a given point in time.  A commit occurs when one or more changes are copied from the staging area to the repository.
+A **commit** is a **snapshot** of an _entire_ repository at a given point in time.
 
 ## A typical workflow
 
-As we mentioned in [How Git Works](git_101?id=how-git-works), git has a two-step process to save changes to a repository.
+As we mentioned in [How Git Works](git_101?id=how-git-works), Git has a two-step process to save changes to a repository.
 
 ![alt text](../../../img/image-24.png ':size=550px')
 
@@ -17,11 +17,9 @@ In practice, this looks like:
 
 ### git add
 
-`git add <files>` copies changes from the working directory to the staging area.
+Copies changes from the working directory to the staging area.
 
-The `git add` command is a fundamental Git command used to add changes in the working directory to the staging area. It tells Git that you want to include updates to a particular file in the next commit. However, `git add` doesn't affect the repository; changes are not actually recorded until you run `git commit`.
-
-#### Staging files
+**Staging files**
 
 The simplest way to use `git add` is to add all changes (new, modified, and removed files) in the current directory and its subdirectories:
 
@@ -41,7 +39,7 @@ You can also add multiple files at once:
 git add filename1 filename2
 ```
 
-#### Staging hunks
+**Staging hunks**
 
 If you've made several changes to a file but only want to stage some of them, you can use `git add -p`:
 
@@ -51,7 +49,7 @@ git add -p filename
 
 This command will prompt you to stage individual changes (or 'hunks') in the file. You can choose to stage, skip, or split each hunk.
 
-#### Viewing Staged Changes
+**Viewing Staged Changes**
 
 After you've staged some changes, you can view them with `git diff --staged`:
 
@@ -61,7 +59,7 @@ git diff --staged
 
 This command will show you a diff of what's been staged but not yet committed.
 
-#### Unstaging Changes
+**Unstaging Changes**
 
 If you've staged some changes with `git add` but then decide you don't want to commit them, you can unstage them with `git restore --staged`:
 
@@ -76,13 +74,9 @@ This command will remove the changes from the staging area but won't alter the w
 
 ### git commit
 
-`git commit -m "Commit message"` saves a snapshot of the changes in staging area to the local repository as a commit.
+Saves a snapshot of the changes in staging area to the local repository as a commit.
 
-The `git commit` command is one of the core primary functions of Git. Prior to this operation, `git add` is used to add any new or modified files to the staging area.
-
-This command takes the current state of the staging area and saves it as a new commit in the local Git repository. This commit serves as a record of the project history, and it includes the changes made to the code and an associated message describing those changes.
-
-#### Committing staged changes
+**Committing staged changes**
 
 The simplest way to use `git commit` is to commit all staged changes with a message:
 
@@ -90,9 +84,9 @@ The simplest way to use `git commit` is to commit all staged changes with a mess
 git commit -m "Your commit message"
 ```
 
-The `-m` option allows you to write the commit message directly in the command line.
+> The `-m` option allows you to write the commit message directly in the command line
 
-#### Committing all changes
+**Committing all changes**
 
 If you've made several changes but haven't staged them yet, you can commit all changes (modified and deleted files, but not new files) with one command:
 
@@ -100,35 +94,77 @@ If you've made several changes but haven't staged them yet, you can commit all c
 git commit -a -m "Your commit message"
 ```
 
-The `-a` option tells Git to automatically stage every file that is tracked and has been modified or deleted.
-
-#### Amending the Last Commit
-
-If you need to change the last commit (to modify the commit message or add new changes), you can use the `--amend` option:
-
-```bash
-git commit --amend -m "New commit message"
-```
-
-!> This command replaces the last commit with a new one. Be careful with this option if you've already pushed your commits to a remote repository.
-
+> The `-a` option automatically stages every file that is tracked and has been modified or deleted
 
 ## Viewing history
 
 ### git log
 
-```sh
+The git log command is used to view the commit history of your Git repository. It shows the commit hashes, authors, dates, and commit messages.
+
+```bash
 git log
-git log --oneline --graph --decorate --all
-git log --stat
-git log --patch
 ```
+
+**Output:**
+
+```bash
+commit 4a8e17d7f593a3c0ad626648175e8b4858e77f2c (HEAD -> main)
+Author: Your Name <your.email@example.com>
+Date:   Thu Sep 30 14:33:50 2021 -0700
+
+    Update file1.txt
+
+commit 9d3a192570a772443332d6c55b3002a5d7e2c1b5
+Author: Your Name <your.email@example.com>
+Date:   Thu Sep 30 14:31:26 2021 -0700
+
+    Initial commit
+```
+
+---
+
+> The `--oneline` option can be used to display the commit history in a more compact format:
+
+```bash
+git log --oneline
+```
+
+
+**Output:**
+
+```bash
+4a8e17d (HEAD -> main) Update file1.txt
+9d3a192 Initial commit
+```
+
+---
+
+> The `--oneline --graph --decorate --all` command provides a visual representation of the commit history. 
+
+```bash
+git log --oneline --graph --decorate --all
+```
+
+**Output:**
+
+```bash
+* 7a8b9cd (HEAD -> main, origin/main) Fix bug
+* 6b7c8de Implement feature
+| * 5c6d7ef (feature-branch) Update feature
+| * 4e5f6dg Add feature
+|/  
+* 3d4e5cf Refactor code
+* 2c3d4bf Update README
+* 1b2c3ad Initial commit
+```
+
 
 ## Comparing changes
 
 ### git diff
 
-`git diff` allows you to see the difference between any two refs in the repository. 
+Allows you to see the difference between any two refs in a repository. 
 
 The diagram below shows how you can compare the content of your working area, staging, and HEAD (or the most recent commit):
 
@@ -138,140 +174,156 @@ The diagram below shows how you can compare the content of your working area, st
 
 </center>
 
-```sh
+```bash
 git diff
-git diff --staged
-git diff HEAD
-git diff --color-words
-git diff <REF-1> <REF-2>
-git diff main slow-down
-git diff origin/main main
-git diff 2710 b745
 ```
+
+**Output:**
+
+```bash
+diff --git a/file1.txt b/file1.txt
+index e965047..2c7ee5a 100644
+--- a/file1.txt
++++ b/file1.txt
+@@ -1 +1,2 @@
+ Hello, World!
++Hello, Git!
+```
+
+#### Common flags
+
+- `git diff --staged`
+- `git diff HEAD`
+- `git diff main feature`
+- `git diff origin/main main`
+
 
 ## Fixing mistakes
 
 ### git reset
 
-Sometimes we are working on a branch, and we decide things aren't going quite like we had planned. We want to reset some, or even all, of our files to look like what they were at a different point in history.
+The `git reset` command is a powerful tool that allows you to manipulate the state of your Git repository. It can be used to unstage files, undo commits, and more.
 
-<center>
+#### Unstaging Files
 
-![Git Reset Before and After](../../../img/reset-visual.png ':size=500')
+If you've staged changes that you don't want to commit, you can use `git reset` to unstage them:
 
-</center>
+```bash
+git reset <file>
+```
 
-Remember, there are three different snapshots of our project at any given time. The first is the most recent commit (also known as HEAD). The second is the staging area (also called the index). The third is the working directory containing any new, deleted, or modified files.
+This command will unstage the specified file, but it won't alter the file itself.
 
-The `git reset` command has three modes, and they allow us to change some or all of these three snapshots.
+#### Undoing Commits
 
-It also helps to know what branches technically are: each is a pointer, or reference, to the latest commit in a line of work. As we add new commits, the currently checked-out branch "moves forward," so that it always points to the most recent commit.
+`git reset` can also be used to undo commits. There are three main modes: `--soft`, `--mixed`, and `--hard`.
 
-#### Reset modes
+* **Soft Reset**
 
-The three modes for git reset are: `--soft`, `--mixed`, and `--hard`. For these examples, assume that we have a "clean" working directory, i.e. there are no uncommitted changes.
+A soft reset moves the HEAD pointer to a specified commit, but it leaves the staging area and the working directory unchanged. This is useful if you want to keep your changes, but move the HEAD pointer.
 
-- `git reset --soft <SHA>` moves the current branch to point at the `<SHA>`. However, the working directory and staging area remain untouched. Since the snapshot that current branch points to now differs from the index's snapshot, this command effectively stages all differences between those snapshots. This is a good command to use when you have made numerous small commits, and you would like to regroup them into a single commit.
-- `git reset --mixed <SHA>` makes the current branch *and* the staging area look like the `<SHA>` snapshot. *This is the default mode:* if you don't include a mode flag, Git will assume you want to do a `--mixed` reset. `--mixed` is useful if you want to keep all of your changes in the working directory, but change whether and how you commit those changes.
-- `git reset --hard <SHA>` is the most drastic option. With this, Git will make all 3 snapshots, the current branch, the staging area, *and* your working directory, look like they did at `<other-commit>`. This can be dangerous! We've assumed so far that our working directory is clean. If it is not, and you have uncommitted changes, `git reset --hard` will *delete all of those changes*. Even with a clean working directory, use `--hard` only if you're sure you want to completely undo earlier changes.
+```bash
+git reset --soft <commit>
+```
 
-### git checkout
+* **Mixed Reset**
 
--- files copies files from the stage to the working directory. Use this to throw away local changes
+A mixed reset (the default mode) moves the HEAD pointer and alters the staging area to match the specified commit, but it leaves the working directory unchanged. This is useful if you want to undo a commit but keep your changes.
 
-### git commit --amend
+```bash
+git reset --mixed <commit>
+# or
+git reset <commit>
+```
 
-`git commit --amend` allows us to make changes to the commit that HEAD is currently pointing to. 
+* **Hard Reset**
 
-Two of the most common uses are:
-- Re-writing commit messages
-- Adding files to the commit
+A hard reset moves the HEAD pointer, alters the staging area, and alters the working directory to match the specified commit. This effectively undoes all changes since the specified commit. Be careful with this mode, as it can permanently delete your changes.
+
+```bash
+git reset --hard <commit>
+```
 
 ### git revert
 
-`git revert` is used to create a new commit that undoes the changes made in a previous commit.
+A safe way to undo changes by creating a new commit that undoes changes made in a previous commit.  It's useful for fixing mistakes and for safely removing changes without rewriting the project's history. 
 
-It's useful for fixing mistakes and for safely removing changes without rewriting the project's history. 
+#### Reverting with No Commit
+
+If you run `git revert` without a commit hash, Git will ask you to enter a commit message for a new commit that undoes the changes made in the last commit:
+
+```bash
+git revert
+```
+
+#### Reverting a Single Commit
+
+If you've made a mistake in a commit and want to undo the changes made in that commit, you can use `git revert`:
+
+```bash
+git revert <commit-hash>
+```
+
+This command will create a new commit that undoes the changes made in the commit specified by `<commit-hash>`. Your working directory will be updated to reflect the new commit.
+
+#### Reverting a Range of Commits
+
+If you've made mistakes in a range of commits and want to undo all of them, you can use `git revert` with a commit range:
+
+```bash
+git revert <older-commit-hash>..<newer-commit-hash>
+```
+
+This command will create new commits for each commit in the range that undo the changes made in those commits. Your working directory will be updated to reflect the new commits.
+
+>Note: The older commit is not included in the range. If you want to include it, use three dots instead of two:
+> 
+> ```bash
+> git revert <older-commit-hash>...<newer-commit-hash>
+> ```
+
 
 ### git rebase
 
-Reordering commit history with `git rebase -i` is a powerful way to clean up your project's timeline. 
+The `git rebase` command is a powerful tool that allows you to modify your commit history by moving or combining your commits. 
 
-Here's how to do it:
+#### Interactive Rebase
 
-1. **Start Interactive Rebase**: First, check out the branch you want to reorder. Then, initiate an interactive rebase for the last `N` commits using `git rebase -i HEAD~N`. Replace `N` with the number of commits you want to reorder.
+Interactive rebase allows you to modify individual commits as they are moved. This is useful for combining, reordering, or modifying commits.
 
-    ```bash
-    git checkout feature-branch
-    git rebase -i HEAD~3
-    ```
-
-    This command will open a text editor with a list of commits like this:
-
-    ```
-    pick e3f1e37 Commit message A
-    pick 7c91bf1 Commit message B
-    pick 4a07e8d Commit message C
-    ```
-
-2. **Reorder Commits**: In the text editor, reorder the lines to change the order of commits. Move the lines up or down as desired.
-
-    ```
-    pick 4a07e8d Commit message C
-    pick e3f1e37 Commit message A
-    pick 7c91bf1 Commit message B
-    ```
-
-3. **Resolve Conflicts**: If there are conflicts after reordering, Git will stop and let you resolve them. After fixing conflicts in a file, stage the changes with `git add` and then continue rebasing with `git rebase --continue`.
-
-    ```bash
-    # Fix conflicts in your files
-    git add <file-with-conflict>
-    git rebase --continue
-    ```
-
-    You may need to repeat this step if there are multiple conflicts.
-
-4. **Force Push if Necessary**: If you've already pushed the branch to a remote repository, you'll need to force push your changes because the commit history has changed.
-
-    ```bash
-    git push --force
-    ```
-
-    Be cautious with this step, as it can overwrite history on the remote.
-
-5. **Verify the New Order**: Use `git log` to ensure the commit history reflects your changes.
-
-    ```bash
-    git log --oneline
-    ```
-
-    You'll see the new order of commits:
-
-    ```
-    7c91bf1 Commit message B
-    e3f1e37 Commit message A
-    4a07e8d Commit message C
-    ```
-
-Remember to use `git rebase -i` with care, especially when working with branches that others might be using, as it rewrites commit history[1][2][4].
-
-### git reflog
-
-#### Does 'gone' really mean gone?
-
-The answer: It depends!
-
-```sh
-git reflog
+```bash
+# Start an interactive rebase
+git rebase -i HEAD~3
 ```
 
-The reflog is a record of every place HEAD has been. In a few minutes we will see how the reflog can be helpful in allowing us to restore previously committed changes. But first, we need to be aware of some of the reflog's limitations:
+This command will start an interactive rebase for the last 3 commits. Git will open a text editor with a list of the commits and options for what to do with each commit:
 
-- **The reflog is only local.** It is not pushed to the remote and only includes your local history. In other words, you can't see the reflog for someone else's commits, and they can't see yours.
-- **The reflog is a limited time offer.** By default, reachable commits are displayed in the reflog for 90 days, but unreachable commits (meaning commits that are not attached to a branch) are only displayed for 30 days.
+```bash
+pick 1fc6c95 do something
+pick 6b2481b do something else
+pick dd1475d changed some things
+```
 
-> Sometimes, you'll want to save your work in a commit without having to think of a commit message, or before you're ready to organize your changes. If that's the case, you can create aliases to create "save points". See the appendix with aliases to learn how!
+You can replace `pick` with an action keyword:
+
+- `reword`: Change the commit message.
+- `edit`: Amend the commit.
+- `squash`: Combine this commit with the previous one.
+- `fixup`: Like `squash`, but discard this commit's log message.
+- `drop`: Remove the commit.
+
+Save and close the file to continue the rebase.
+
+#### Abort a Rebase
+
+If you want to stop the rebase process at any time, you can use `git rebase --abort`:
+
+```bash
+git rebase --abort
+```
+
+This will stop the rebase and return your repository to the state it was in before you started the rebase.
+
 
 ## Syncing changes
 
@@ -289,15 +341,63 @@ This is typically used when you want to update your local branch with all data f
 
 ### git push
 
-`git push` Uploads local repository content to a remote repository.
+The `git push` command is used to upload local repository content to a remote repository. It's a fundamental command in Git that allows you to share your commits with others.
 
+#### Basic Push
 
+The simplest use of `git push` is to upload your commits to the default remote repository (usually called `origin`) and the branch that you're currently on:
 
-<center>
+```bash
+git push
+```
 
-![Alt text](../../../img/image-3.png)
+#### Pushing to a Specific Remote
 
-</center>
+If you have multiple remote repositories, you can specify which one to push to:
+
+```bash
+git push <remote-name>
+```
+
+Replace `<remote-name>` with the name of the remote repository you want to push to.
+
+#### Pushing a Specific Branch
+
+You can also specify which branch you want to push:
+
+```bash
+git push <remote-name> <branch-name>
+```
+
+Replace `<branch-name>` with the name of the branch you want to push.
+
+#### Setting the Upstream Branch
+
+The first time you push a branch, you may need to set the upstream branch:
+
+```bash
+git push -u <remote-name> <branch-name>
+```
+
+The `-u` option sets the upstream branch, which means that future `git push` commands without a branch specified will know to push to `<branch-name>` on `<remote-name>`.
+
+#### Force Pushing
+
+If your local branch and the remote branch have diverged (i.e., they both have commits that the other doesn't have), `git push` will fail. You can force Git to overwrite the remote branch with your local branch using the `--force` option:
+
+```bash
+git push --force <remote-name> <branch-name>
+```
+
+Be careful with this command, as it can permanently delete commits on the remote branch.
+
+#### Deleting a Remote Branch
+
+You can use `git push` to delete a branch on the remote repository:
+
+```bash
+git push <remote-name> --delete <branch-name>
+```
 
 ## Quiz
 

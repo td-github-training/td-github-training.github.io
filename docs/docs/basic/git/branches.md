@@ -134,7 +134,7 @@ git checkout main
 Then, merge the `feature` branch into the `main` branch:
 
 ```bash
-git merge `feature`
+git merge feature
 ```
 
 If the branches have diverged, Git will create a new commit to combine the changes from the `feature` branch into the `main` branch. If the branches have not diverged (i.e., if the `feature` branch was created from the `main` branch and the `main` branch has not changed since then), Git will perform a "fast-forward" merge, meaning it will just move the `main` branch pointer to point at the latest commit on the `feature` branch.
@@ -146,7 +146,7 @@ Sometimes, you might have changes in the two branches that conflict with each ot
 Let's say you have a conflict. When you try to merge, you'll see an output like this:
 
 ```bash
-git merge `feature`
+git merge feature
 ```
 
 **Output:**
@@ -161,10 +161,10 @@ To `resolve` the conflicts, open the file with conflicts in your text editor. Yo
 
 ```bash
 <<<<<<< HEAD
-This is some content from the `main` branch.
+This is some content from the main branch.
 =======
-This is some content from the `feature` branch.
->>>>>>> `feature`
+This is some content from the feature branch.
+>>>>>>> feature
 ```
 
 Edit the file to `resolve` the conflicts, then add the file to the staging area:
@@ -176,7 +176,7 @@ git add file.txt
 And commit the changes:
 
 ```bash
-git commit -m "`resolve`d merge conflict"
+git commit -m "resolved merge conflict"
 ```
 
 ### Aborting a merge
@@ -196,7 +196,7 @@ Git supports several different strategies for merging branches. The default is t
 You can specify a merge strategy with the `-s` or `--strategy` option:
 
 ```bash
-git merge -s `resolve` `feature`
+git merge -s resolve feature
 ```
 
 This command will use the `resolve` strategy to merge the `feature` branch into the current branch.
@@ -226,7 +226,7 @@ This will show you a list of commits. Each commit has a hash, like `3a0b9b6`.
 Now, switch to the `main` branch:
 
 ```bash
-git checkout `main`
+git checkout main
 ```
 
 Then, cherry-pick the commit:
@@ -270,7 +270,7 @@ To resolve the conflicts, open the file with conflicts in your text editor. You'
 
 ```bash
 <<<<<<< HEAD
-This is some content from the `main` branch.
+This is some content from the main branch.
 =======
 This is some content from the feature branch.
 >>>>>>> feature
@@ -293,7 +293,7 @@ git cherry-pick --continue
 If you start a cherry-pick and then decide you want to stop, you can abort the cherry-pick with the `--abort` option:
 
 ```bash
-git cherry-pick `--abort`
+git cherry-pick --abort
 ```
 
 This will stop the cherry-pick and return your repository to the state it was in before you started the cherry-pick.

@@ -4,27 +4,27 @@ A _repository_ is a centralized location that stores a collection of files along
 
 ## Local vs Remote
 
-As Git is a **distributed** version control system, it has the concept of a _**local**_ and _**remote**_ repositories.
+As a **distributed** version control system, Git has the concept of _**local**_ and _**remote**_ repositories.
 
 ![text](../../../img/img-6.png)
 
-### Local Repositories
+### Local repositories
 
-Repositories located on _your_ local computer are local repositories.
+A local repository is located on your personal computer, where you're doing the work, and you can work on it without an internet connection.
 
-Git manages and tracks changes to your code using three main areas: the Working Directory, the Staging Area, and the Repository.
+Local repositories consists of three main areas managed by Git:
 
-1. **Working Directory**: This is where you'll be doing all your work: creating, editing, deleting and organizing files. When you make changes, Git recognizes that a file has changed in the working directory but it won't keep track of these changes until you tell it to.
+1. **Working directory**: This is where you do your work: creating, editing, deleting and organizing files. 
+2. **Staging area**: This is where Git tracks and saves changes that will go into your next commit.
+3. **Repository**: This is where Git permanently stores changes as commits. 
 
-2. **Staging Area**: Also known as the "index", the staging area is where Git tracks and saves changes that will go into your next commit, which means, when you make a change to a file, you'll need to add it to the staging area (with `git add`) to include it in your next commit.
+### Remote repositories
 
-3. **Repository**: This is where Git permanently stores changes as commits. You can think of it as a database of your project's history. Once you've staged your changes, you can commit them to the repository with `git commit`, which takes your changes from the staging area, wraps them in a new commit object, and stores it in your repository.
+Remote repositories are _shared_ repositories where teams can collaborate on the same codebase. 
 
-### Remote Repositories
+Changes made in a local repository won't affect a remote repository until the changes are _**pushed**_ and changes made in the remote repository won't affect a local repository until they are _**pulled**_ or _**fetched**_.
 
-See [Remote Repositories](/docs/basic/github/repositories#remote-repositories)
-
-## Creating a repository
+## Creating repositories
 
 Repositories are created in one of two ways depending on whether you are starting from scratch or from an existing repository.
 
@@ -55,20 +55,36 @@ Initialized empty Git repository in /home/me/repo/.git/
 
 TODO: 
 
-## Using a repository
+## Using repositories
 
 ### git status
 
-To verify the current state of your repository type: `git status`
+Displays the state of the working directory and the staging area. 
 
-```sh
-git status
+Git has three main statuses for your files: 
+
+1. **Untracked**: Files that have not yet been staged or committed.
+1. **Modified**: Modified files that have not yet been staged.
+1. **Staged**: Modified files that have been marked to go into the next commit.
+
+#### Sample output
+
+```bash
 On branch main
-Your branch is up-to-date with 'origin/main'.
-nothing to commit, working tree clean
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+    modified: hello.py
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+    modified: main.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+    hello.pyc
 ```
 
-In the above example, we can see that we are on branch `main`, everything is up-to-date with `origin/main` and our working tree is clean.
 
 ## Configuration
 
