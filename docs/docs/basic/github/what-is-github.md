@@ -1,23 +1,8 @@
 # What is GitHub?
 
+GitHub is a web-based hosting service for version control using Git, which provides a platform for collaboration, allowing multiple people to work on a project at the same time. 
 
-<div class="grid2">
-<div class="col">
-  <img src="../../../img/image-16.png" alt="code" width="300"/>
-</div>
+![alt text](../../../img/image-42.png)
 
-<div class="col">
 
-- Technology platform built on top of **Git**
-- **Social** side of Git
-- **Code hosting** and **collaboration** platform
-- **Community** of developers
-- **Ecosystem** of integrations
-- **Team** collaboration through:
-  - **Issues**
-  - **Pull requests**
-  - **Organisation and teams**
-  - **Projects**
-
-</div>
-</div>
+GitHub is widely used by individuals, open-source projects, and businesses for personal projects, collaboration, and software development.

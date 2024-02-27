@@ -41,69 +41,43 @@ After completing work on a branch, changes can be merged back into the main code
 
 ## Creating branches
 
-To create a new branch, use the `git branch` command followed by the name of the new branch.
+To view the existing branches in a repository, use `git branch`:
 
 ```bash
-git branch new-feature
-```
-
-This creates a new branch named new-feature. However, it does not switch to the new branch. To verify that the branch has been created, you can use the git branch command with no arguments:
-
-```bash
-git branch
-```
-
-**Output:**
-
-```bash
+> git branch
 * master
   new-feature
 ```
 
-The `*` next to master indicates that master is the currently active branch.
+> The `*` next to master indicates that master is the currently active branch.
 
-## Switching branches
-
-To switch to the `new-feature` branch, you can use the `git switch` command:
+To create a new branch, use:
 
 ```bash
-git switch new-feature
+git branch <branchname>
 ```
 
-Now, if you run `git branch` again, you'll see that the `*` is next to `new-feature`, indicating that it's the currently active branch:
-
-**Output:**
-
-```bash
-  master
-* new-feature
-```
-
-If you want to create a new branch and switch to it in one command, you can use the `-c` option with the `git switch` command:
-
-```bash
-git switch -c another-feature
-```
-
-This creates a new branch named `another-feature` and immediately switches to it.
+This creates a new branch named, however, it does not switch to the new branch. 
 
 ## Deleting branches
 
-To delete a branch, use the `-d` option with the `git branch` command:
+To delete a branch, use the `-d` option:
 
 ```bash
-git branch -d new-feature
+git branch -d <branchname>
 ```
 
-This deletes the `new-feature` branch. If you try to delete a branch that has changes that haven't been merged, Git will prevent you from doing so to avoid data loss. 
+This deletes the `<branchname>` branch. 
+
+?> If you try to delete a branch that has changes that haven't been merged, Git will prevent you from doing so to avoid data loss. 
 
 In such cases, if you're sure you want to delete the branch, you can use the `-D` option instead:
 
 ```bash
-git branch -D unmerged-feature
+git branch -D <branchname>
 ```
 
-This forcefully deletes the `unmerged-feature` branch, discarding any unmerged changes.
+This forcefully deletes the unmerged `<branchname>` branch, discarding any unmerged changes.
 
 ## Renaming branches
 
@@ -117,9 +91,26 @@ This renames the branch `old-name` to `new-name`.
 
 Remember to replace `old-name` and `new-name` with the current and new names of your branch, respectively.
 
+## Switching branches
+
+To switch to a branch, use `git switch`:
+
+```bash
+git switch <branch>
+```
+
+If you want to create a new branch and switch to it in one command, you can use the `-c` option:
+
+```bash
+git switch -c <new-branch>
+```
+
+This creates a new branch named `<new-branch>` and immediately switches to it.
+
+
 ## Merging changes
 
-`git merge` is a command that allows you to combine the work of different branches together. This command is typically used to combine changes made on two distinct branches.
+`git merge` allows you to combine changes from different, typically distinct, branches. 
 
 ### Basic merging
 
@@ -128,7 +119,7 @@ Let's start with a basic example. Suppose you have a repository with a `main` br
 First, switch to the `main` branch:
 
 ```bash
-git checkout main
+git switch main
 ```
 
 Then, merge the `feature` branch into the `main` branch:
@@ -137,7 +128,7 @@ Then, merge the `feature` branch into the `main` branch:
 git merge feature
 ```
 
-If the branches have diverged, Git will create a new commit to combine the changes from the `feature` branch into the `main` branch. If the branches have not diverged (i.e., if the `feature` branch was created from the `main` branch and the `main` branch has not changed since then), Git will perform a "fast-forward" merge, meaning it will just move the `main` branch pointer to point at the latest commit on the `feature` branch.
+If the branches have diverged, Git will create a new commit to combine the changes from the `feature` branch into the `main` branch. If the branches have not diverged (if the `feature` branch was created from the `main` branch and the `main` branch has not changed since then), Git will perform a "fast-forward" merge, meaning it will just move the `main` branch pointer to point at the latest commit on the `feature` branch.
 
 ### Merging with conflicts
 
@@ -189,27 +180,9 @@ git merge --abort
 
 This will stop the merge and return your repository to the state it was in before you started the merge.
 
-### Merge strategies
-
-Git supports several different strategies for merging branches. The default is the `recursive` strategy, which can handle complex merge situations involving multiple common ancestors. However, there are other strategies available, such as the `resolve` strategy, which uses a different algorithm to find the common ancestor.
-
-You can specify a merge strategy with the `-s` or `--strategy` option:
-
-```bash
-git merge -s resolve feature
-```
-
-This command will use the `resolve` strategy to merge the `feature` branch into the current branch.
-
 ## Cherry-picking changes
 
-<center>
-
-![Alt text](../../../img/image-13.png ':size=500')
-
-</center>
-
-`git cherry-pick` is a powerful command that enables you to pick a commit from one branch and apply it onto another. This is useful when you want to apply some commit without merging or rebasing the whole branch.
+`git cherry-pick` enables you to pick a commit from one branch and apply it onto another. This is useful when you want to apply some commit without merging or rebasing the whole branch.
 
 ### Basic cherry-picking
 
@@ -226,7 +199,7 @@ This will show you a list of commits. Each commit has a hash, like `3a0b9b6`.
 Now, switch to the `main` branch:
 
 ```bash
-git checkout main
+git switch main
 ```
 
 Then, cherry-pick the commit:

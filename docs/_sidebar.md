@@ -15,27 +15,17 @@
     - [Commits](./docs/basic/git/commits.md)
     - [Branches](./docs/basic/git/branches.md)
     - [Tags](./docs/basic/git/tags.md)
-    - Exercises
-      - [Creating a Repo](./docs/basic/git/exercises/create_local_repo.md)
-      - [Versioning Files]()
-      - [Fixing Mistakes]()
-      - [Navigating Branches](./docs/basic/git/exercises/forgot_to_branch.md)
-      - [Creating a .gitignore](./docs/basic/git/exercises/gitignore.md)
+    - [Configuration](./docs/basic/git/configuration.md)
   - **GitHub**
     - [What is GitHub?](./docs/basic/github/what-is-github.md)
     - [Repositories](./docs/basic/github/repositories.md)
     - [Pull Requests](./docs/basic/github/pull_requests.md)
-    - [Issues](./docs/basic/github/issues.md)
     - [Workflows](./docs/basic/github/github_flow.md)
     - [Markdown](./docs/basic/github/markdown.md)
     - Administration
       - [Fixing Mistakes](./docs/basic/github/fixing-mistakes.md)
       - [Handling Large Files](./docs/basic/github/handling-large-files.md)
       - [Managing Secrets](./docs/basic/github/managing-secrets.md)
-    - Exercises
-      - [Creating a Repo](./docs/basic/github/repositories.md)
-      - [Creating a PR](./docs/basic/github/pull_requests.md)
-      - [Creating an Issue](./docs/basic/github/issues.md)
 
 - **Advanced Topics**
   - **Git**

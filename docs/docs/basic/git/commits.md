@@ -110,13 +110,11 @@ git commit --amend -m "New commit message"
 
 The git log command is used to view the commit history of your Git repository. It shows the commit hashes, authors, dates, and commit messages.
 
-```bash
-git log
-```
-
-**Output:**
+For example:
 
 ```bash
+> git log
+
 commit 4a8e17d7f593a3c0ad626648175e8b4858e77f2c (HEAD -> main)
 Author: Your Name <your.email@example.com>
 Date:   Thu Sep 30 14:33:50 2021 -0700
@@ -132,31 +130,20 @@ Date:   Thu Sep 30 14:31:26 2021 -0700
 
 ---
 
-> The `--oneline` option can be used to display the commit history in a more compact format:
+The `--oneline` option can be used to display the commit history in a more compact format:
 
 ```bash
-git log --oneline
-```
-
-
-**Output:**
-
-```bash
+> git log --oneline
 4a8e17d (HEAD -> main) Update file1.txt
 9d3a192 Initial commit
 ```
 
 ---
 
-> The `--oneline --graph --decorate --all` command provides a visual representation of the commit history. 
+The `--oneline --graph --decorate --all` command provides a visual representation of the commit history:
 
 ```bash
-git log --oneline --graph --decorate --all
-```
-
-**Output:**
-
-```bash
+> git log --oneline --graph --decorate --all
 * 7a8b9cd (HEAD -> main, origin/main) Fix bug
 * 6b7c8de Implement feature
 | * 5c6d7ef (feature-branch) Update feature
@@ -166,7 +153,6 @@ git log --oneline --graph --decorate --all
 * 2c3d4bf Update README
 * 1b2c3ad Initial commit
 ```
-
 
 ## Comparing changes
 
@@ -182,13 +168,10 @@ The diagram below shows how you can compare the content of your working area, st
 
 </center>
 
-```bash
-git diff
-```
-
-**Output:**
+For example:
 
 ```bash
+> git diff
 diff --git a/file1.txt b/file1.txt
 index e965047..2c7ee5a 100644
 --- a/file1.txt
@@ -210,53 +193,33 @@ index e965047..2c7ee5a 100644
 
 ### git reset
 
-The `git reset` command is a powerful tool that allows you to manipulate the state of your Git repository. It can be used to unstage files, undo commits, and more.
+`git reset` allows you to manipulate the state of your Git repository and has three main modes:
 
-#### Unstaging Files
+* `--soft` reset moves the HEAD pointer to a specified commit, but it leaves the staging area and the working directory unchanged. This is useful if you want to keep your changes, but move the HEAD pointer.
 
-If you've staged changes that you don't want to commit, you can use `git reset` to unstage them:
+  ```bash
+  git reset --soft <commit>
+  ```
 
-```bash
-git reset <file>
-```
+* `--mixed` reset (the default mode) moves the HEAD pointer and alters the staging area to match the specified commit, but it leaves the working directory unchanged. This is useful if you want to undo a commit but keep your changes.
 
-This command will unstage the specified file, but it won't alter the file itself.
+  ```bash
+  git reset --mixed <commit>
+  # or
+  git reset <commit>
+  ```
 
-#### Undoing Commits
+* `--hard` reset moves the HEAD pointer, alters the staging area, and alters the working directory to match the specified commit. This effectively undoes all changes since the specified commit. Be careful with this mode, as it can permanently delete your changes.
 
-`git reset` can also be used to undo commits. There are three main modes: `--soft`, `--mixed`, and `--hard`.
-
-* **Soft Reset**
-
-A soft reset moves the HEAD pointer to a specified commit, but it leaves the staging area and the working directory unchanged. This is useful if you want to keep your changes, but move the HEAD pointer.
-
-```bash
-git reset --soft <commit>
-```
-
-* **Mixed Reset**
-
-A mixed reset (the default mode) moves the HEAD pointer and alters the staging area to match the specified commit, but it leaves the working directory unchanged. This is useful if you want to undo a commit but keep your changes.
-
-```bash
-git reset --mixed <commit>
-# or
-git reset <commit>
-```
-
-* **Hard Reset**
-
-A hard reset moves the HEAD pointer, alters the staging area, and alters the working directory to match the specified commit. This effectively undoes all changes since the specified commit. Be careful with this mode, as it can permanently delete your changes.
-
-```bash
-git reset --hard <commit>
-```
+  ```bash
+  git reset --hard <commit>
+  ```
 
 ### git revert
 
-A safe way to undo changes by creating a new commit that undoes changes made in a previous commit.  It's useful for fixing mistakes and for safely removing changes without rewriting the project's history. 
+`git revert` is a safe way to undo changes.  It works by creating a new commit that undoes changes made in a previous commit.  It's useful for fixing mistakes and for removing changes without rewriting the project's history. 
 
-#### Reverting with No Commit
+**Reverting with No Commit**
 
 If you run `git revert` without a commit hash, Git will ask you to enter a commit message for a new commit that undoes the changes made in the last commit:
 
@@ -264,25 +227,21 @@ If you run `git revert` without a commit hash, Git will ask you to enter a commi
 git revert
 ```
 
-#### Reverting a Single Commit
+**Reverting a Single Commit**
 
-If you've made a mistake in a commit and want to undo the changes made in that commit, you can use `git revert`:
+If you want to undo the changes made in a specific commit, you can use: 
 
 ```bash
 git revert <commit-hash>
 ```
 
-This command will create a new commit that undoes the changes made in the commit specified by `<commit-hash>`. Your working directory will be updated to reflect the new commit.
+**Reverting a Range of Commits**
 
-#### Reverting a Range of Commits
-
-If you've made mistakes in a range of commits and want to undo all of them, you can use `git revert` with a commit range:
+If you've made mistakes in a range of commits and want to undo all of them, you can use:
 
 ```bash
 git revert <older-commit-hash>..<newer-commit-hash>
 ```
-
-This command will create new commits for each commit in the range that undo the changes made in those commits. Your working directory will be updated to reflect the new commits.
 
 >Note: The older commit is not included in the range. If you want to include it, use three dots instead of two:
 > 
@@ -293,11 +252,9 @@ This command will create new commits for each commit in the range that undo the 
 
 ### git rebase
 
-The `git rebase` command is a powerful tool that allows you to modify your commit history by moving or combining your commits. 
+`git rebase` allows you to modify your commit history by moving or combining your commits. 
 
-#### Interactive Rebase
-
-Interactive rebase allows you to modify individual commits as they are moved. This is useful for combining, reordering, or modifying commits.
+**Interactive rebase** using `--interactive` or `-i` allows you to modify individual commits as they are moved. This is useful for combining, reordering, or modifying commits.
 
 ```bash
 # Start an interactive rebase
@@ -322,7 +279,7 @@ You can replace `pick` with an action keyword:
 
 Save and close the file to continue the rebase.
 
-#### Abort a Rebase
+**Aborting a Rebase**
 
 If you want to stop the rebase process at any time, you can use `git rebase --abort`:
 

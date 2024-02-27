@@ -12,15 +12,15 @@ A pull request is a proposal to merge a set of changes from one **branch** into 
 
 In a pull request, collaborators can review and discuss the proposed set of changes before they integrate the changes into the main codebase. Pull requests display the differences, or diffs, between the content in the source branch and the content in the target branch.
 
-![octicon-comment-discussion] **Conversation**
+**Conversation**
 
 Similar to the discussion thread on an Issue, a Pull Request contains a discussion about the changes being made to the repository. This discussion is found in the **Conversation** tab and also includes a record of all the commits made on the branch as well as assignments, labels and reviews that have been applied to the pull request.
 
-![octicon-git-commit] **Commits**
+**Commits**
 
 The **Commits** tab contains more detailed information about who has made changes to the files. Clicking each commit ID will allow you to see the changes applied in that specific commit.
 
-![octicon-diff] **Files changed**
+**Files changed**
 
 The **Files changed** tab allows you to see cumulative effect of all the changes made on the branch. We call this the `diff`. Our diff isn't very interesting yet, but as we make changes your diff will become very colorful.
 
@@ -48,7 +48,7 @@ To provide feedback on proposed changes, GitHub offers three levels of commentin
 
 2. **Line comments**
 
-  In the **Files changed** tab, you can hover over a line to see a blue ![`+`][octicon-diff-added] icon. Clicking this icon will allow you to enter a comment on a specific line. These line level comments are a great way to give additional context on recommended changes. They will also be displayed in the **Conversation** tab.
+  In the **Files changed** tab, you can hover over a line to see a blue icon. Clicking this icon will allow you to enter a comment on a specific line. These line level comments are a great way to give additional context on recommended changes. They will also be displayed in the **Conversation** tab.
 
 3. **Review**
 

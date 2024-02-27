@@ -8,19 +8,13 @@ As a **distributed** version control system, Git has the concept of _**local**_ 
 
 ![text](../../../img/img-6.png)
 
-### Local repositories
+**Local repositories** consists of _three_ main areas:
 
-Local repositories consists of _three_ main areas:
-
-1. **Working directory**: This is where you do your work: creating, editing, deleting and organizing files. 
+1. **Working directory**: This is where you do your work - creating, editing, deleting and organizing files. 
 2. **Staging area**: This is where Git tracks and saves changes that will go into your next commit.
 3. **Repository**: This is where Git permanently stores changes as commits. 
 
-### Remote repositories
-
-Remote repositories, like those hosted on GitHub, are generally _shared_ repositories where teams can collaborate on the same codebase. 
-
-Changes made in a local repository won't affect a remote repository until the changes are _**pushed**_ and changes made in the remote repository won't affect a local repository until they are _**pulled**_ or _**fetched**_.
+**Remote repositories**, like those hosted on GitHub, are where teams collaborate on a given codebase. 
 
 ## Creating repositories
 
@@ -47,24 +41,26 @@ Initialized empty Git repository in /home/repo/.git/
 `git clone <repository>` clones a repository into a new directory.
 
 ```bash
-TODO: 
-git clone 
-Initialized empty Git repository in /home/.git/
+> git clone https://github.com/githubschool/repo.git
+Cloning into 'repo'...
+remote: Enumerating objects: 452, done.
+...
 ```
 
 `git clone <repository> <directory>` clones a repository into the specified directory.
 
 ```bash
-TODO:
-git clone repo
-Initialized empty Git repository in /home/repo/.git/
+> git clone https://github.com/githubschool/repo.git newrepo
+Cloning into 'newrepo'...
+remote: Enumerating objects: 452, done.
+...
 ```
 
 ## Using repositories
 
 ### git status
 
-Displays the status of the working directory and the staging area. 
+`git status` displays the status of the working directory and the staging area. 
 
 Files can be in one of three statuses:
 
@@ -72,9 +68,10 @@ Files can be in one of three statuses:
 1. **Modified**: Modified files that have not yet been staged.
 1. **Staged**: Modified files that have been marked to go into the next commit.
 
-**Output:**
+For example:
 
 ```bash
+> git status
 On branch main
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
@@ -94,47 +91,37 @@ Untracked files:
 
 ### git fetch
 
-`git fetch` This command downloads commits, files, and refs from a remote repository to your local repository, but it does not merge them with your local branches. 
+`git fetch` downloads commits, files, and refs from a remote repository to your local repository, but it does not merge them with your local branches. 
 
 It's a safe way to see what's happening on the remote repository before integrating changes into your local working copy. After fetching, you can inspect the changes or merge them manually with `git merge`.
 
 ### git pull
 
-`git pull` This command is essentially a combination of `git fetch` followed by `git merge`. It downloads changes from the remote repository and immediately applies those changes to your current branch. 
+`git pull` is essentially a combination of `git fetch` followed by `git merge`. It downloads changes from the remote repository and immediately applies those changes to your current branch. 
 
 This is typically used when you want to update your local branch with all data from its remote counterpart.
 
 ### git push
 
-The `git push` command is used to upload local repository content to a remote repository. It's a fundamental command in Git that allows you to share your commits with others.
+`git push` is used to upload local repository content to a remote repository. 
 
-#### Basic Push
-
-The simplest use of `git push` is to upload your commits to the default remote repository (usually called `origin`) and the branch that you're currently on:
+To upload your commits to the **default** remote repository (usually called `origin`) and the branch that you're currently on:
 
 ```bash
 git push
 ```
 
-#### Pushing to a Specific Remote
-
-If you have multiple remote repositories, you can specify which one to push to:
+If you have **multiple** remote repositories, you can specify which one to push to:
 
 ```bash
 git push <remote-name>
 ```
 
-Replace `<remote-name>` with the name of the remote repository you want to push to.
-
-#### Pushing a Specific Branch
-
-You can also specify which branch you want to push:
+You can also specify a **specific** branch you want to push:
 
 ```bash
 git push <remote-name> <branch-name>
 ```
-
-Replace `<branch-name>` with the name of the branch you want to push.
 
 #### Setting the Upstream Branch
 
@@ -144,32 +131,65 @@ The first time you push a branch, you may need to set the upstream branch:
 git push -u <remote-name> <branch-name>
 ```
 
-The `-u` option sets the upstream branch, which means that future `git push` commands without a branch specified will know to push to `<branch-name>` on `<remote-name>`.
+> The `-u` option sets the upstream branch, which means that future `git push` commands without a branch specified will know to push to `<branch-name>` on `<remote-name>`.
 
 #### Force Pushing
 
-If your local branch and the remote branch have diverged (i.e., they both have commits that the other doesn't have), `git push` will fail. You can force Git to overwrite the remote branch with your local branch using the `--force` option:
+If your local branch and the remote branch have diverged (they both have commits that the other doesn't have), `git push` will fail. 
+
+You can force Git to overwrite the remote branch with your local branch using the `--force` option:
 
 ```bash
 git push --force <remote-name> <branch-name>
 ```
 
-Be careful with this command, as it can permanently delete commits on the remote branch.
-
-#### Deleting a Remote Branch
-
-You can use `git push` to delete a branch on the remote repository:
-
-```bash
-git push <remote-name> --delete <branch-name>
-```
+!> Be careful using `git push --force`, as it can permanently delete commits on the remote branch.
 
 
 ## Configuration
 
 ### .gitignore
 
-A `.gitignore` file in your repository stores names and file types. This file and its contents instruct Git to stop tracking changes of certain files, which means that these files will not be pushed to GitHub from your local.
+The `.gitignore` file is used by Git to determine which files and directories to ignore when committing changes. It's a plain text file where each line contains a pattern for files/directories to ignore.
+
+For example:
+
+```bash
+# No .log files
+*.log
+
+# No .tmp files
+*.tmp
+
+# Ignore the node_modules directory
+node_modules/
+
+# Ignore all files in the dist directory
+dist/*
+
+# Ignore the .env file
+.env
+```
+
+> In this example, `.log` and `.tmp` files, the `node_modules` directory, all files in the `dist` directory, and the `.env` file will be ignored by Git.
+
+**.gitignore Pattern Format**
+
+- `*` matches zero or more characters
+- `?` matches one character
+- `[abc]` matches any character a, b, or c
+- `**` matches any number of directories. For example, `**/foo` matches file or directory `foo` anywhere in the project
+- `/` at the start of the pattern means the pattern will only match files and directories in the repository root. For example, `/foo` matches file or directory `foo` in the repository root, not `bar/foo`
+- `/` at the end of the pattern specifies a directory
+- `!` at the start of the pattern can be used to negate the pattern, making Git ignore files that would otherwise be ignored. For example, `!important.log` would track the file `important.log`, even if `.log` files were ignored with `*.log`
+
+**Notes**
+
+- Comments can be added in `.gitignore` with `#` at the start of the line.
+- Blank lines are ignored.
+- Standard glob patterns work.
+- You can have multiple `.gitignore` files in a single repository. A `.gitignore` file in a specific directory applies to that directory and its subdirectories.
+- If a file is already tracked by Git before it was added to `.gitignore`, you need to untrack it manually with `git rm --cached filename`.
 
 **Example files that you might want Git to ignore:**
 
@@ -178,9 +198,12 @@ A `.gitignore` file in your repository stores names and file types. This file an
 1. Log files, e.g. `*.log`
 1. Build files, e.g. `Build/*`
 
-#### Links  
-- Collection of .gitignore templates from GitHub: [github/gitignore repository](https://github.com/github/gitignore)
-- Collection of .gitignore templates from toptal: [gitignore.io](https://www.toptal.com/developers/gitignore) 
+**Links**
+
+There are many online resources that provide comprehensive pre-built `.gitignore` files for a variety of project types.  Before you build your own, be sure to check the following sites:
+
+- [github/gitignore repository](https://github.com/github/gitignore)
+- [gitignore.io](https://www.toptal.com/developers/gitignore) 
 
 ## Quiz
 
