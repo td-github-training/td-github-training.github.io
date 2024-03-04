@@ -22,7 +22,7 @@ Repositories are created in one of two ways depending on whether you are startin
 
 ### git init
 
-`git init` creates a new local repository in the current directory.
+`git init` creates a new ***local*** repository in the current directory.
 
 ```bash
 git init 
@@ -38,7 +38,7 @@ Initialized empty Git repository in /home/repo/.git/
 
 ### git clone
 
-`git clone <repository>` clones a repository into a new directory.
+`git clone <repository>` clones a ***remote*** repository into a new directory.
 
 ```bash
 > git clone https://github.com/githubschool/repo.git
@@ -47,7 +47,7 @@ remote: Enumerating objects: 452, done.
 ...
 ```
 
-`git clone <repository> <directory>` clones a repository into the specified directory.
+`git clone <repository> <directory>` clones a ***remote*** repository into the specified directory.
 
 ```bash
 > git clone https://github.com/githubschool/repo.git newrepo
