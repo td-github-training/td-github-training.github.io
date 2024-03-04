@@ -36,7 +36,7 @@ git add filename
 You can also add multiple files at once:
 
 ```bash
-git add filename1 filename2
+git add filename1 filename2 ...
 ```
 
 **Staging hunks**
@@ -148,7 +148,7 @@ The `--oneline --graph --decorate --all` command provides a visual representatio
 * 6b7c8de Implement feature
 | * 5c6d7ef (feature-branch) Update feature
 | * 4e5f6dg Add feature
-|/  
+|/
 * 3d4e5cf Refactor code
 * 2c3d4bf Update README
 * 1b2c3ad Initial commit
@@ -158,7 +158,7 @@ The `--oneline --graph --decorate --all` command provides a visual representatio
 
 ### git diff
 
-Allows you to see the difference between any two refs in a repository. 
+Allows you to see the difference between any two refs in a repository.
 
 The diagram below shows how you can compare the content of your working area, staging, and HEAD (or the most recent commit):
 
@@ -217,7 +217,7 @@ index e965047..2c7ee5a 100644
 
 ### git revert
 
-`git revert` is a safe way to undo changes.  It works by creating a new commit that undoes changes made in a previous commit.  It's useful for fixing mistakes and for removing changes without rewriting the project's history. 
+`git revert` is a safe way to undo changes.  It works by creating a new commit that undoes changes made in a previous commit.  It's useful for fixing mistakes and for removing changes without rewriting the project's history.
 
 **Reverting with No Commit**
 
@@ -229,7 +229,7 @@ git revert
 
 **Reverting a Single Commit**
 
-If you want to undo the changes made in a specific commit, you can use: 
+If you want to undo the changes made in a specific commit, you can use:
 
 ```bash
 git revert <commit-hash>
@@ -244,7 +244,7 @@ git revert <older-commit-hash>..<newer-commit-hash>
 ```
 
 >Note: The older commit is not included in the range. If you want to include it, use three dots instead of two:
-> 
+>
 > ```bash
 > git revert <older-commit-hash>...<newer-commit-hash>
 > ```
@@ -252,7 +252,7 @@ git revert <older-commit-hash>..<newer-commit-hash>
 
 ### git rebase
 
-`git rebase` allows you to modify your commit history by moving or combining your commits. 
+`git rebase` allows you to modify your commit history by moving or combining your commits.
 
 **Interactive rebase** using `--interactive` or `-i` allows you to modify individual commits as they are moved. This is useful for combining, reordering, or modifying commits.
 

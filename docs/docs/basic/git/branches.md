@@ -1,6 +1,9 @@
 # What is a Branch?
 
-Branches are lightweight, movable bookmarks to a specific commit that allow separate lines of development without impacting the main codebase. 
+Branches are lightweight, movable pointers to a specific commit that allow separate lines of development without impacting the main codebase.
+* When you create a ***branch***, Git creates a ***reference*** and points it at your ***current  commit***
+* As you make ***new commits***, Git automatically updates this ***reference*** to the ***latest commit***
+* In this way, a ***branch reference*** always represents the latest line of development in a ***branch***
 
 ```mermaid
 %%{init: { 'logLevel': 'debug', 'gitGraph': {'showBranches': true, 'showCommitLabel': false, 'parallelCommits': true}} }%%
@@ -45,11 +48,11 @@ To view the existing branches in a repository, use `git branch`:
 
 ```bash
 > git branch
-* master
+* main
   new-feature
 ```
 
-> The `*` next to master indicates that master is the currently active branch.
+> The `*` next to main indicates that main is the currently active branch.
 
 To create a new branch, use:
 
@@ -57,7 +60,7 @@ To create a new branch, use:
 git branch <branchname>
 ```
 
-This creates a new branch named, however, it does not switch to the new branch. 
+This creates a new branch named, however, it does not switch to the new branch.
 
 ## Deleting branches
 
@@ -67,9 +70,9 @@ To delete a branch, use the `-d` option:
 git branch -d <branchname>
 ```
 
-This deletes the `<branchname>` branch. 
+This deletes the `<branchname>` branch.
 
-?> If you try to delete a branch that has changes that haven't been merged, Git will prevent you from doing so to avoid data loss. 
+?> If you try to delete a branch that has changes that haven't been merged, Git will prevent you from doing so to avoid data loss.
 
 In such cases, if you're sure you want to delete the branch, you can use the `-D` option instead:
 
@@ -110,7 +113,14 @@ This creates a new branch named `<new-branch>` and immediately switches to it.
 
 ## Merging changes
 
-`git merge` allows you to combine changes from different, typically distinct, branches. 
+`git merge` allows you to combine changes from different, typically distinct, branches.
+
+Git supports two types of merges:
+
+1. **Fast-forward merges**: This type of merge can occur when there is a linear path from the current branch tip to the target branch. Instead of creating a new commit, Git just moves the current branch pointer up to the target branch pointer.
+
+2. **Three-way merge**: This is the most common type of merge. When the two branches you're trying to merge have diverged, Git creates a new commit that includes changes from both branches. This is done by looking at the common ancestor of the two branches, the current branch, and the target branch.
+
 
 ### Basic merging
 
@@ -132,9 +142,11 @@ If the branches have diverged, Git will create a new commit to combine the chang
 
 ### Merging with conflicts
 
-Sometimes, you might have changes in the two branches that conflict with each other. In this case, Git will not be able to perform the merge automatically, and you'll have to `resolve` the conflicts manually.
+Merge conflicts occur when the same part of your code is changed in two branches that you're trying to merge together, and Git can't determine which change should take precedence.
 
-Let's say you have a conflict. When you try to merge, you'll see an output like this:
+When this happens, Git halts the merge process and requires manual intervention to resolve the conflict, after which you can continue with the merge.
+
+For example, let's say you have a conflict. When you try to merge, you'll see an output like this:
 
 ```bash
 git merge feature
@@ -186,7 +198,7 @@ This will stop the merge and return your repository to the state it was in befor
 
 ### Basic cherry-picking
 
-Let's start with a basic example. Suppose you have a repository with a `master` branch and a `feature` branch. You've made a commit in the `feature` branch that you want to apply to the `master` branch.
+Let's start with a basic example. Suppose you have a repository with a `main` branch and a `feature` branch. You've made a commit in the `feature` branch that you want to apply to the `main` branch.
 
 First, get the commit hash of the commit you want to cherry-pick. You can do this with the `git log` command:
 
