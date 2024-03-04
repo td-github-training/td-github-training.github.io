@@ -12,7 +12,7 @@ Git allows you to set configuration options at three different levels.
 
 > The default value for `git config` is `--local`.
 
-If you would like to see which config settings have been added automatically, you can type 
+If you would like to see which config settings have been added automatically, you can type
 ```sh
 git config --list
 ```
@@ -28,9 +28,23 @@ git config --global --list
 
 ## Setting the default branch name
 
-The `init.defaultBranch` is a configuration option in Git that sets the name of the initial branch when creating a new repository. 
+```sh
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /workspaces/1-introduction-to-github-master/tem/.git/
+```
 
-By default, Git uses `master` as the name of the initial branch. However, you can change this default name using the `init.defaultBranch` configuration option. 
+The `init.defaultBranch` is a configuration option in Git that sets the name of the initial branch when creating a new repository.
+
+By default, Git uses `master` as the name of the initial branch. However, you can change this default name using the `init.defaultBranch` configuration option.
 
 For example, if you want to use `main` instead of `master` as the default branch name, you can set this configuration option like this:
 
@@ -45,7 +59,7 @@ After running this command, any new repositories you create with `git init` will
 
 The `push.autosetupremote` is a Git configuration option that controls the behavior of `git push` when a new branch is created.
 
-When you create a new branch with `git branch` or `git checkout -b`, Git can automatically set up a branch in your remote repository to track your new local branch. 
+When you create a new branch with `git branch` or `git checkout -b`, Git can automatically set up a branch in your remote repository to track your new local branch.
 
 The `push.autosetupremote` option can have three possible values:
 
@@ -61,7 +75,7 @@ You can set this option with the `git config` command. For example, to set it to
 git config --global push.autosetupremote always
 ```
 
-This command sets the `push.autosetupremote` option to `always` for all repositories on your system. If you want to set it for a single repository, you can omit the `--global` option. 
+This command sets the `push.autosetupremote` option to `always` for all repositories on your system. If you want to set it for a single repository, you can omit the `--global` option.
 
 
 ## Setting a default editor
@@ -80,7 +94,7 @@ In this command, `--global` means that the configuration will apply to all repos
 
 The `"code --wait"` argument tells Git to use VS Code as the editor, and to wait until the files are closed before continuing.
 
-You can replace `"code --wait"` with the command for your preferred text editor. 
+You can replace `"code --wait"` with the command for your preferred text editor.
 
 
 ## Changing the diff syntax

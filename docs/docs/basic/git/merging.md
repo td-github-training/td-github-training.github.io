@@ -1,24 +1,19 @@
-# Merge strategies: Rebase
-
-In this section, we will discuss another popular merge strategy, rebasing.
+# Merge Strategies
 
 ## Understanding Git merge strategies
 
 Git uses three primary merge strategies:
 
-### Recursive
+1. **Recursive:**
+    A recursive merge means that changes have been made on both the base branch and the feature branch and git needs to recursively combine them. With a recursive merge, a new "merge commit" is made to mark the point in time when the two branches came together. This merge commit is used the most often when you click `merge` on a pull request.
 
-A recursive merge means that changes have been made on both the base branch and the feature branch and git needs to recursively combine them. With a recursive merge, a new "merge commit" is made to mark the point in time when the two branches came together. This merge commit is used the most often when you click `merge` on a pull request.
+2. **Fast-forward:**
+    A fast-forward merge assumes that no changes have been made on the base branch since the feature branch was created. This means that the branch pointer for base can simply be "fast forwarded" to point to the same commit as the feature branch.
 
-### Fast-forward
+3. **Octopus:**
+    A merge of 3 or more branches is an octopus merge. This will also create a merge commit with multiple parents.
 
-A fast-forward merge assumes that no changes have been made on the base branch since the feature branch was created. This means that the branch pointer for base can simply be "fast forwarded" to point to the same commit as the feature branch.
-
-### Octopus
-
-A merge of 3 or more branches is an octopus merge. This will also create a merge commit with multiple parents.
-
-## About Git rebase
+## Git Rebase
 
 `git rebase` should be used with purpose, as it will be rewriting the history of commits on a repository.
 
@@ -39,7 +34,7 @@ Typically, you would use `git rebase -i` to:
 
 One of the most common uses of rebase is to eliminate recursive merges and create a linear history.
 
-![Git Rebase](./img/git-rebase.png)
+![Git Rebase](../../../img/git-rebase.png)
 
 ### Setup
 

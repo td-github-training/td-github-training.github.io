@@ -15,7 +15,10 @@
     - [Commits](./docs/basic/git/commits.md)
     - [Branches](./docs/basic/git/branches.md)
     - [Tags](./docs/basic/git/tags.md)
+    - [Merging](./docs/basic/git/merging.md)
+    - [Revisions](./docs/basic/git/revisions.md)
     - [Configuration](./docs/basic/git/configuration.md)
+      - [Aliases](./docs/basic/git/aliases.md)
   - **GitHub**
     - [What is GitHub?](./docs/basic/github/what-is-github.md)
     - [Repositories](./docs/basic/github/repositories.md)
@@ -29,7 +32,7 @@
 
 - **Advanced Topics**
   - **Git**
-    - [Git Configuration](./docs/basic/git/configuration.md)
+    - [Git Reflog](./docs/advanced/git/reflog.md)
     - [Git Stash](./docs/advanced/git/git_stash.md)
     - [Git Bisect](./docs/advanced/git/git_bisect.md)
     - [Git LFS](./docs/advanced/git/git_lfs.md)

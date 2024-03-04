@@ -1,6 +1,6 @@
 # What is a Pull Request?
 
-A pull request is a proposal to merge a set of changes from one **branch** into another **branch** within a repository or a repository fork.   
+A pull request is a proposal to merge a set of changes from one **branch** into another **branch** within a repository or a repository fork.
 
 <center>
 
@@ -83,3 +83,61 @@ GitHub offers three different merge strategies for pull requests:
 - **Rebase and merge**
 
   This option will take all the commits and replay them as if they just happened. This allows GitHub to perform a fast-forward merge (and avoids the addition of the merge commit).
+
+
+## Pulling changes from a remote repository
+
+`git pull` is a convenient shortcut for completing both `git fetch` and `git merge`in the same command:
+
+```
+$ git pull REMOTE-NAME BRANCH-NAME
+# Grabs online updates and merges them with your local work
+
+```
+
+Because `pull` performs a merge on the retrieved changes, you should ensure that your local work is committed before running the `pull` command. If you run into [a merge conflict](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line) you cannot resolve, or if you decide to quit the merge, you can use `git merge --abort` to take the branch back to where it was in before you pulled.
+
+## Updating your local repository
+
+When you merged your Pull Request, you deleted the branch on GitHub, but this will not automatically update your local copy of the repository. Let's go back to our command line application and get everything in sync.
+
+First, we need to get the changes we made on GitHub into our local copy of the repository:
+
+1. Start by switching back to your default branch: `git switch main`
+1. Retrieve all the changes from GitHub: `git pull`
+
+`git pull` is a combination command that retrieves all the changes from GitHub and then updates the branch you are currently on to include the changes from the remote. The two separate commands being run are `git fetch` and `git merge`
+
+## Cleaning up the unneeded branches
+
+If you type `git branch --all` you will probably see that, even though you deleted your branch on the remote, it is still listed in your local copy of the repository, both as a local branch and as a read-only remote tracking branch. Let's get rid of those extra branches.
+
+1. Take a look at your local branches: `git branch --all`
+1. Let's see which branches are safe to delete: `git branch --merged`
+1. Delete the local branch: `git branch -d <branch-name>`
+1. Take another look at the list: `git branch --all`
+1. Your local branch is gone, but the remote tracking branch is still there. Delete the remote tracking branch: `git pull --prune`
+
+> Adding the `--merged` option to the `git branch` command allows you to see which branches do not contain unique work when compared to the checked out branch. In this case, since we are checked out to main, we will use this command to ensure all the changes on our feature branch have been merged to production before we delete the branch.
+
+If you would like pruning of the remote tracking branches to be set as your default behavior when you pull, you can use the following configuration option: `git config --global fetch.prune true`.
+
+## Activity: Creating a pull request
+
+Pull Requests are used to propose changes to the project files. A pull request introduces an action that addresses an Issue. A Pull Request is considered a "work in progress" until it is merged into the project.
+
+Now that you have started to change your file, you will open a pull request to discuss the file with your teammates. Follow these steps to create a Pull Request in the class repository:
+
+1. Click the *Pull Request* tab.
+1. Click *New Pull Request*.
+1. In the *base* dropdown, choose `main`
+1. In the *compare* dropdown, choose your branch.
+1. Type a subject line and enter a comment.
+1. Use Markdown formatting to add a header and a checklist to your Pull Request.
+1. Include one of the keywords: `closes`, `fixes`, or `resolves` followed by the issue number you created earlier to note which Issue the Pull Request should close. Example: `This resolves #3`
+1. Click *Preview* to see how your Pull Request will look.
+1. Assign the Pull Request to yourself.
+1. Select your partner as a Reviewer for the Pull Request.
+1. Click *Create pull request*.
+
+> When you navigate to the class repository, you should see a banner at the top of the page indicating you have recently pushed branches, along with a button that reads *Compare & pull request*. This helpful button will automatically start the pull request process between your branch and the repository's default branch.

@@ -64,9 +64,19 @@ remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (6/6), done.
 ```
 
-> **Note:** If your clone is unsuccessful, read about [authenticating with GitHub from Git](https://docs.github.com/github/getting-started-with-github/set-up-git#next-steps-authenticating-with-github-from-git). 
+> **Note:** If your clone is unsuccessful, read about [authenticating with GitHub from Git](https://docs.github.com/github/getting-started-with-github/set-up-git#next-steps-authenticating-with-github-from-git).
 
 ## Basic configuration
+
+```sh
+Author identity unknown
+*** Please tell me who you are.
+Run
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+```
 
 Git uses the config settings for your user name and email address to generate a unique fingerprint for each of the commits you create. You can't create commits without these settings:
 
@@ -81,7 +91,7 @@ git config --global user.email "you@email.com"
 
 **Local configuration**
 
-If you are using a computer without a private, personal account, don't apply the `--global` flag. This way, the settings will only be stored in your current repository. 
+If you are using a computer without a private, personal account, don't apply the `--global` flag. This way, the settings will only be stored in your current repository.
 
 However, if you work in another repository on this same computer, you will need to set these configuration options again.
 
