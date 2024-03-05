@@ -34,7 +34,7 @@
   - **Git**
     - [Git Reflog](./docs/advanced/git/reflog.md)
     - [Git Stash](./docs/advanced/git/git_stash.md)
-    - [Git Bisect](./docs/advanced/git/git_bisect.md)
+    <!-- - [Git Bisect](./docs/advanced/git/git_bisect.md) -->
     - [Git LFS](./docs/advanced/git/git_lfs.md)
-  - **GitHub**
-    - [Personal Access Tokens](./docs/advanced/github/personal_access_token.md)
+  <!-- - **GitHub** -->
+    <!-- - [Personal Access Tokens](./docs/advanced/github/personal_access_token.md) -->
