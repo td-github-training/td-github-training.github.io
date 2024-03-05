@@ -1,6 +1,8 @@
 # Configuring Git
 
-Git is highly configurable and supports a large number of configuration options: [git-config](https://git-scm.com/docs/git-config).  This page contains a curated list of useful options.
+Git is highly configurable and supports a large number of configuration options: [git-config](https://git-scm.com/docs/git-config).
+
+This page contains a curated list of useful options.
 
 ## Configuration scope
 
@@ -13,12 +15,12 @@ Git allows you to set configuration options at three different levels.
 > The default value for `git config` is `--local`.
 
 If you would like to see which config settings have been added automatically, you can type
+
 ```sh
 git config --list
 ```
 
 This will automatically read from each of the three config files and list the setting they contain.
-
 
 You can also narrow the list to a specific configuration level by including it before the list option:
 
@@ -54,7 +56,6 @@ git config --global init.defaultBranch main
 
 After running this command, any new repositories you create with `git init` will have an initial branch named `main`.
 
-
 ## Automatically setting up remotes
 
 The `push.autosetupremote` is a Git configuration option that controls the behavior of `git push` when a new branch is created.
@@ -77,7 +78,6 @@ git config --global push.autosetupremote always
 
 This command sets the `push.autosetupremote` option to `always` for all repositories on your system. If you want to set it for a single repository, you can omit the `--global` option.
 
-
 ## Setting a default editor
 
 The `core.editor` configuration option in Git specifies the text editor that Git will use for commit messages, interactive rebase, and other operations that require user input.
@@ -95,7 +95,6 @@ In this command, `--global` means that the configuration will apply to all repos
 The `"code --wait"` argument tells Git to use VS Code as the editor, and to wait until the files are closed before continuing.
 
 You can replace `"code --wait"` with the command for your preferred text editor.
-
 
 ## Changing the diff syntax
 

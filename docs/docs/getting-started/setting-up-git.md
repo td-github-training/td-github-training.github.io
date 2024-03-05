@@ -1,8 +1,5 @@
 # Setting up Git
 
-**Git** is an open source version control application. You'll need git installed for this class.
-
-
 ## Installing git
 
 ### Windows
@@ -29,6 +26,7 @@ brew install git
 sudo apt-get update
 sudo apt-get install git
 ```
+
 #### Fedora
 
 1. For Fedora systems, use dnf:
@@ -68,19 +66,30 @@ Unpacking objects: 100% (6/6), done.
 
 ## Basic configuration
 
-```sh
+### Setting your default identity
+
+To create commits you must have a `user.name` and `user.email` configured in Git.
+
+If these settings aren't configured, you will get the following error:
+
+```bash
 Author identity unknown
+
 *** Please tell me who you are.
+
 Run
+
   git config --global user.email "you@example.com"
   git config --global user.name "Your Name"
+
 to set your account's default identity.
 Omit --global to set the identity only in this repository.
 ```
 
-Git uses the config settings for your user name and email address to generate a unique fingerprint for each of the commits you create. You can't create commits without these settings:
 
-**Global configuration**
+> Git uses the `user.name` and `user.email` config settings to generate a unique fingerprint for each your commits.
+
+#### Global configuration
 
 If you are using a personal computer, apply the `--global` flag so you only have to set these settings once.
 
@@ -89,11 +98,11 @@ git config --global user.name "First-name Surname"
 git config --global user.email "you@email.com"
 ```
 
-**Local configuration**
+#### Local configuration
 
-If you are using a computer without a private, personal account, don't apply the `--global` flag. This way, the settings will only be stored in your current repository.
+If you are using a computer without a private, personal account, omit the `--global` flag to store these settings in your current repository.
 
-However, if you work in another repository on this same computer, you will need to set these configuration options again.
+> If you work in another repository on this same computer, you will need to set these configuration options again.
 
 ```sh
 git config user.name "First-name Surname"

@@ -1,185 +1,59 @@
-# Streamlining your workflow with aliases
+# Aliases
 
-So far we have learned quite a few commands. Some, like the log commands, can be long and tedious to type. In this section, you will learn how to create custom shortcuts for Git commands.
+Aliases allow you to create custom shortcuts for Git commands.
 
-# Creating custom aliases
+## Creating an alias
 
-An alias allows you to type a shortened command to represent a long string on the command line.
+For example, let's create an alias for the following command:
 
-For example, let's create an alias for the log command we learned earlier.
-
-## Original command
-
-```sh
+```bash
 git log --oneline --graph --decorate --all
 ```
 
-## Creating the alias
+To create the alias:
 
-```sh
+```bash
 git config --global alias.lol "log --oneline --graph --decorate --all"
 ```
 
-## Using the alias
+To use the alias:
 
-```sh
+```bash
 git lol
 ```
-
-# Explore other helpful aliases
-
-Check out these resources for a list of common aliases:
-
-- *[git-scm.com/book/en/v2/Git-Basics-Git-Aliases](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases)* A helpful overview of some of the most common git aliases.
-
-We also encourage you to read through these three blog posts by GitHub developer Phil Hack. His tips are referenced throughout the manual.
-
-- [GitHub Flow Aliases](http://haacked.com/archive/2014/07/28/github-flow-aliases/)
-- [Git Migrate](http://haacked.com/archive/2015/06/29/git-migrate/)
-- [Git Alias Open URL](http://haacked.com/archive/2017/01/04/git-alias-open-url/)
 
 ## Example aliases
 
 To edit your global aliases manually, you can open the `.gitconfig` file with your default editor:
 
-```sh
+```bash
 git config --global alias.ec "config --global -e"
 ```
 
 To switch to another branch, you can make a quick shortcut:
 
-```sh
+```bash
 git config --global alias.sw "switch"
 ```
 
 To create and switch to a brand-new branch, you can easily extend your existing shortcut:
 
-```sh
+```bash
 git config --global alias.swc "switch -c"
 ```
 
 You can create aliases that only call one command:
 
-```sh
+```bash
 git config --global alias.s "status -s"
 ```
 
 Clean up branches quickly and easily:
 
-```sh
+```bash
 git config alias.dlb '!git checkout <DEFAULT-BRANCH> && git pull --prune && git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 ```
 
-# Alias pro-tips
+## References
 
-## Tidying up locally
-
-There are shortcuts that allow you to do a deep clean if you've neglected the state of your local repository. The following TWO configs (both need to be added) will: switch to main, update main from the origin, and delete all local branches already merged into main.
-
-**Note:** Depending on your shell, you might have to add these aliases directly to your git config file, which you can open by typing `git config --global -e`.
-
-```sh
-git config --global alias.bclean "!f() { branches=$(git branch --merged ${1-main} | grep -v " ${1-main}$"); [ -z \"$branches\" ] || git branch -d $branches; }; f"
-```
-
-**Warning:** You might want to edit this to avoid local deletions of important branches like `gh-pages` or `production`.
-
-```sh
-git config --global alias.bdone "!f() { git switch ${1-main} && git up && git bclean ${1-main}; }; f"
-```
-
-- This alias won't work until we add `git up`, which is shared at the end of this course.
-
-## Quick Commits
-
-Sometimes, you'll want to do the opposite of granular commits and move quickly. Here's an alias that stages all saved changes and gives the stub for writing a commit message.
-
-```sh
-git config --global alias.cm "!git add -A && git commit -m"
-```
-
-- Using the `!` prefix allows you to use any command and not just git commands in the alias. It also allows you to string two commands together.
-
-- The `-A` flag adds all changes, including untracked files, to the index.
-
-## Returning to the remote
-
-After finishing up locally, you might determine that you want to head back to your remote repository to make sure that everything looks right.
-
-**Note:** Depending on your shell, you might have to add these aliases directly to your git config file, which you can open by typing `git config --global -e`.
-
-WINDOWS
-
-```sh
-git config --global alias.open = "!f() { REPO_URL=$(git config remote.origin.url); explorer ${REPO_URL%%.git}; }; f"
-```
-
-MAC/LINUX
-
-```sh
-git config --global alias.open = "!f() { REPO_URL=$(git open remote.origin.url); explorer ${REPO_URL%%.git}; }; f"
-```
-
-And just in case you're prone to forget your word choices, you can link multiple aliases together to accomplish the same purpose.
-
-```sh
-git config --global alias.browse "!git open"
-```
-
-## Alternatives to stashing -- check points
-
-Sometimes, you'll want to save your work in a commit without having to think of a commit message, or before you're ready to organize your changes. If that's the case, you can create aliases to create "save points".
-
-```sh
-git config --global alias.save "!git add -A && git commit -m 'SAVEPOINT'"
-```
-
-or
-
-```sh
-git config --global alias.wip "commit -am 'WIP'"
-```
-
-- Using the `!` prefix allows you to use any command and not just git commands in the alias. It also allows you to string two commands together.
-- In `save`, the `-A` flag adds all changes, including untracked files, to the index.
-- In `wip`, only tracked changes are committed.
-
-When you're ready to return to work, you can use `git undo` to reset your prior commit and keep all the changes from that commit in the working directory.
-
-```sh
-git config --global alias.undo "reset HEAD~1 --mixed"
-```
-
-If the only thing that you needed to change was the commit message, you can update by using `git amend`.
-
-```sh
-git config --global alias.amend "commit -a --amend"
-```
-
-- `-a` will add any modifications and deletions of existing files to your commit, but ignore brand-new files.
-
-## Avoiding tragedy
-
-Sometimes, you'll reset --hard too soon, before you've made a commit. If you reset work that you never committed, it's gone for good. Using a command like `git wipe` will commit everything in your working directory, and then do a hard reset to get rid of that commit (but it's still reachable in the reflog). This is a really safe option that allows you to keep yourself from making sad mistakes.
-
-```sh
-git config --global alias.wipe "!git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 -- hard"
-```
-
-- `-q` stands for `--quiet`, which suppresses the commit summary message.
-
-## Getting your working directory up to date
-
-```sh
-git pull --rebase --prune
-```
-
-This helpful command allows you to pull changes down from the remote and place local commits to follow the remote updates.
-
-If you'd like to combine this with another advanced workflow tip and update your submodules, that command might look like this:
-
-```sh
-git config --global alias.up "!git pull --rebase --prune $@ && git submodule update --init --recursive"
-```
-
-- Using the `!` prefix allows you to use any command and not just git commands in the alias. It also allows you to string two commands together.
+- *[git-scm.com/book/en/v2/Git-Basics-Git-Aliases](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases)* A helpful overview of some of the most common git aliases.

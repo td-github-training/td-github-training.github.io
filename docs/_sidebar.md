@@ -1,8 +1,9 @@
-<div id="dark_mode"
-  ><i class="fas fa-sun"></i
-  ><input type="checkbox" id="dark_mode_switch" name="mode"
-  ><label for="dark_mode_switch">Toggle</label
-  ><i class="fas fa-moon"></i></div>
+<div id="dark_mode">
+  <i class="fas fa-sun"></i>
+    <input type="checkbox" id="dark_mode_switch" name="mode">
+      <label for="dark_mode_switch">Toggle</label >
+  <i class="fas fa-moon"></i>
+</div>
 
 - **Getting Started**
   - [Setting up Git](./docs/getting-started/setting-up-git.md)
@@ -15,10 +16,9 @@
     - [Commits](./docs/basic/git/commits.md)
     - [Branches](./docs/basic/git/branches.md)
     - [Tags](./docs/basic/git/tags.md)
-    - [Merging](./docs/basic/git/merging.md)
     - [Revisions](./docs/basic/git/revisions.md)
     - [Configuration](./docs/basic/git/configuration.md)
-      - [Aliases](./docs/basic/git/aliases.md)
+    - [Aliases](./docs/basic/git/aliases.md)
   - **GitHub**
     - [What is GitHub?](./docs/basic/github/what-is-github.md)
     - [Repositories](./docs/basic/github/repositories.md)

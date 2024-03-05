@@ -9,6 +9,7 @@ As we mentioned in [How Git Works](git_101?id=how-git-works), Git has a two-step
 ![alt text](../../../img/image-24.png ':size=550px')
 
 In practice, this looks like:
+
 1. You make changes in your **working directory**
 2. When you're ready to save these changes, you **stage** them using `git add`
 3. Then you the **commit** the staged changes to the repository using `git commit`
@@ -19,7 +20,7 @@ In practice, this looks like:
 
 Copies changes from the working directory to the staging area.
 
-**Staging files**
+#### Staging files
 
 The simplest way to use `git add` is to add all changes (new, modified, and removed files) in the current directory and its subdirectories:
 
@@ -27,48 +28,47 @@ The simplest way to use `git add` is to add all changes (new, modified, and remo
 git add .
 ```
 
-If you want to add changes from a specific file, you can do so by specifying the file:
+To add changes from a specific file:
 
 ```bash
 git add filename
 ```
 
-You can also add multiple files at once:
+To add multiple files at once:
 
 ```bash
 git add filename1 filename2 ...
 ```
 
-**Staging hunks**
+#### Staging hunks
 
-If you've made several changes to a file but only want to stage some of them, you can use `git add -p`:
+To stage only _some_ of the changes made to a file:
 
 ```bash
 git add -p filename
 ```
 
-This command will prompt you to stage individual changes (or 'hunks') in the file. You can choose to stage, skip, or split each hunk.
+> This command will prompt you to stage individual changes (or 'hunks') in the file. You can choose to stage, skip, or split each hunk.
 
-**Viewing Staged Changes**
+#### Viewing staged changes
 
-After you've staged some changes, you can view them with `git diff --staged`:
+To view staged changes:
 
 ```bash
 git diff --staged
 ```
 
-This command will show you a diff of what's been staged but not yet committed.
+> This command will show you a diff of what's been staged but not yet committed.
 
-**Unstaging Changes**
+#### Unstaging changes
 
-If you've staged some changes with `git add` but then decide you don't want to commit them, you can unstage them with `git restore --staged`:
+To unstage previously staged files:
 
 ```bash
 git restore --staged filename
 ```
 
-This command will remove the changes from the staging area but won't alter the working directory. The changes will still be there, but they won't be included in the next commit.
-
+> This command will remove the changes from the staging area but won't alter the working directory. The changes will still be there, but they won't be included in the next commit.
 
 ## Committing changes
 
@@ -76,7 +76,7 @@ This command will remove the changes from the staging area but won't alter the w
 
 Saves a snapshot of the changes in staging area to the local repository as a commit.
 
-**Committing staged changes**
+#### Committing staged changes
 
 The simplest way to use `git commit` is to commit all staged changes with a message:
 
@@ -86,9 +86,9 @@ git commit -m "Your commit message"
 
 > The `-m` option allows you to write the commit message directly in the command line
 
-**Committing all changes**
+#### Committing all changes
 
-If you've made several changes but haven't staged them yet, you can commit all changes (modified and deleted files, but not new files) with one command:
+To commit all changes to the working directory:
 
 ```bash
 git commit -a -m "Your commit message"
@@ -96,9 +96,9 @@ git commit -a -m "Your commit message"
 
 > The `-a` option automatically stages every file that is tracked and has been modified or deleted
 
-**Amending the last commit**
+#### Amending the last commit
 
-If you need to change the last commit (to modify the commit message or add new changes), you can use the `--amend` option:
+To change the last commit (to modify the commit message or add new changes):
 
 ```bash
 git commit --amend -m "New commit message"
@@ -108,9 +108,25 @@ git commit --amend -m "New commit message"
 
 ### git log
 
-The git log command is used to view the commit history of your Git repository. It shows the commit hashes, authors, dates, and commit messages.
+To view the commit history of the repository:
 
-For example:
+```bash
+git log
+```
+
+To view the commit history in a more compact format:
+
+```bash
+git log --oneline
+```
+
+To view a visual representation of the commit history:
+
+```bash
+git log --oneline --graph --decorate --all
+```
+
+#### Example output
 
 ```bash
 > git log
@@ -128,19 +144,11 @@ Date:   Thu Sep 30 14:31:26 2021 -0700
     Initial commit
 ```
 
----
-
-The `--oneline` option can be used to display the commit history in a more compact format:
-
 ```bash
 > git log --oneline
 4a8e17d (HEAD -> main) Update file1.txt
 9d3a192 Initial commit
 ```
-
----
-
-The `--oneline --graph --decorate --all` command provides a visual representation of the commit history:
 
 ```bash
 > git log --oneline --graph --decorate --all
@@ -188,20 +196,19 @@ index e965047..2c7ee5a 100644
 - `git diff main feature`
 - `git diff origin/main main`
 
-
 ## Fixing mistakes
 
 ### git reset
 
 `git reset` allows you to manipulate the state of your Git repository and has three main modes:
 
-* `--soft` reset moves the HEAD pointer to a specified commit, but it leaves the staging area and the working directory unchanged. This is useful if you want to keep your changes, but move the HEAD pointer.
+- `--soft` reset moves the HEAD pointer to a specified commit, but it leaves the staging area and the working directory unchanged. This is useful if you want to keep your changes, but move the HEAD pointer.
 
   ```bash
   git reset --soft <commit>
   ```
 
-* `--mixed` reset (the default mode) moves the HEAD pointer and alters the staging area to match the specified commit, but it leaves the working directory unchanged. This is useful if you want to undo a commit but keep your changes.
+- `--mixed` reset (the default mode) moves the HEAD pointer and alters the staging area to match the specified commit, but it leaves the working directory unchanged. This is useful if you want to undo a commit but keep your changes.
 
   ```bash
   git reset --mixed <commit>
@@ -209,7 +216,7 @@ index e965047..2c7ee5a 100644
   git reset <commit>
   ```
 
-* `--hard` reset moves the HEAD pointer, alters the staging area, and alters the working directory to match the specified commit. This effectively undoes all changes since the specified commit. Be careful with this mode, as it can permanently delete your changes.
+- `--hard` reset moves the HEAD pointer, alters the staging area, and alters the working directory to match the specified commit. This effectively undoes all changes since the specified commit. Be careful with this mode, as it can permanently delete your changes.
 
   ```bash
   git reset --hard <commit>
@@ -249,10 +256,18 @@ git revert <older-commit-hash>..<newer-commit-hash>
 > git revert <older-commit-hash>...<newer-commit-hash>
 > ```
 
-
 ### git rebase
 
-`git rebase` allows you to modify your commit history by moving or combining your commits.
+Rebasing enables you to modify your commit history in a variety of ways. For example, you can use it to reorder commits, edit them, squash multiple commits into one, and much more.
+
+#### Basic rebase
+
+![Git Rebase](../../../img/git-rebase.png)
+
+One of the most common uses of rebase is to eliminate recursive merges and create a linear history.
+TODO:
+
+#### Interactive rebase
 
 **Interactive rebase** using `--interactive` or `-i` allows you to modify individual commits as they are moved. This is useful for combining, reordering, or modifying commits.
 
@@ -288,8 +303,6 @@ git rebase --abort
 ```
 
 This will stop the rebase and return your repository to the state it was in before you started the rebase.
-
-
 
 ## Quiz
 
