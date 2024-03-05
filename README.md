@@ -1,12 +1,12 @@
 # InfoMagnus GitHub Training
 
-Welcome to the InfoMagnus GitHub Training repository. 
+Welcome to the InfoMagnus GitHub Training repository!
 
 The content is all written in [Markdown](https://guides.github.com/features/mastering-markdown/), and the scripts are shell scripts.
 
 ## Technologies used
 
-- GitHub Pages 
+- GitHub Pages
 - [docsify](https://docsify.js.org)
 - [Mermaid.js](https://mermaid.js.org/)
 - [mermaid-docsify](https://github.com/Leward/mermaid-docsify)
@@ -64,18 +64,14 @@ The `.devcontainer` is setup with the [VSCodeExt-docsify-Preview](https://github
 To open a preview window in `vscode` type `Ctrl+Shift+P` and select `docsify: Open the full Preview`.
 
 ### Web Browser
+
 You can install, and serve the contents of the `docs/` folder locally with minimal setup. The steps are thoroughly described in the [doscify quick start](https://docsify.js.org/#/quickstart) guide.
 
-You can also simply run the following scripts:
+You can also simply run the following:
 
 ```shell
-script/bootstrap
-script/server
+docsify serve docs
 ```
-
-## Teaching scripts
-
-Scripts that accompany the manual, and their documentation can be found in the [`script/`](script/) directory. This repository includes development container configuration. So you can run the scripts on the Visual Studio developer container or [GitHub Codespaces](https://github.com/features/codespaces).
 
 ## License
 

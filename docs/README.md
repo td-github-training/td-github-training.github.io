@@ -1,5 +1,6 @@
+
 # InfoMagnus GitHub Training
 
-The prose, course text, slide layouts, class outlines, diagrams, HTML, CSS, and Markdown code in the set of educational materials located in this repository are licensed as [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/legalcode). The Octocat, GitHub logo and other already-copyrighted and already-reserved trademarks and images are not covered by this license.
+Welcome to the InfoMagnus GitHub Training repository!
 
-For more information, visit: <http://creativecommons.org/licenses/by/4.0/>
+Click here to get started: [Setting up Git](/#/./docs/getting-started/setting-up-git)

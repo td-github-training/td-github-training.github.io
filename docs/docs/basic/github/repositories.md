@@ -35,7 +35,7 @@ Wikis are to communicate project details, display user documentation, or almost 
 <div class="grid2">
 <div class="col">
 
-1.  In the upper-right corner of any page, select New repository.
+1. In the upper-right corner of any page, select New repository.
 
 </div><div class="col">
 
@@ -47,7 +47,7 @@ Wikis are to communicate project details, display user documentation, or almost 
 <div class="grid2">
 <div class="col">
 
-2.  Type a short, memorable name for your repository. 
+2. Type a short, memorable name for your repository.
 
 </div><div class="col">
 
@@ -56,15 +56,13 @@ Wikis are to communicate project details, display user documentation, or almost 
 </div>
 </div>
 
+3. Optionally, add a description of your repository.
 
-3.  Optionally, add a description of your repository. 
+4. Choose a repository visibility. For more information, see "[About repositories](https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories#about-repository-visibility)."
 
-4.  Choose a repository visibility. For more information, see "[About repositories](https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories#about-repository-visibility)."
+5. Select Initialize this repository with a README.
 
-5.  Select Initialize this repository with a README.
-
-6.  Click Create repository.
-
+6. Click Create repository.
 
 ### GitHub CLI
 
@@ -76,7 +74,8 @@ To create a remote repository, use:
 gh repo create <repository name> [visibility]
 
 ```
-> where [visibility] is one of: `--public`, `--private`, or `--internal`. 
+
+> where [visibility] is one of: `--public`, `--private`, or `--internal`.
 
 To clone the new repository locally:
 
@@ -84,6 +83,7 @@ To clone the new repository locally:
 gh repo create <repository name> [visibility] --clone
 
 ```
+
 To create a remote repository from an existing local repository, specify the source directory with `--source`. By default, the remote repository name will be the name of the source directory. Pass `--push` to push any local commits to the new repository.
 
 ## Best practices
