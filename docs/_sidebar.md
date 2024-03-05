@@ -24,7 +24,7 @@
     - [Repositories](./docs/basic/github/repositories.md)
     - [Pull Requests](./docs/basic/github/pull_requests.md)
     - [Workflows](./docs/basic/github/github_flow.md)
-    - [Markdown](./docs/basic/github/markdown.md)
+    <!-- - [Markdown](./docs/basic/github/markdown.md) -->
     - Administration
       - [Fixing Mistakes](./docs/basic/github/fixing-mistakes.md)
       - [Handling Large Files](./docs/basic/github/handling-large-files.md)

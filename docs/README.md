@@ -5,6 +5,6 @@
 
 ![InfoMagnus Logo](../../../img/logo.png)
 
-### Access the Training Platform: [here](https://github.com/im-github-training/exercises)
+### Click Here to Access the Training Platform: [here](https://github.com/im-github-training/exercises)
 
 </center>
