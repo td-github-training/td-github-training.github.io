@@ -5,6 +5,6 @@
 
 ![InfoMagnus Logo](../../../img/logo.png)
 
-### Click here to get started: [Setting up Git](/docs/getting-started/setting-up-git)
+### Access the Training Platform: [here](https://github.com/im-github-training/exercises)
 
 </center>
