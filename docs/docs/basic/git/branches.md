@@ -42,19 +42,15 @@ After completing work on a branch, changes can be merged back into the main code
        commit
 ```
 
-## Local vs Remote branches
+## Branch locality
 
-As mentioned in [What is a Repository?](), Git has a concept of **local** and **remote** ***repositories***.  Similarly, Git has a concept of **local** and **remote** ***branches***.
+Similar to ***repositories***, Git has a concept of **local** and **remote** ***branches***.
 
-### Local Branches
+### Local branches
 
-Local branches are branches that only you (the local user) can see. These branches can be created, deleted, renamed, and modified without any other collaborators knowing about them.
+Local branches exist in your *local* repository - and are branches that only you (the local user) can see. These branches can be created, deleted, renamed, and modified without any other collaborators knowing about them.
 
-#### Common local branches
-
-- `main` is the most common local branch as it's the default branch created when a repository is initialized.
-
-### Remote Branches
+### Remote branches
 
 Remote branches are references to the state of branches in your remote repositories.  They act as bookmarks to remind you where the branches on your remote repositories were the last time you connected to them.
 
