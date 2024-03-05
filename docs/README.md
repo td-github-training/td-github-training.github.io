@@ -1,6 +1,10 @@
 
-# InfoMagnus GitHub Training
+## Welcome to the InfoMagnus GitHub Training Guide!
 
-Welcome to the InfoMagnus GitHub Training repository!
+<center>
 
-Click here to get started: [Setting up Git](/#/./docs/getting-started/setting-up-git)
+![InfoMagnus Logo](../../../img/logo.png)
+
+### Click here to get started: [Setting up Git](/docs/getting-started/setting-up-git)
+
+</center>
