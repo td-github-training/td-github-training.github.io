@@ -58,3 +58,57 @@ You can have multiple stashes, and they can be referenced by specifying the stas
     - Adds it to the stash ref and updates the stash reflog
     - Useful for scripts
     - Easily confused with `git stash push`, but doesn't return a clean working directory
+
+---
+
+## Stashing commits
+
+Git mostly stays out of your way as you create and switch between branches, however, Git disallows switching branches when the switch could result in losing uncommitted changes.
+
+This typically happens when the changes in your current working directory or staging area conflict with the branch you are trying to switch to. If the same file has been modified in your current branch and in the branch you're trying to check out, Git will prevent the branch switch to avoid overwriting those modifications.
+
+In these situations, you have two options:
+
+1. **Commit your changes**: `git commit`
+2. **Stash your changes**: `git stash`
+
+**Stashing** allows you to save changes that you don't want to commit immediately. You can apply the stashed changes later, even on a different branch.
+
+### Basic stashing
+
+You're in the middle of working on a feature when you need to switch branches to fix a bug. You don't want to commit half-done work, so you can stash the changes.
+
+1. Modify a file in your repository but do not commit the changes.
+2. Run `git stash`. Your changes are saved in a new stash and your working directory is reverted to the last commit.
+3. Switch to another branch and make some changes.
+4. Switch back to the original branch.
+
+### Applying stashes
+
+Now that the bug is fixed, you want to go back to working on the feature. You can apply the stashed changes to your working directory.
+
+1. Run `git stash list`. This will show a list of all stashes. You should see the stash you created earlier.
+2. Run `git stash apply`. This will apply the most recent stash to your working directory.
+
+### Stashing specific files
+
+Sometimes, you only want to stash changes to certain files. You can do this with `git stash push`.
+
+1. Modify two files in your repository but do not commit the changes.
+2. Run `git stash push -m "A descriptive message" <file>`. Replace `<file>` with the path to one of the files you modified. This will create a new stash with only the changes to that file.
+
+### Dropping a stash
+
+Once you've applied a stash and made sure you won't need it again, you can drop it to keep your stash list clean.
+
+1. Run `git stash list`. This will show a list of all stashes.
+2. Run `git stash drop <stash>`. Replace `<stash>` with the name of the stash you want to drop.
+
+### Stashing untracked Files
+
+By default, `git stash` will not stash untracked files. If you want to include untracked files, you can use `git stash -u`.
+
+1. Create a new file in your repository but do not stage or commit it.
+2. Run `git stash -u`. This will create a new stash that includes the untracked file.
+
+Remember, stashing is a powerful tool that allows you to save changes without committing them. It's useful when you need to switch context quickly, but don't want to lose your current work.

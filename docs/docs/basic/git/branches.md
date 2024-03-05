@@ -42,9 +42,33 @@ After completing work on a branch, changes can be merged back into the main code
        commit
 ```
 
-## Creating branches
+## Local vs Remote branches
 
-To view the existing branches in a repository, use `git branch`:
+As mentioned in [What is a Repository?](), Git has a concept of **local** and **remote** ***repositories***.  Similarly, Git has a concept of **local** and **remote** ***branches***.
+
+### Local Branches
+
+Local branches are branches that only you (the local user) can see. These branches can be created, deleted, renamed, and modified without any other collaborators knowing about them.
+
+#### Common local branches
+
+- `main` is the most common local branch as it's the default branch created when a repository is initialized.
+
+### Remote Branches
+
+Remote branches are references to the state of branches in your remote repositories.  They act as bookmarks to remind you where the branches on your remote repositories were the last time you connected to them.
+
+#### Common remote branches
+
+- `origin/HEAD`: This is a pointer to the default branch on the remote repository (usually `origin/main`).
+- `origin/main`: This is a pointer to the main branch on the remote repository. When you clone a repository, Git automatically names it `origin` and fetches all its data, creating a pointer to where the main branch is.
+- `upstream/main`: This is commonly used when working with a forked repository. The `upstream` refers to the original repository that was forked. `upstream/main` is a pointer to the main branch on the original repository.
+
+## Listing branches
+
+### Local branches
+
+To view the existing *local* branches in a repository, use `git branch`:
 
 ```bash
 > git branch
@@ -53,6 +77,31 @@ To view the existing branches in a repository, use `git branch`:
 ```
 
 > The `*` next to main indicates that main is the currently active branch.
+
+### Remote branches
+
+To view the existing *remote* branches in a repository, use `git branch --remote` or `git branch -r`:
+
+```bash
+> git branch -r
+  origin/HEAD -> origin/main
+  origin/main
+  upstream/main
+```
+
+> `-r` is the short form of `--remote`
+
+To see the URLs which remote branches are pointing to, use `git remote -v`:
+
+```bash
+> git remote -v
+  origin  https://github.com/im-sampm/exercises.git (fetch)
+  origin  https://github.com/im-sampm/exercises.git (push)
+  upstream        https://github.com/im-github-training/exercises.git (fetch)
+  upstream        https://github.com/im-github-training/exercises.git (push)
+```
+
+## Creating branches
 
 To create a new branch, use:
 
