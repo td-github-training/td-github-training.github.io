@@ -3,6 +3,6 @@
 
 <center>
 
-### Click Here to Access the Training Platform: [here](https://github.com/im-github-training/exercises)
+### Click Here to Access the Training Platform: [here](https://github.com/_CLIENT_ORG_/exercises)
 
 </center>
