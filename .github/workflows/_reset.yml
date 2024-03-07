@@ -5,7 +5,11 @@ on:
     inputs:
       to_name:
         description: 'To name'
+        default: 'InfoMagnus'
         required: true
+  push:
+    branches:
+      - develop
 
 # Reference: https://docs.github.com/en/actions/security-guides/automatic-token-authentication
 permissions:
@@ -24,6 +28,8 @@ jobs:
 
       - name: Commit changes
         run: |
+          git switch main
+
           # Rename main branch to main-old
           git branch -m main main-old
           git push -u origin main-old --force
