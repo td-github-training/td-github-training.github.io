@@ -49,9 +49,6 @@ jobs:
         run: |
           find . -type f -name "*.html" -exec sed -i "s/_CLIENT_NAME_/${{ inputs.to_name }}/g" {} +
 
-      - name: Set step to 0
-        run: echo "0" > ./.github/steps/-step.txt
-
       - name: Commit changes
         run: |
           git config user.name github-actions[bot]
