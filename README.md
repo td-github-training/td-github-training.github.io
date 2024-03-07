@@ -1,6 +1,6 @@
-# InfoMagnus GitHub Training
+# _CLIENT_NAME_ GitHub Training
 
-Welcome to the InfoMagnus GitHub Training repository!
+Welcome to the _CLIENT_NAME_ GitHub Training repository!
 
 The content is all written in [Markdown](https://guides.github.com/features/mastering-markdown/), and the scripts are shell scripts.
 
