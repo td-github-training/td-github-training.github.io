@@ -15,9 +15,6 @@ jobs:
     name: Reset repository
     runs-on: ubuntu-latest
     steps:
-      with:
-        CLIENT_NAME: ${{ vars.CLIENT_NAME }}
-
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -49,6 +46,8 @@ jobs:
         run: |
           find . -type f -name "*.md" -exec sed -i "s/_CLIENT_NAME_/${{ vars.CLIENT_NAME }}/g" {} +
           find . -type f -name "*.html" -exec sed -i "s/_CLIENT_NAME_/${{ vars.CLIENT_NAME }}/g" {} +
+        env:
+          CLIENT_NAME: ${{ vars.CLIENT_NAME }}
 
       - name: Commit changes
         run: |
@@ -58,3 +57,5 @@ jobs:
           git add .
           git commit -m "Reinitialized repository for ${{ vars.CLIENT_NAME }}" --amend
           git push origin main --force
+        env:
+          CLIENT_NAME: ${{ vars.CLIENT_NAME }}
