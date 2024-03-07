@@ -47,7 +47,7 @@ jobs:
 
       - name: Update client name in *.html
         run: |
-          find . -type f -name "*.html" -exec sed -i "s/$_CLIENT_NAME_/${{ inputs.to_name }}/g" {} +
+          find . -type f -name "*.html" -exec sed -i "s/_CLIENT_NAME_/${{ inputs.to_name }}/g" {} +
 
       - name: Set step to 0
         run: echo "0" > ./.github/steps/-step.txt
