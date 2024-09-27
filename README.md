@@ -1,5 +1,5 @@
 # Teradyne GitHub Training
-
+ 
 Welcome to the Teradyne GitHub Training repository!
 
 The content is all written in [Markdown](https://guides.github.com/features/mastering-markdown/), and the scripts are shell scripts.
